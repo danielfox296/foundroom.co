@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Found Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --off-white: #F7F7F9;
+      --ink: #0C0C14;
+      --ink-mid: #2C2C3A;
+      --ink-light: #6B6B80;
+      --accent: #2A5FD4;
+      --accent-hover: #1E4DB8;
+      --accent-pale: #EBF0FB;
+      --rule: #E2E2EC;
+      --dark: #0C0C14;
+      --dark-surface: #13131F;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 18px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.6rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.93);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: var(--white);
+      background: var(--accent);
+      text-decoration: none;
+      padding: 0.6rem 1.4rem;
+      transition: background 0.18s;
+    }
+    .nav-cta:hover { background: var(--accent-hover); }
+
+    /* Hero */
+    .about-hero {
+      padding: 12rem 6rem 7rem;
+      max-width: 860px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 0.1s;
+    }
+
+    .about-hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.4rem, 4vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.25s;
+    }
+
+    /* Rule */
+    .section-rule { width: 100%; height: 1px; background: var(--rule); }
+
+    /* Two-column story */
+    .story {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .story-left {
+      padding: 7rem 5rem 7rem 6rem;
+      border-right: 1px solid var(--rule);
+    }
+
+    .story-right {
+      padding: 7rem 6rem 7rem 5rem;
+      background: var(--off-white);
+    }
+
+    .story-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .story-left p,
+    .story-right p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--ink-mid);
+      max-width: 520px;
+      margin-bottom: 1.4rem;
+    }
+
+    .story-left p:last-child,
+    .story-right p:last-child { margin-bottom: 0; }
+
+    /* Pull quote */
+    .pull-quote {
+      padding: 8rem 6rem;
+      background: var(--off-white);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .pull-quote blockquote {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.6rem, 2.8vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Closing */
+    .closing {
+      padding: 8rem 6rem;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .closing-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding-top: 0.5rem;
+      position: sticky;
+      top: 6rem;
+    }
+
+    .closing-content p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--ink-mid);
+      max-width: 600px;
+      margin-bottom: 1.4rem;
+    }
+
+    .closing-content .byline {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink-light);
+      margin-top: 0.4rem;
+      margin-bottom: 0;
+    }
+
+    /* CTA section */
+    .cta-section {
+      background: var(--dark);
+      padding: 8rem 6rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .cta-block {
+      padding: 3rem;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .cta-block-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 1.2rem;
+    }
+
+    .cta-block h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.3rem, 2vw, 1.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .cta-block p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--white);
+      background: var(--accent);
+      text-decoration: none;
+      padding: 0.9rem 1.8rem;
+      transition: background 0.18s;
+    }
+    .btn-primary:hover { background: var(--accent-hover); }
+
+    .btn-secondary {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      background: transparent;
+      text-decoration: none;
+      padding: 0.9rem 1.8rem;
+      border: 1px solid rgba(255,255,255,0.18);
+      transition: border-color 0.18s, color 0.18s;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.4); color: var(--white); }
+
+    footer {
+      padding: 2.5rem 6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      background: var(--dark);
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.18);
+      letter-spacing: 0.04em;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      nav { padding: 1.3rem 1.5rem; }
+      .about-hero { padding: 8rem 1.5rem 4rem; }
+      .story { grid-template-columns: 1fr; }
+      .story-left { padding: 4rem 1.5rem; border-right: none; border-bottom: 1px solid var(--rule); }
+      .story-right { padding: 4rem 1.5rem; }
+      .pull-quote { padding: 5rem 1.5rem; }
+      .closing { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 2rem; }
+      .closing-label { position: static; }
+      .cta-section { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 2rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; gap: 0.8rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Found Room</a>
+    <a href="index.html#join" class="nav-cta">Express Interest</a>
+  </nav>
+
+  <section class="about-hero">
+    <p class="eyebrow">The story behind Found Room</p>
+    <h1>I built something real. And then I had to figure out what I was without it.</h1>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <section class="story">
+    <div class="story-left reveal">
+      <p class="story-label">In Daniel's words</p>
+      <p>I put myself through design school doing freelance work. From the beginning, what drove me wasn't just the work — it was the feedback the work produced. Recognition. Legitimacy. A way of knowing I was doing something that mattered.</p>
+      <p>I didn't pathologize that at the time. I still don't. It's a completely normal place to begin.</p>
+      <p>What I didn't see was how that early hunger would shape everything that came after — the company I built, the decisions I made inside it, and what happened to me when it was gone.</p>
+      <p>I scaled that company to 180 people and tens of millions in annual revenue. We were recognized publicly. By any measure the culture uses to keep score, it worked. And then I exited. And I spent years in a low-grade disorientation I didn't have language for.</p>
+      <p>I kept working. Advising founders, consulting on strategy and positioning, ghostwriting for public figures, staying useful. What I was actually doing — though I couldn't name it then — was searching. For something that could replace what the company had quietly been doing for me all along. Giving me a place to stand. A way to know I mattered.</p>
+      <p>What I found instead was that every founder I worked with was doing some version of the same thing. Making decisions not from first principles, but from a need for reassurance. Building structures that served their sense of legitimacy more than their business. Using the company to answer questions it was never designed to answer.</p>
+      <p>I recognized it because I'd been doing it for years.</p>
+      <p>Then the floor dropped. Illness. The loss of relationships I'd counted on. The slow disappearance of the external markers I'd used to know I was okay. At some point there was nothing left to optimize and nowhere left to hide from the actual question.</p>
+      <p>That period produced The Identity Cost — a body of work examining how founders route personal needs through business systems, and what it costs them. And it produced Found Room.</p>
+    </div>
+    <div class="story-right reveal">
+      <p class="story-label">Found Room</p>
+      <p>Found Room exists because that question — what am I building this for, and is it working — deserves a real container. Not a therapist's office. Not another mastermind. Not a podcast or a course or a weekend workshop with a certificate.</p>
+      <p>A room. With other founders who are living the same question, at different stages, with different versions of the same weight.</p>
+      <p>The community draws on The Identity Cost as one available lens — not a curriculum to follow, but a framework for seeing what's often invisible inside a business. Beyond that, Found Room takes no position on what members should do, want, or become. The room holds the question. The members bring everything else.</p>
+      <p>Retreats, peer cohorts, and an ongoing private community form the structure. What happens inside them is determined by who shows up.</p>
+    </div>
+  </section>
+
+  <section class="pull-quote reveal">
+    <blockquote>"The most successful founders are often carrying the most — and have the fewest places to set it down honestly."</blockquote>
+  </section>
+
+  <section class="closing">
+    <p class="closing-label reveal">From Daniel</p>
+    <div class="closing-content reveal">
+      <p>I don't write as a therapist or an academic. I write as someone who has been inside success, failure, and the long unwinding in between — and who believes that the founders willing to look honestly at themselves are building something more durable than the ones who aren't.</p>
+      <p>Found Room is for them.</p>
+      <p class="byline">— Daniel Fox</p>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-block reveal">
+      <p class="cta-block-label">Join the community</p>
+      <h3>The room is forming now.</h3>
+      <p>Found Room is building its founding member community. Express your interest and be among the first to hear when the room is open.</p>
+      <a href="index.html#join" class="btn-primary">Express Interest</a>
+    </div>
+    <div class="cta-block reveal">
+      <p class="cta-block-label">The work behind it</p>
+      <h3>Read The Identity Cost.</h3>
+      <p>The body of work that gave Found Room its foundation — on how founders route personal needs through business systems, and what it costs them.</p>
+      <a href="#" class="btn-secondary">The Identity Cost →</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Found Room</p>
+    <p>foundroom.co</p>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
