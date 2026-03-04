@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership — Found Room</title>
+  <meta name="description" content="Found Room is a private community for experienced founders. Not a course. Not a coaching program. A room where the real conversations happen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --off-white: #F7F7F9;
+      --ink: #0C0C14;
+      --ink-mid: #2C2C3A;
+      --ink-light: #6B6B80;
+      --accent: #2A5FD4;
+      --accent-hover: #1E4DB8;
+      --accent-pale: #EBF0FB;
+      --rule: #E2E2EC;
+      --dark: #0C0C14;
+      --dark-surface: #13131F;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 18px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.6rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.93);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: var(--ink-mid);
+      text-decoration: none;
+      transition: color 0.18s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: var(--white);
+      background: var(--accent);
+      text-decoration: none;
+      padding: 0.6rem 1.4rem;
+      transition: background 0.18s;
+    }
+
+    .nav-cta:hover { background: var(--accent-hover); }
+
+    /* Rule */
+    .section-rule { width: 100%; height: 1px; background: var(--rule); }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Eyebrow */
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 12rem 6rem 7rem;
+      max-width: 860px;
+    }
+
+    .hero .eyebrow {
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 0.1s;
+    }
+
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.4rem, 4vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.25s;
+    }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: var(--ink-mid);
+      max-width: 560px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.4s;
+    }
+
+    /* Sidebar sections */
+    .sidebar-section {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 6rem;
+      align-items: start;
+      padding: 8rem 6rem;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      position: sticky;
+      top: 6rem;
+    }
+
+    .sidebar-content h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+    }
+
+    .sidebar-content p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--ink-mid);
+      max-width: 600px;
+      margin-bottom: 1.4rem;
+    }
+
+    .sidebar-content p:last-child { margin-bottom: 0; }
+
+    /* Formats section */
+    .formats-section {
+      background: var(--off-white);
+      padding: 8rem 6rem;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .formats-section h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 4rem;
+    }
+
+    .formats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0 4rem;
+    }
+
+    .format-item {
+      padding: 2.5rem 0;
+      border-top: 2px solid var(--ink);
+    }
+
+    .format-number {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+    }
+
+    .format-item h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.8rem;
+    }
+
+    .format-item p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--ink-mid);
+    }
+
+    /* CTA section */
+    .cta-section {
+      background: var(--dark);
+      padding: 8rem 6rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .cta-left h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      font-weight: 800;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-left p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.45);
+      max-width: 420px;
+    }
+
+    .cta-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .cta-form-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .cta-input-row {
+      display: flex;
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .cta-input-row input {
+      flex: 1;
+      background: rgba(255,255,255,0.05);
+      border: none;
+      padding: 1.1rem 1.4rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: var(--white);
+      outline: none;
+    }
+
+    .cta-input-row input::placeholder { color: rgba(255,255,255,0.22); }
+
+    .cta-input-row button {
+      background: var(--accent);
+      border: none;
+      padding: 1.1rem 1.8rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--white);
+      cursor: pointer;
+      transition: background 0.18s;
+      white-space: nowrap;
+    }
+
+    .cta-input-row button:hover { background: var(--accent-hover); }
+    .cta-input-row button:disabled { opacity: 0.55; cursor: default; }
+
+    .cta-note {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.22);
+      line-height: 1.5;
+    }
+
+    .success-message {
+      display: none;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.65);
+      padding: 1.2rem 0;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2.5rem 6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      background: var(--dark);
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.18);
+      letter-spacing: 0.04em;
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      nav { padding: 1.3rem 1.5rem; }
+      .nav-links { display: none; }
+
+      .hero { padding: 8rem 1.5rem 4rem; }
+
+      .sidebar-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 5rem 1.5rem;
+      }
+      .section-label { position: static; }
+
+      .formats-section { padding: 5rem 1.5rem; }
+      .formats-grid { grid-template-columns: 1fr; }
+
+      .cta-section {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 5rem 1.5rem;
+      }
+
+      footer { padding: 2rem 1.5rem; flex-direction: column; gap: 0.8rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Found Room</a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="the-room.html">The Room</a>
+      <a href="retreats.html">Retreats</a>
+      <a href="identity-cost.html">The Identity Cost</a>
+      <a href="journal.html">Journal</a>
+    </div>
+    <a href="the-room.html" class="nav-cta">Express Interest</a>
+  </nav>
+
+  <section class="hero">
+    <p class="eyebrow">Membership</p>
+    <h1>This is not a program.</h1>
+    <p class="hero-sub">Found Room is a private community for founders who are ready to invest in the full picture — the company and the life.</p>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <section class="sidebar-section">
+    <p class="section-label reveal">What the room is</p>
+    <div class="sidebar-content reveal">
+      <h2>A room, not a program.</h2>
+      <p>Most communities for founders are built around the company. Deals, tactics, intros, growth. Those things have their place.</p>
+      <p>Found Room is built around the founder.</p>
+      <p>Not as a therapeutic project. Not as a self-improvement program. As a recognition that the most consequential variable in any founder's company and life is the founder themselves — and that variable rarely gets honest attention.</p>
+      <p>The room creates conditions for that attention. Through retreats, peer cohorts, and an ongoing private community, Found Room holds space for the kind of conversations that don't happen in boardrooms, on podcasts, or at conferences.</p>
+      <p>No performance required. No pitch. No scoreboard.</p>
+    </div>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <section class="formats-section">
+    <h2 class="reveal">Three ways to be in the room.</h2>
+    <div class="formats-grid">
+      <div class="format-item reveal">
+        <p class="format-number">01</p>
+        <h3>Retreats</h3>
+        <p>Immersive in-person experiences designed to create genuine discontinuity — a break from the usual context, the usual roles, the usual answers. Where the real conversations happen.</p>
+      </div>
+      <div class="format-item reveal">
+        <p class="format-number">02</p>
+        <h3>Peer Cohorts</h3>
+        <p>Small groups of founders meeting regularly over a defined period. Structured enough to create momentum, open enough to follow what's actually alive in the room.</p>
+      </div>
+      <div class="format-item reveal">
+        <p class="format-number">03</p>
+        <h3>Community</h3>
+        <p>An ongoing private space — not a Slack firehose, not a networking forum. A room where founders can think out loud, ask real questions, and find people who understand without explanation.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <section class="sidebar-section">
+    <p class="section-label reveal">Who belongs</p>
+    <div class="sidebar-content reveal">
+      <p>Found Room is not for every founder.</p>
+      <p>It's for founders who have built something real — and are willing to look honestly at themselves as part of what they've built. Pre-exit, post-exit, or continuing to operate. The stage doesn't matter. The willingness does.</p>
+      <p>The founding members are being selected personally. Not by application form, not by revenue threshold, not by how well-known you are. By whether you're the kind of founder who makes the room better for everyone in it.</p>
+      <p>If you're reading this and it resonates — that's usually the right signal.</p>
+    </div>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <section class="cta-section" id="join">
+    <div class="cta-left reveal">
+      <h2>The room is <span style="color:var(--accent)">forming.</span></h2>
+      <p>Found Room is forming its founding member community now. Founding members shape what the room becomes — the formats, the culture, the standards. This is not a waitlist. It's a conversation.</p>
+    </div>
+    <div class="cta-right reveal">
+      <p class="cta-form-label">Express interest</p>
+      <div class="cta-input-row" id="formRow">
+        <input type="email" id="emailInput" placeholder="Your email address">
+        <button onclick="handleSubmit()">I'm interested</button>
+      </div>
+      <p class="cta-note">No pitch. No newsletter. A direct conversation about whether this is right for you.</p>
+      <p class="success-message" id="successMsg">You're in the room. We'll be in touch.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Found Room</p>
+    <p>foundroom.co</p>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => observer.observe(el));
+
+    async function handleSubmit() {
+      const email = document.getElementById('emailInput').value;
+      if (!email || !email.includes('@')) { document.getElementById('emailInput').style.outline = '2px solid var(--accent)'; return; }
+      const button = document.querySelector('#formRow button');
+      button.textContent = 'Sending...'; button.disabled = true;
+      try {
+        const response = await fetch('https://formspree.io/f/mvzbeabr', {
+          method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        if (response.ok) {
+          document.getElementById('formRow').style.display = 'none';
+          document.querySelector('.cta-note').style.display = 'none';
+          document.getElementById('successMsg').style.display = 'block';
+        } else { button.textContent = 'Try again'; button.disabled = false; }
+      } catch { button.textContent = 'Try again'; button.disabled = false; }
+    }
+  </script>
+
+</body>
+</html>

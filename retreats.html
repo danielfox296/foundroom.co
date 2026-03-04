@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retreats — Found Room</title>
+  <meta name="description" content="Found Room retreats are designed to create the conditions for honest conversation, genuine rest, and the kind of clarity that doesn't happen at a desk.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --off-white: #F7F7F9;
+      --ink: #0C0C14;
+      --ink-mid: #2C2C3A;
+      --ink-light: #6B6B80;
+      --accent: #2A5FD4;
+      --accent-hover: #1E4DB8;
+      --accent-pale: #EBF0FB;
+      --rule: #E2E2EC;
+      --dark: #0C0C14;
+      --dark-surface: #13131F;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 18px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.6rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.93);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: var(--ink-mid);
+      text-decoration: none;
+      transition: color 0.18s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: var(--white);
+      background: var(--accent);
+      text-decoration: none;
+      padding: 0.6rem 1.4rem;
+      transition: background 0.18s;
+    }
+
+    .nav-cta:hover { background: var(--accent-hover); }
+
+    /* Hero */
+    .hero {
+      padding: 12rem 6rem 7rem;
+      max-width: 860px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 0.1s;
+    }
+
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.4rem, 4vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.25s;
+    }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      color: var(--ink-mid);
+      max-width: 580px;
+      line-height: 1.6;
+      margin-top: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.4s;
+    }
+
+    /* Rule */
+    .section-rule { width: 100%; height: 1px; background: var(--rule); }
+
+    /* Sidebar section pattern */
+    .sidebar-section {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 6rem;
+      align-items: start;
+      padding: 8rem 6rem;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 6rem;
+    }
+
+    .sidebar-content h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+    }
+
+    .sidebar-content p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--ink-mid);
+      max-width: 600px;
+      margin-bottom: 1.4rem;
+    }
+
+    .sidebar-content p:last-child { margin-bottom: 0; }
+
+    /* What we're building section */
+    .building-section {
+      background: var(--off-white);
+      padding: 8rem 6rem;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .building-section h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 4rem;
+    }
+
+    .building-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+    }
+
+    .building-item {
+      border-top: 2px solid var(--ink);
+      padding-top: 2rem;
+    }
+
+    .building-item h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--ink);
+      margin-bottom: 0.8rem;
+    }
+
+    .building-item p {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--ink-mid);
+    }
+
+    /* CTA section */
+    .cta-section {
+      background: var(--dark);
+      padding: 8rem 6rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .cta-left h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-left p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.45);
+      max-width: 420px;
+      line-height: 1.75;
+    }
+
+    .cta-form-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 1rem;
+    }
+
+    .cta-input-row {
+      display: flex;
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .cta-input-row input {
+      flex: 1;
+      background: rgba(255,255,255,0.05);
+      border: none;
+      padding: 1.1rem 1.4rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: var(--white);
+      outline: none;
+    }
+
+    .cta-input-row input::placeholder { color: rgba(255,255,255,0.22); }
+
+    .cta-input-row button {
+      background: var(--accent);
+      border: none;
+      padding: 1.1rem 1.8rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--white);
+      cursor: pointer;
+      transition: background 0.18s;
+      white-space: nowrap;
+    }
+
+    .cta-input-row button:hover { background: var(--accent-hover); }
+
+    .cta-input-row button:disabled { opacity: 0.55; cursor: default; }
+
+    .cta-note {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.22);
+      line-height: 1.5;
+      margin-top: 1rem;
+    }
+
+    .success-message {
+      display: none;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.65);
+      padding: 1.2rem 0;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2.5rem 6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      background: var(--dark);
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.18);
+      letter-spacing: 0.04em;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      nav { padding: 1.3rem 1.5rem; }
+      .nav-links { display: none; }
+
+      .hero { padding: 8rem 1.5rem 4rem; }
+
+      .sidebar-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 5rem 1.5rem;
+      }
+
+      .section-label { position: static; }
+
+      .building-section { padding: 5rem 1.5rem; }
+      .building-grid { grid-template-columns: 1fr; }
+
+      .cta-section {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 5rem 1.5rem;
+      }
+
+      footer { padding: 2rem 1.5rem; flex-direction: column; gap: 0.8rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Found Room</a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="the-room.html">The Room</a>
+      <a href="retreats.html">Retreats</a>
+      <a href="identity-cost.html">The Identity Cost</a>
+      <a href="journal.html">Journal</a>
+    </div>
+    <a href="the-room.html" class="nav-cta">Express Interest</a>
+  </nav>
+
+  <!-- SECTION 1: HERO -->
+  <section class="hero">
+    <p class="eyebrow">Found Room Retreats</p>
+    <h1>Some things can only happen when you leave.</h1>
+    <p class="hero-sub">Found Room retreats are designed to create the conditions for honest conversation, genuine rest, and the kind of clarity that doesn't happen at a desk.</p>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <!-- SECTION 2: THE VISION -->
+  <section class="sidebar-section">
+    <p class="section-label">The vision</p>
+    <div class="sidebar-content reveal">
+      <h2>A conversation founders almost never have.</h2>
+      <p>There is a particular kind of conversation that founders almost never have.</p>
+      <p>Not about the company. Not about the market, the team, the next raise, or the exit multiple. About the actual experience of building something — what it takes, what it costs, what it means, and what they want from the years ahead.</p>
+      <p>These conversations don't happen at conferences. They don't happen in masterminds. They barely happen between co-founders, because there's too much at stake in those relationships to be fully honest.</p>
+      <p>They happen when a small group of people who've been somewhere real get out of their usual context, slow down enough to think, and find themselves in a room where performance isn't required.</p>
+      <p>That's what Found Room retreats are designed to be.</p>
+    </div>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <!-- SECTION 3: WHY IN-PERSON -->
+  <section class="sidebar-section">
+    <p class="section-label">Why in-person</p>
+    <div class="sidebar-content reveal">
+      <h2>Something about leaving matters.</h2>
+      <p>Not just the change of scenery. The discontinuity. The physical act of stepping out of the environment where you perform your usual roles. The absence of your usual routines, your usual responsibilities, your usual self.</p>
+      <p>In that space, different things become possible. Questions that felt too large to hold at a desk become manageable. Conversations that would feel risky in a familiar context feel natural. Rest that wouldn't come at home arrives on its own.</p>
+      <p>Found Room retreats are designed around that discontinuity. Not as a vacation — as a genuine container for the work that the rest of life doesn't make room for.</p>
+    </div>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <!-- SECTION 4: WHAT WE'RE BUILDING -->
+  <section class="building-section">
+    <h2 class="reveal">What we're building.</h2>
+    <div class="building-grid">
+      <div class="building-item reveal">
+        <h3>Small</h3>
+        <p>Intimate enough that everyone in the room knows everyone else by the end. Not a conference. Not a cohort of fifty. A room where real conversation is possible.</p>
+      </div>
+      <div class="building-item reveal">
+        <h3>Honest</h3>
+        <p>Structured around genuine exchange, not performance. No keynotes. No panels. No one selling anything.</p>
+      </div>
+      <div class="building-item reveal">
+        <h3>Located</h3>
+        <p>In places that earn the trip. Environments chosen for their capacity to create the right kind of space — natural, removed, genuinely beautiful.</p>
+      </div>
+      <div class="building-item reveal">
+        <h3>Unhurried</h3>
+        <p>Long enough to actually land somewhere. Not a weekend of back-to-back sessions. Time to think, to walk, to sit with what comes up.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <!-- SECTION 5: WHO THESE ARE FOR -->
+  <section class="sidebar-section">
+    <p class="section-label">Who these are for</p>
+    <div class="sidebar-content reveal">
+      <p>Founders who've built something real and want to invest in the full picture. Pre-exit founders carrying a load they rarely set down. Post-exit founders navigating the disorientation of what comes next. Founders who are continuing to operate and want to do it with more clarity, more ease, and more of themselves available.</p>
+      <p>You don't need to be in crisis. You don't need to have a specific problem to solve. You need to be the kind of founder who believes that investing in yourself is at least as important as investing in your company.</p>
+    </div>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <!-- SECTION 6: CTA -->
+  <section class="cta-section" id="join">
+    <div class="cta-left reveal">
+      <h2>Be part of the <span style="color:var(--accent)">first retreat.</span></h2>
+      <p>Found Room's first retreat is in development. We're looking for a small group of founding members to help shape what it becomes — the format, the location, the focus. If this resonates, express your interest. Daniel will be in touch directly.</p>
+    </div>
+    <div class="cta-right reveal">
+      <p class="cta-form-label">Express interest</p>
+      <div class="cta-input-row" id="formRow">
+        <input id="emailInput" type="email" placeholder="Your email address">
+        <button onclick="handleSubmit()">I'm interested</button>
+      </div>
+      <p class="cta-note">No commitment. A conversation about whether this is right for you.</p>
+      <p class="success-message" id="successMsg">You're in the room. We'll be in touch.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Found Room</p>
+    <p>foundroom.co</p>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => observer.observe(el));
+
+    async function handleSubmit() {
+      const email = document.getElementById('emailInput').value;
+      if (!email || !email.includes('@')) { document.getElementById('emailInput').style.outline = '2px solid var(--accent)'; return; }
+      const button = document.querySelector('#formRow button');
+      button.textContent = 'Sending...'; button.disabled = true;
+      try {
+        const response = await fetch('https://formspree.io/f/mvzbeabr', {
+          method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        if (response.ok) {
+          document.getElementById('formRow').style.display = 'none';
+          document.querySelector('.cta-note').style.display = 'none';
+          document.getElementById('successMsg').style.display = 'block';
+        } else { button.textContent = 'Try again'; button.disabled = false; }
+      } catch { button.textContent = 'Try again'; button.disabled = false; }
+    }
+  </script>
+
+</body>
+</html>

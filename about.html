@@ -71,6 +71,23 @@
     }
     .nav-cta:hover { background: var(--accent-hover); }
 
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: var(--ink-mid);
+      text-decoration: none;
+      transition: color 0.18s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
     /* Hero */
     .about-hero {
       padding: 12rem 6rem 7rem;
@@ -292,6 +309,7 @@
     /* Responsive */
     @media (max-width: 960px) {
       nav { padding: 1.3rem 1.5rem; }
+      .nav-links { display: none; }
       .about-hero { padding: 8rem 1.5rem 4rem; }
       .story { grid-template-columns: 1fr; }
       .story-left { padding: 4rem 1.5rem; border-right: none; border-bottom: 1px solid var(--rule); }
@@ -308,7 +326,14 @@
 
   <nav>
     <a href="index.html" class="nav-logo">Found Room</a>
-    <a href="index.html#join" class="nav-cta">Express Interest</a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="the-room.html">The Room</a>
+      <a href="retreats.html">Retreats</a>
+      <a href="identity-cost.html">The Identity Cost</a>
+      <a href="journal.html">Journal</a>
+    </div>
+    <a href="the-room.html" class="nav-cta">Express Interest</a>
   </nav>
 
   <section class="about-hero">
@@ -358,13 +383,13 @@
       <p class="cta-block-label">Join the community</p>
       <h3>The room is forming now.</h3>
       <p>Found Room is building its founding member community. Express your interest and be among the first to hear when the room is open.</p>
-      <a href="index.html#join" class="btn-primary">Express Interest</a>
+      <a href="the-room.html" class="btn-primary">Express Interest</a>
     </div>
     <div class="cta-block reveal">
       <p class="cta-block-label">The work behind it</p>
       <h3>Read The Identity Cost.</h3>
       <p>The body of work that gave Found Room its foundation — on how founders route personal needs through business systems, and what it costs them.</p>
-      <a href="#" class="btn-secondary">The Identity Cost →</a>
+      <a href="identity-cost.html" class="btn-secondary">The Identity Cost →</a>
     </div>
   </section>
 

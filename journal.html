@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal — Found Room</title>
+  <meta name="description" content="Essays on founders, identity, transitions, and what it actually takes to build a great company and a great life.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --off-white: #F7F7F9;
+      --ink: #0C0C14;
+      --ink-mid: #2C2C3A;
+      --ink-light: #6B6B80;
+      --accent: #2A5FD4;
+      --accent-hover: #1E4DB8;
+      --accent-pale: #EBF0FB;
+      --rule: #E2E2EC;
+      --dark: #0C0C14;
+      --dark-surface: #13131F;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 18px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Nav */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.6rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.93);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: var(--ink-mid);
+      text-decoration: none;
+      transition: color 0.18s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: var(--white);
+      background: var(--accent);
+      text-decoration: none;
+      padding: 0.6rem 1.4rem;
+      transition: background 0.18s;
+    }
+
+    .nav-cta:hover { background: var(--accent-hover); }
+
+    /* Hero */
+    .journal-hero {
+      padding: 12rem 6rem 5rem;
+      max-width: 860px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards 0.1s;
+    }
+
+    .journal-hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.4rem, 4vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.25s;
+    }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      color: var(--ink-mid);
+      max-width: 560px;
+      line-height: 1.6;
+      margin-top: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.4s;
+    }
+
+    /* Rule */
+    .section-rule { width: 100%; height: 1px; background: var(--rule); }
+
+    /* Essay List */
+    .essay-list {
+      padding: 0 6rem 8rem;
+    }
+
+    .essay-item {
+      border-top: 1px solid var(--rule);
+      padding: 3rem 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .essay-item:last-child {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .essay-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .essay-number {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+    }
+
+    .essay-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .essay-desc {
+      font-size: 0.95rem;
+      color: var(--ink-mid);
+      line-height: 1.7;
+      max-width: 580px;
+    }
+
+    .essay-date {
+      font-size: 0.75rem;
+      color: var(--ink-light);
+      margin-top: 0.4rem;
+    }
+
+    .essay-read {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      white-space: nowrap;
+      padding-top: 0.3rem;
+      transition: color 0.18s;
+    }
+
+    .essay-read:hover { color: var(--accent-hover); }
+
+    .essay-read.coming-soon {
+      color: var(--ink-light);
+      cursor: default;
+    }
+
+    .essay-read.coming-soon:hover { color: var(--ink-light); }
+
+    /* Footer */
+    footer {
+      padding: 2.5rem 6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      background: var(--dark);
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.18);
+      letter-spacing: 0.04em;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      nav { padding: 1.3rem 1.5rem; }
+      .nav-links { display: none; }
+      .journal-hero { padding: 8rem 1.5rem 4rem; }
+      .essay-list { padding: 0 1.5rem 5rem; }
+      .essay-item { grid-template-columns: 1fr; gap: 1rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; gap: 0.8rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Found Room</a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="the-room.html">The Room</a>
+      <a href="retreats.html">Retreats</a>
+      <a href="identity-cost.html">The Identity Cost</a>
+      <a href="journal.html">Journal</a>
+    </div>
+    <a href="the-room.html" class="nav-cta">Express Interest</a>
+  </nav>
+
+  <section class="journal-hero">
+    <p class="eyebrow">Journal</p>
+    <h1>Writing from inside the work.</h1>
+    <p class="hero-sub">Essays on founders, identity, transitions, and what it actually takes to build a great company and a great life.</p>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <section class="essay-list">
+
+    <div class="essay-item reveal">
+      <div class="essay-meta">
+        <span class="essay-number">01</span>
+        <p class="essay-title">What the business was doing for you that you never asked it to do</p>
+        <p class="essay-desc">The invisible work every company performs for its founder — and what happens when it stops.</p>
+        <p class="essay-date">2026</p>
+      </div>
+      <a href="essay-what-the-business-was-doing.html" class="essay-read">Read →</a>
+    </div>
+
+    <div class="essay-item reveal">
+      <div class="essay-meta">
+        <span class="essay-number">02</span>
+        <p class="essay-title">The long unwinding: what happens after you sell</p>
+        <p class="essay-desc">Why the exit is the beginning of a harder question, not the end of one.</p>
+        <p class="essay-date">2026</p>
+      </div>
+      <a href="#" class="essay-read coming-soon">Coming soon</a>
+    </div>
+
+    <div class="essay-item reveal">
+      <div class="essay-meta">
+        <span class="essay-number">03</span>
+        <p class="essay-title">Why optimization stops working</p>
+        <p class="essay-desc">On the moment when tightening processes stops reducing pressure — and what that signal means.</p>
+        <p class="essay-date">2026</p>
+      </div>
+      <a href="#" class="essay-read coming-soon">Coming soon</a>
+    </div>
+
+    <div class="essay-item reveal">
+      <div class="essay-meta">
+        <span class="essay-number">04</span>
+        <p class="essay-title">The founder who stays</p>
+        <p class="essay-desc">Continuing to operate isn't simpler than exiting. It's a different version of the same question.</p>
+        <p class="essay-date">2026</p>
+      </div>
+      <a href="#" class="essay-read coming-soon">Coming soon</a>
+    </div>
+
+    <div class="essay-item reveal">
+      <div class="essay-meta">
+        <span class="essay-number">05</span>
+        <p class="essay-title">On authorship</p>
+        <p class="essay-desc">What it means to write your own meaning instead of inheriting it from outcomes and roles.</p>
+        <p class="essay-date">2026</p>
+      </div>
+      <a href="#" class="essay-read coming-soon">Coming soon</a>
+    </div>
+
+    <div class="essay-item reveal">
+      <div class="essay-meta">
+        <span class="essay-number">06</span>
+        <p class="essay-title">What founders actually need that no community is providing</p>
+        <p class="essay-desc">On the gap between what founder communities offer and what founders are quietly searching for.</p>
+        <p class="essay-date">2026</p>
+      </div>
+      <a href="#" class="essay-read coming-soon">Coming soon</a>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 Found Room</p>
+    <p>foundroom.co</p>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
