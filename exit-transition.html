@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Exit Transition — Found Room</title>
+  <meta name="description" content="The period after selling your business has a shape. Most founders don't know what it is until they're already in it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --white: #FFFFFF; --off-white: #F7F7F9; --ink: #0C0C14; --ink-mid: #2C2C3A; --ink-light: #6B6B80; --accent: #2A5FD4; --accent-hover: #1E4DB8; --accent-pale: #EBF0FB; --rule: #E2E2EC; --dark: #0C0C14; --dark-surface: #13131F; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 18px; scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; font-weight: 400; line-height: 1.7; overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.6rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.93); backdrop-filter: blur(14px); border-bottom: 1px solid var(--rule); }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { font-family: 'Inter', sans-serif; font-size: 0.83rem; font-weight: 500; color: var(--ink-mid); text-decoration: none; transition: color 0.18s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { font-family: 'Inter', sans-serif; font-size: 0.83rem; font-weight: 500; color: var(--white); background: var(--accent); text-decoration: none; padding: 0.6rem 1.4rem; transition: background 0.18s; }
+    .nav-cta:hover { background: var(--accent-hover); }
+    .section-rule { width: 100%; height: 1px; background: var(--rule); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; }
+    .section-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); position: sticky; top: 6rem; }
+    .hero { padding: 12rem 6rem 7rem; max-width: 860px; }
+    .hero .eyebrow { opacity: 0; animation: fadeUp 0.7s ease forwards 0.1s; }
+    .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.4rem, 4vw, 4.2rem); font-weight: 800; line-height: 1.06; letter-spacing: -0.03em; margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.25s; }
+    .hero-sub { font-size: 1.2rem; line-height: 1.6; color: var(--ink-mid); max-width: 500px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s; }
+    .large-intro { background: var(--off-white); padding: 7rem 6rem; border-bottom: 1px solid var(--rule); }
+    .large-intro-inner { max-width: 780px; margin: 0 auto; }
+    .large-intro p { font-size: 1.1rem; line-height: 1.9; color: var(--ink-mid); margin-bottom: 1.6rem; }
+    .large-intro p:last-child { margin-bottom: 0; }
+    .large-intro p.italic { font-style: italic; }
+    .sidebar-section { display: grid; grid-template-columns: 200px 1fr; gap: 6rem; align-items: start; padding: 8rem 6rem; }
+    .sidebar-section-content h2 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 2rem; }
+    .sidebar-section-content p { font-size: 1.05rem; line-height: 1.9; color: var(--ink-mid); max-width: 600px; margin-bottom: 1.4rem; }
+    .sidebar-section-content p:last-child { margin-bottom: 0; }
+    .sidebar-section-content p.italic { font-style: italic; }
+    .related-links { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 0.5rem; }
+    .related-links a { font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--accent); text-decoration: none; transition: color 0.18s; }
+    .related-links a:hover { color: var(--accent-hover); }
+    .cta-section { background: var(--dark); padding: 8rem 6rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .cta-left h2 { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 800; line-height: 1.0; letter-spacing: -0.03em; color: var(--white); margin-bottom: 1.5rem; }
+    .cta-left h2 span { color: var(--accent); }
+    .cta-left p { font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.45); max-width: 420px; }
+    .cta-right { display: flex; flex-direction: column; align-items: flex-start; }
+    .btn-primary { display: inline-block; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--white); background: var(--accent); text-decoration: none; padding: 0.9rem 1.8rem; transition: background 0.18s; }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-secondary { display: block; width: fit-content; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.65); background: transparent; text-decoration: none; padding: 0.9rem 1.8rem; border: 1px solid rgba(255,255,255,0.18); transition: border-color 0.18s, color 0.18s; margin-top: 1rem; }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.4); color: var(--white); }
+    footer { padding: 2.5rem 6rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.07); background: var(--dark); }
+    footer p { font-size: 0.8rem; color: rgba(255,255,255,0.18); letter-spacing: 0.04em; }
+    @media (max-width: 960px) {
+      nav { padding: 1.3rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { padding: 8rem 1.5rem 4rem; }
+      .large-intro { padding: 5rem 1.5rem; }
+      .sidebar-section { grid-template-columns: 1fr; gap: 2rem; padding: 5rem 1.5rem; }
+      .section-label { position: static; }
+      .cta-section { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; gap: 0.8rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">Journal</a>
+  </div>
+  <a href="the-room.html" class="nav-cta">Express Interest</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="eyebrow">The transition</p>
+  <h1>The exit transition starts the day the deal closes.</h1>
+  <p class="hero-sub">The period after selling your business has a shape. Most founders don't know what it is until they're already in it.</p>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- INTRO -->
+<section class="large-intro">
+  <div class="large-intro-inner reveal">
+    <p>Most founders assume the exit transition ends when they figure out what's next. A new company, a new project, something with structure and direction. Once that's in place, the transition is over. They're back.</p>
+    <p>That's probably the wrong frame. The exit transition ends when the founder has built a life that doesn't depend on the company to be coherent. That's a different timeline, and a different kind of work, than figuring out what to do next.</p>
+    <p class="italic">The two things can happen simultaneously. Often one gets mistaken for the other.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 1 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">What it is</p>
+  <div class="sidebar-section-content reveal">
+    <h2>A structural change, not a circumstantial one.</h2>
+    <p>A transition, in this context, is a period of structural change. Not just circumstantial change, where things are different, but structural change, where the underlying way you make sense of yourself and your days has to be rebuilt from different materials.</p>
+    <p>Most founders haven't been through that since early adulthood. Maybe not since then at all. The company has been a stable identity structure for long enough that its absence isn't just an inconvenience. It's a reorganization.</p>
+    <p>The founders who move through the transition most smoothly are usually the ones who understand early that the work isn't logistical. It's not about optimizing the new chapter. It's about understanding what the last chapter was actually providing, before you can figure out what you need the next one to do.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 2 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">Phase one</p>
+  <div class="sidebar-section-content reveal">
+    <h2>The static.</h2>
+    <p>The first phase tends to look like rest. The calendar clears. The urgency goes away. There are no fires to put out, no decisions on a timeline that matters, no one waiting on you.</p>
+    <p>Most founders don't experience this as peaceful. They experience it as static.</p>
+    <p>That's not ingratitude. It's a pattern. Founders have usually spent years training themselves to operate in urgency. The ability to drop into low-urgency states has atrophied, in most cases deliberately, because the company required the opposite. When the urgency disappears, the absence doesn't feel like freedom. It feels like something's wrong.</p>
+    <p>This phase tends to last longer than founders expect. A few weeks is common in the plan. A few months is more common in practice. During that time, the question "what's wrong with me?" tends to come up more than it should. The answer is usually nothing. The state is unfamiliar, not pathological.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 3 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">Phase two</p>
+  <div class="sidebar-section-content reveal">
+    <h2>The run back.</h2>
+    <p>At some point, most founders make a move. A new company. A board seat. A serious angel portfolio. Some version of getting back in the game. The move is usually framed as the natural next step.</p>
+    <p>Sometimes this is exactly right. The timing is good, the opportunity is real, the founder has done enough internal work to know what they actually want to build. Those exits do happen.</p>
+    <p>More often, the run back is an attempt to recreate the structure that's gone before the founder has had a chance to examine what that structure was for. The new thing fills the silence. It provides urgency, direction, external validation, and a clean answer to "what are you up to?" It works, in the short term, because it's doing the same work the old company was doing.</p>
+    <p>The problem is that if the identity cost was running in the previous business, it doesn't reset at the exit. It transfers. The new company inherits the same pattern, usually on a compressed timeline, because the founder hasn't changed what they're asking the business to provide.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 4 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">Phase three</p>
+  <div class="sidebar-section-content reveal">
+    <h2>The actual work.</h2>
+    <p>The third phase is slower and doesn't have a good cultural name, which is part of why it's hard to find.</p>
+    <p>It's the period where a founder starts to separate who they are from what they built. Where the company stops being the primary way they explain themselves. Where the answer to "what do you do?" stops requiring a company name to feel complete.</p>
+    <p>This phase doesn't announce itself. It tends to arrive gradually, and founders often don't recognize it until they're partway through it, when they notice that certain questions feel less urgent than they used to. Not resolved. Just lighter.</p>
+    <p>What's actually happening is that the identity cost is being paid down. The founder is slowly reclaiming the parts of their self-definition that were running through the company, and finding other places to put them — or finding that some of them don't need to go anywhere at all.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 5 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">What works</p>
+  <div class="sidebar-section-content reveal">
+    <h2>What distinguishes the ones who come through it.</h2>
+    <p>They talk to people who've been through it. Not people who will congratulate them on the exit, but people who will describe what the year after looked like honestly. That company matters. The experience of the transition is genuinely hard to understand from the outside, and almost immediately recognizable from the inside.</p>
+    <p>They resist filling the space too fast. Not because activity is wrong, but because the discomfort of unstructured time is doing something useful. It's surfacing what the structure was for. Replacing it before that becomes clear tends to replace the problem, not solve it.</p>
+    <p>They answer the actual question. "What's next?" is a logistical question. It points toward a company, a project, a title. The question underneath it is "who am I when the company isn't doing that work?" That one takes longer. It also turns out to be more interesting.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 6 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">The timeline</p>
+  <div class="sidebar-section-content reveal">
+    <h2>It ends when it ends.</h2>
+    <p>There's no normal length for the exit transition. Founders who expect it to be short often find it isn't. Founders who expect it to be long sometimes move through it faster than they thought.</p>
+    <p>The length tends to correlate with how much identity weight the previous business was carrying. A founder who kept clean boundaries between who they were and what they built will probably move through it faster. A founder whose company was the central structure of their self-definition for fifteen years will probably take longer.</p>
+    <p>Neither of those outcomes reflects on the quality of the exit or the quality of the life that follows. They reflect on the amount of work that needs to get done.</p>
+    <p>The transition ends when it ends. The marker isn't a new project or a new title. It's when the question "who am I without the company?" stops feeling like a threat and starts feeling like the right question.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- RELATED -->
+<section class="sidebar-section">
+  <p class="section-label reveal">Related</p>
+  <div class="sidebar-section-content reveal">
+    <div class="related-links">
+      <a href="post-exit-founder.html">The Post-Exit Founder: A Complete Guide →</a>
+      <a href="identity-cost.html">The Identity Cost →</a>
+      <a href="the-found-room.html">The Found Room →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-left reveal">
+    <h2>The room is <span>open.</span></h2>
+    <p>Found Room is a community for founders navigating the period after the exit. The founding member community is forming now.</p>
+  </div>
+  <div class="cta-right reveal">
+    <a href="the-room.html" class="btn-primary">Join Found Room</a>
+    <a href="about.html" class="btn-secondary">Read Daniel's story</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Found Room</p>
+  <p>foundroom.co</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
