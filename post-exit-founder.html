@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Post-Exit Founder: A Complete Guide — Found Room</title>
+  <meta name="description" content="What actually happens after you sell your business, and why almost nobody talks about it honestly.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --white: #FFFFFF; --off-white: #F7F7F9; --ink: #0C0C14; --ink-mid: #2C2C3A; --ink-light: #6B6B80; --accent: #2A5FD4; --accent-hover: #1E4DB8; --accent-pale: #EBF0FB; --rule: #E2E2EC; --dark: #0C0C14; --dark-surface: #13131F; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 18px; scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; font-weight: 400; line-height: 1.7; overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.6rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.93); backdrop-filter: blur(14px); border-bottom: 1px solid var(--rule); }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { font-family: 'Inter', sans-serif; font-size: 0.83rem; font-weight: 500; color: var(--ink-mid); text-decoration: none; transition: color 0.18s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { font-family: 'Inter', sans-serif; font-size: 0.83rem; font-weight: 500; color: var(--white); background: var(--accent); text-decoration: none; padding: 0.6rem 1.4rem; transition: background 0.18s; }
+    .nav-cta:hover { background: var(--accent-hover); }
+    .section-rule { width: 100%; height: 1px; background: var(--rule); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; }
+    .section-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); position: sticky; top: 6rem; }
+    .hero { padding: 12rem 6rem 7rem; max-width: 860px; }
+    .hero .eyebrow { opacity: 0; animation: fadeUp 0.7s ease forwards 0.1s; }
+    .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.4rem, 4vw, 4.2rem); font-weight: 800; line-height: 1.06; letter-spacing: -0.03em; margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.25s; }
+    .hero-sub { font-size: 1.2rem; line-height: 1.6; color: var(--ink-mid); max-width: 500px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s; }
+    .large-intro { background: var(--off-white); padding: 7rem 6rem; border-bottom: 1px solid var(--rule); }
+    .large-intro-inner { max-width: 780px; margin: 0 auto; }
+    .large-intro p { font-size: 1.1rem; line-height: 1.9; color: var(--ink-mid); margin-bottom: 1.6rem; }
+    .large-intro p:last-child { margin-bottom: 0; }
+    .large-intro p.italic { font-style: italic; }
+    .sidebar-section { display: grid; grid-template-columns: 200px 1fr; gap: 6rem; align-items: start; padding: 8rem 6rem; }
+    .sidebar-section-content h2 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 2rem; }
+    .sidebar-section-content p { font-size: 1.05rem; line-height: 1.9; color: var(--ink-mid); max-width: 600px; margin-bottom: 1.4rem; }
+    .sidebar-section-content p:last-child { margin-bottom: 0; }
+    .sidebar-section-content p.italic { font-style: italic; }
+    .cost-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); margin-bottom: 0.6rem; }
+    .cost-group { margin-bottom: 2.5rem; }
+    .cost-group:last-child { margin-bottom: 0; }
+    .related-links { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 0.5rem; }
+    .related-links a { font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--accent); text-decoration: none; transition: color 0.18s; }
+    .related-links a:hover { color: var(--accent-hover); }
+    .cta-section { background: var(--dark); padding: 8rem 6rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .cta-left h2 { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 800; line-height: 1.0; letter-spacing: -0.03em; color: var(--white); margin-bottom: 1.5rem; }
+    .cta-left h2 span { color: var(--accent); }
+    .cta-left p { font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.45); max-width: 420px; }
+    .cta-right { display: flex; flex-direction: column; align-items: flex-start; }
+    .btn-primary { display: inline-block; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--white); background: var(--accent); text-decoration: none; padding: 0.9rem 1.8rem; transition: background 0.18s; }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-secondary { display: block; width: fit-content; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.65); background: transparent; text-decoration: none; padding: 0.9rem 1.8rem; border: 1px solid rgba(255,255,255,0.18); transition: border-color 0.18s, color 0.18s; margin-top: 1rem; }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.4); color: var(--white); }
+    footer { padding: 2.5rem 6rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.07); background: var(--dark); }
+    footer p { font-size: 0.8rem; color: rgba(255,255,255,0.18); letter-spacing: 0.04em; }
+    @media (max-width: 960px) {
+      nav { padding: 1.3rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { padding: 8rem 1.5rem 4rem; }
+      .large-intro { padding: 5rem 1.5rem; }
+      .sidebar-section { grid-template-columns: 1fr; gap: 2rem; padding: 5rem 1.5rem; }
+      .section-label { position: static; }
+      .cta-section { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; gap: 0.8rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">Journal</a>
+  </div>
+  <a href="the-room.html" class="nav-cta">Express Interest</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="eyebrow">The complete guide</p>
+  <h1>The Post-Exit Founder</h1>
+  <p class="hero-sub">What actually happens after you sell your business, and why almost nobody talks about it honestly.</p>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- INTRO -->
+<section class="large-intro">
+  <div class="large-intro-inner reveal">
+    <p>There's a version of the exit story you've probably heard. The wire hits. You take a week off. Maybe two. You travel somewhere you've been meaning to go. And then, slowly, you start thinking about what's next. A new company, a board seat, some angel investing. The story has a clean arc. Build, sell, reinvent.</p>
+    <p>What that story leaves out is the part in between.</p>
+    <p>The part where you don't know what day it is. Where you check your phone out of habit and there's nothing urgent. Where someone asks what you're up to and you say "taking some time off" and you both pretend that's a satisfying answer. Where the thing you spent eight or twelve or twenty years building is still running, just without you, and you're not sure how to feel about that.</p>
+    <p class="italic">That part is real. It's common. And it almost never gets named. That's what this guide is for.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 1 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">What it is</p>
+  <div class="sidebar-section-content reveal">
+    <h2>Not a gap between chapters. A chapter of its own.</h2>
+    <p>Most people treat the period after selling a business as a rest stop. A place you pass through on the way to the next thing.</p>
+    <p>It's closer to the opposite. For most founders, the transition after an exit is one of the more disorienting periods of their adult lives, precisely because nothing looks wrong from the outside. You're financially fine. You're free. You succeeded by almost every measure that matters in the world of business. The conditions for difficulty are invisible.</p>
+    <p>Which is partly why it's hard to talk about.</p>
+    <p>When a founder exits and finds themselves off-balance, the explanation they reach for is usually external. Bad timing. Misaligned deal terms. Wrong acquirer. Those things can be real. But they often aren't the actual cause. The actual cause is that the company was probably doing more than business work.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 2 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">The mechanism</p>
+  <div class="sidebar-section-content reveal">
+    <h2>What the business was actually doing.</h2>
+    <p>By the time most founders exit, the company has been in their life long enough to become structural. Ten-hour days for years. Decisions that ran through you. A professional identity that was, in most contexts, inseparable from the name of what you built.</p>
+    <p>That's not a character flaw. It's what commitment looks like in founder-stage companies. You are the company, for a long time, before the company can be itself.</p>
+    <p>The problem shows up after. Because the company was never just a commercial enterprise. It was also, for most founders, a way of answering certain questions. Who am I? Does what I do matter? Am I pointed in the right direction? The company provided ongoing evidence. Revenue moved or it didn't. People joined or they left. The feedback was constant, and the feedback was partly about you.</p>
+    <p>After the exit, the feedback stops. Not gradually. All at once.</p>
+    <p>What a lot of founders discover in that silence is that some portion of their sense of self had been quietly routed through the company for years. The deal closes, and the routing stays intact, but the signal is gone. That's not a crisis. It's a structural problem with a traceable cause.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 3 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">The framework</p>
+  <div class="sidebar-section-content reveal">
+    <h2>The identity cost.</h2>
+    <p>The identity cost is what happens when a business ends up doing psychological work it wasn't designed to do. It supplies meaning, legitimacy, and evidence of worth to the person running it. That's not unusual. It's probably the norm. The cost isn't that it happened. The cost shows up afterward, when the structure is gone and the psychological work that was routed through it suddenly has nowhere to go.</p>
+    <p>Most founders don't realize this was happening until they exit. From inside the company, it doesn't feel like dependence. It feels like dedication. The distinction becomes visible in retrospect.</p>
+    <p>The identity cost isn't a moral problem. It doesn't mean you built the wrong thing or ran it badly. It means you're human, and humans have used institutions to answer identity questions for as long as institutions have existed. Businesses are just the current version of that. Especially for founders. Especially in a cultural moment when entrepreneurship carries the kind of status it does.</p>
+    <p>The exit surfaces it. That's probably the most useful thing it does.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 4 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">The phases</p>
+  <div class="sidebar-section-content reveal">
+    <h2>The exit transition.</h2>
+    <p>The exit transition is the period that starts the day the deal closes and ends when you've built a life that doesn't depend on the company to be coherent. That timeline varies. The length tends to depend less on how large the exit was and more on how much of the founder's identity was running through the business before it sold.</p>
+    <p>The transition has recognizable phases, though they don't always happen in order.</p>
+    <p><strong>The first phase</strong> tends to look like rest but feel like static. The calendar clears. The urgency goes away. There's nothing to solve, at least not on a timeline that matters. Most founders don't know how to be in that state. They've optimized for urgency for years. The absence of it doesn't feel like relief, at first. It feels like something's wrong.</p>
+    <p><strong>The second phase</strong> is usually a run at something new. A new company, a project, a board position. Sometimes this is the right move and the timing is right. More often, it's the founder trying to recreate the structure that's gone, before they've had a chance to figure out what they actually want the structure to do. The new thing can work. But if it's mostly being used to fill the silence, it tends to reproduce the same problem on a shorter timeline.</p>
+    <p><strong>The third phase</strong> is slower. It doesn't have a name because most people don't talk about it. It's the period where the founder starts to separate who they are from what they built. Where the company stops being the main way they explain themselves. That phase is harder than the others. It's also where the actual work gets done.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 5 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">What nobody says</p>
+  <div class="sidebar-section-content reveal">
+    <h2>What nobody tells you about selling your business.</h2>
+    <div class="cost-group">
+      <p class="cost-label">The grief is real.</p>
+      <p>You can be glad you sold and still grieve the loss. The company was yours. The team was yours. The problems were yours. Even when the deal was right and the timing was right and you'd do it again, something ends. Most founders don't give themselves room for that, because grieving success feels incoherent. It isn't.</p>
+    </div>
+    <div class="cost-group">
+      <p class="cost-label">Freedom is harder than it looks.</p>
+      <p>Most founders spend years dreaming about having more time. Then they have it and discover that time without structure is its own challenge. The ability to do anything tends to make it harder to do any specific thing. The lack of constraints, which felt like the goal, turns out to be one of the harder parts.</p>
+    </div>
+    <div class="cost-group">
+      <p class="cost-label">The relationships shift.</p>
+      <p>Some of the closest working relationships you had were contextual. They existed because of the shared stakes, the shared problems, the shared mission. After the exit, some of those relationships fade. Not because anyone did anything wrong. Because the context is gone. That's a real loss, and it tends to surprise founders who assumed those relationships would transfer automatically.</p>
+    </div>
+    <div class="cost-group">
+      <p class="cost-label">The money doesn't fix it.</p>
+      <p>Financial security removes a real category of stress. It does not supply meaning, direction, or identity. Founders who expected the money to handle more than it can end up more confused, not less, because the problem they thought they were solving turns out to have been the wrong framing.</p>
+    </div>
+    <div class="cost-group">
+      <p class="cost-label">The question was never "what's next?"</p>
+      <p>The productive question isn't what to do with the time and the capital. It's what kind of person you want to be. Most founders haven't had to think about that question directly in years. The company was answering it for them. After the exit, it's just sitting there.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 6 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">The other side</p>
+  <div class="sidebar-section-content reveal">
+    <h2>The found room.</h2>
+    <p>There's a phrase for what the period after exit can become, if you let it: the found room.</p>
+    <p>The found room is the space that opens up when the identity cost has been paid off. When the company stops being the explanation for who you are, and you start having to supply that explanation yourself. It's called the found room because it isn't a loss. It's a discovery. The room was there the whole time. You just couldn't get to it while you were running the company.</p>
+    <p>What founders tend to find in that room is what they actually care about, distinct from what they cared about because the company required it. Which problems are genuinely interesting to them. Which relationships matter for their own sake. Which version of a day feels like a life and which version feels like productivity theater.</p>
+    <p>That's not a small thing to know. Most people don't find out until they have to.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 7 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">Before the exit</p>
+  <div class="sidebar-section-content reveal">
+    <h2>For founders who are about to exit.</h2>
+    <p>If you're still in the company, a few things are worth knowing before the deal closes.</p>
+    <p>The transition will probably be harder than you expect, regardless of how well you've prepared financially or operationally. That's not a warning. It's just a description of what tends to happen.</p>
+    <p>The difficulty isn't a sign that you made the wrong decision. It's a sign that the company mattered to you, which is probably part of why it succeeded.</p>
+    <p>The question "what's next?" doesn't have to be answered immediately. Most of the mistakes founders make in the post-exit period come from answering it too fast. The discomfort of not having an answer is real, but it's doing something useful. Let it do its work.</p>
+    <p>The people who've done this well tend to describe it similarly in retrospect: they had to stop trying to get back to something, before they could figure out what they actually wanted to move toward.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 8 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">In the middle</p>
+  <div class="sidebar-section-content reveal">
+    <h2>For founders in the middle of it.</h2>
+    <p>If you've already exited and you're in the middle of this period, what you're experiencing is normal. That doesn't make it easy. It means you're in a recognizable place, even if it doesn't feel recognizable from inside it.</p>
+    <p>Talk to other founders who've been through it. Not people who will congratulate you on the exit, but people who will describe what the year after was actually like. That company matters.</p>
+    <p>Resist the pull to fill the space before you've had a chance to examine it. The discomfort of open time is not a problem to be solved by adding structure. It might be information.</p>
+    <p>The question "who am I without the company?" sounds like a crisis. It's closer to a starting point.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- RELATED -->
+<section class="sidebar-section">
+  <p class="section-label reveal">Related</p>
+  <div class="sidebar-section-content reveal">
+    <div class="related-links">
+      <a href="identity-cost.html">The Identity Cost →</a>
+      <a href="exit-transition.html">The Exit Transition →</a>
+      <a href="the-found-room.html">The Found Room →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-left reveal">
+    <h2>The room is <span>open.</span></h2>
+    <p>Found Room is a coaching practice for founders after the exit. If you're in this period and want to talk through where you are, the founding member community is forming now.</p>
+  </div>
+  <div class="cta-right reveal">
+    <a href="the-room.html" class="btn-primary">Join Found Room</a>
+    <a href="about.html" class="btn-secondary">Read Daniel's story</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Found Room</p>
+  <p>foundroom.co</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
