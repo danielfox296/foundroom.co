@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Identity Cost — Found Room</title>
+  <meta name="description" content="What happens when a business ends up doing psychological work it was never designed to do.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --white: #FFFFFF; --off-white: #F7F7F9; --ink: #0C0C14; --ink-mid: #2C2C3A; --ink-light: #6B6B80; --accent: #2A5FD4; --accent-hover: #1E4DB8; --accent-pale: #EBF0FB; --rule: #E2E2EC; --dark: #0C0C14; --dark-surface: #13131F; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 18px; scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; font-weight: 400; line-height: 1.7; overflow-x: hidden; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.6rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.93); backdrop-filter: blur(14px); border-bottom: 1px solid var(--rule); }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { font-family: 'Inter', sans-serif; font-size: 0.83rem; font-weight: 500; color: var(--ink-mid); text-decoration: none; transition: color 0.18s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { font-family: 'Inter', sans-serif; font-size: 0.83rem; font-weight: 500; color: var(--white); background: var(--accent); text-decoration: none; padding: 0.6rem 1.4rem; transition: background 0.18s; }
+    .nav-cta:hover { background: var(--accent-hover); }
+    .section-rule { width: 100%; height: 1px; background: var(--rule); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; }
+    .section-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); position: sticky; top: 6rem; }
+    .hero { padding: 12rem 6rem 7rem; max-width: 860px; }
+    .hero .eyebrow { opacity: 0; animation: fadeUp 0.7s ease forwards 0.1s; }
+    .hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.4rem, 4vw, 4.2rem); font-weight: 800; line-height: 1.06; letter-spacing: -0.03em; margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.25s; }
+    .hero-sub { font-size: 1.2rem; line-height: 1.6; color: var(--ink-mid); max-width: 500px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s; }
+    .large-intro { background: var(--off-white); padding: 7rem 6rem; border-bottom: 1px solid var(--rule); }
+    .large-intro-inner { max-width: 780px; margin: 0 auto; }
+    .large-intro p { font-size: 1.1rem; line-height: 1.9; color: var(--ink-mid); margin-bottom: 1.6rem; }
+    .large-intro p:last-child { margin-bottom: 0; }
+    .large-intro p.italic { font-style: italic; }
+    .sidebar-section { display: grid; grid-template-columns: 200px 1fr; gap: 6rem; align-items: start; padding: 8rem 6rem; }
+    .sidebar-section-content h2 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 2rem; }
+    .sidebar-section-content p { font-size: 1.05rem; line-height: 1.9; color: var(--ink-mid); max-width: 600px; margin-bottom: 1.4rem; }
+    .sidebar-section-content p:last-child { margin-bottom: 0; }
+    .sidebar-section-content p.italic { font-style: italic; }
+    .related-links { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 0.5rem; }
+    .related-links a { font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--accent); text-decoration: none; transition: color 0.18s; }
+    .related-links a:hover { color: var(--accent-hover); }
+    .cta-section { background: var(--dark); padding: 8rem 6rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .cta-left h2 { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 800; line-height: 1.0; letter-spacing: -0.03em; color: var(--white); margin-bottom: 1.5rem; }
+    .cta-left h2 span { color: var(--accent); }
+    .cta-left p { font-size: 1.05rem; line-height: 1.75; color: rgba(255,255,255,0.45); max-width: 420px; }
+    .cta-right { display: flex; flex-direction: column; align-items: flex-start; }
+    .btn-primary { display: inline-block; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--white); background: var(--accent); text-decoration: none; padding: 0.9rem 1.8rem; transition: background 0.18s; }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-secondary { display: block; width: fit-content; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.65); background: transparent; text-decoration: none; padding: 0.9rem 1.8rem; border: 1px solid rgba(255,255,255,0.18); transition: border-color 0.18s, color 0.18s; margin-top: 1rem; }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.4); color: var(--white); }
+    footer { padding: 2.5rem 6rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.07); background: var(--dark); }
+    footer p { font-size: 0.8rem; color: rgba(255,255,255,0.18); letter-spacing: 0.04em; }
+    @media (max-width: 960px) {
+      nav { padding: 1.3rem 1.5rem; }
+      .nav-links { display: none; }
+      .hero { padding: 8rem 1.5rem 4rem; }
+      .large-intro { padding: 5rem 1.5rem; }
+      .sidebar-section { grid-template-columns: 1fr; gap: 2rem; padding: 5rem 1.5rem; }
+      .section-label { position: static; }
+      .cta-section { grid-template-columns: 1fr; gap: 3rem; padding: 5rem 1.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; gap: 0.8rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">Journal</a>
+  </div>
+  <a href="the-room.html" class="nav-cta">Express Interest</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="eyebrow">The pattern</p>
+  <h1>There's a pattern that shows up in founder-run businesses often enough that it has a name.</h1>
+  <p class="hero-sub">What happens when a business ends up doing psychological work it was never designed to do.</p>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- INTRO -->
+<section class="large-intro">
+  <div class="large-intro-inner reveal">
+    <p>The business is performing. Revenue is fine. The team is solid. By most external measures, things are working. But something feels off. Decisions take longer than they should. There's a low-level friction that optimization doesn't seem to fix. The founder finds themselves more reactive than the situation calls for.</p>
+    <p>The usual explanations don't quite land. It's not a strategy problem. It's not a people problem. It's not a market problem, exactly.</p>
+    <p class="italic">What's often actually happening is that the business has been carrying more than commercial weight for a long time. That's the identity cost.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 1 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">How it happens</p>
+  <div class="sidebar-section-content reveal">
+    <h2>Nobody decides to route their sense of self through their business.</h2>
+    <p>It tends to happen gradually, through conditions that made it almost inevitable.</p>
+    <p>Entrepreneurship became, somewhere in the last two decades, a primary way that ambitious people answer identity questions. Who am I? Does what I do matter? Am I pointed in the right direction? The culture around building companies made those questions feel answerable through the work itself. Success as proof. Growth as evidence. The company as a running argument for your own relevance.</p>
+    <p>That's not a character flaw. It's a reasonable response to a cultural moment where traditional institutions stopped providing those answers and something had to fill the gap. For a lot of founders, the company filled it.</p>
+    <p>The problem is that a company is a commercial structure. It can supply a lot of things. It can't actually supply identity, at least not in any stable way. What it can do is provide ongoing evidence that feels like identity. Revenue up means you're doing it right. Revenue down means something's wrong with you. A bad hire reflects on your judgment. A competitor's win feels personal. The feedback is constant, and the feedback is partly about you, whether you intended that or not.</p>
+    <p>Once that pattern is established, it starts affecting decisions.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 2 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">What it costs</p>
+  <div class="sidebar-section-content reveal">
+    <h2>Two sets of needs that don't always point in the same direction.</h2>
+    <p>When a business is doing identity work alongside commercial work, the two sets of needs conflict regularly. The commercial need is to get accurate information and make good decisions with it. The identity need is to feel like things are going well, or at least to not feel like they aren't. Information that would be useful from a business standpoint gets softened, delayed, or avoided because it carries too much personal weight.</p>
+    <p>This isn't conscious. The founder isn't choosing to distort information. They're just operating inside a structure where certain kinds of truth are harder to receive than others, because those truths carry implications that go beyond the business.</p>
+    <p>The effects compound. Headcount decisions get made partly on the basis of what the team size implies about the company's legitimacy. Spending reflects what the operation should look like, not just what it needs. Metrics get chosen partly for what they demonstrate. From the outside, nothing looks obviously wrong. From the inside, the business feels heavier than it should, and harder to move.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 3 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">The trap</p>
+  <div class="sidebar-section-content reveal">
+    <h2>Trying to fix this through better performance usually deepens it.</h2>
+    <p>When a founder is using business performance to manage their internal state, improving the business works like a painkiller. The improvement creates real relief. The relief feels like resolution. So the next time the internal pressure builds, the founder reaches for the same thing. More success. More proof. More evidence that things are fine.</p>
+    <p>Over time, more of the founder's identity regulation gets routed through the business. The dependency increases. And often, dissatisfaction increases right alongside it, because the underlying question never actually gets answered. It just gets deferred.</p>
+    <p>This is why founders who build successful businesses sometimes feel worse than founders who built smaller ones. The mechanism ran longer. It ran on more fuel. The identity cost accumulated over more time.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 4 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">The exit</p>
+  <div class="sidebar-section-content reveal">
+    <h2>The exit doesn't create the identity cost. It makes it impossible to ignore.</h2>
+    <p>For many founders, the identity cost stays invisible until the business is gone.</p>
+    <p>The exit closes. The feedback loop stops. And the routing that was there the whole time — the part of the founder's sense of self that was running through the company — stays intact, but now there's no signal going through it.</p>
+    <p>That's when it becomes visible. Not as a psychological revelation, but as a structural problem with a traceable cause. The company was doing work it wasn't designed to do. Now that the company is gone, that work has nowhere to go.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- SECTION 5 -->
+<section class="sidebar-section">
+  <p class="section-label reveal">What changes</p>
+  <div class="sidebar-section-content reveal">
+    <h2>Recognition doesn't fix the pattern automatically. But it changes the relationship to it.</h2>
+    <p>Once a founder can see that the business has been carrying identity weight, two things tend to happen. First, a lot of decisions from the past become more legible. The choices that seemed commercially motivated but felt slightly off — the ones that were hard to argue against but harder to fully defend — start making sense in a different way.</p>
+    <p>Second, new decisions become cleaner. The question shifts from "what does this say about me?" to "what does this accomplish?"</p>
+    <p>That shift is small in any individual decision. Across hundreds of decisions, it's the difference between a business that moves and one that carries its own weight.</p>
+    <p>The business doesn't stop mattering. It just stops being asked to do the wrong job.</p>
+  </div>
+</section>
+
+<div class="section-rule"></div>
+
+<!-- RELATED -->
+<section class="sidebar-section">
+  <p class="section-label reveal">Related</p>
+  <div class="sidebar-section-content reveal">
+    <div class="related-links">
+      <a href="post-exit-founder.html">The Post-Exit Founder: A Complete Guide →</a>
+      <a href="exit-transition.html">The Exit Transition →</a>
+      <a href="the-found-room.html">The Found Room →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-left reveal">
+    <h2>The room is <span>open.</span></h2>
+    <p>Found Room is a community for founders navigating the period after the exit. The founding member community is forming now.</p>
+  </div>
+  <div class="cta-right reveal">
+    <a href="the-room.html" class="btn-primary">Join Found Room</a>
+    <a href="about.html" class="btn-secondary">Read Daniel's story</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Found Room</p>
+  <p>foundroom.co</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.08 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
