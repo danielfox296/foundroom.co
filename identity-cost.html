@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Identity Cost — Found Room</title>
-  <meta name="description" content="Your business has been doing something you never asked it to do. The Identity Cost examines how founders route personal needs through business systems — and what it costs them.">
+  <meta name="description" content="The Identity Cost examines how founders route personal needs through business systems — and what becomes possible when they stop.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="assets/css/global.css">
   <style>
-    :root {
+/* identity-cost page styles */
+:root {
       --white: #FFFFFF;
       --off-white: #F7F7F9;
       --ink: #0C0C14;
@@ -349,19 +350,23 @@
 </head>
 <body>
 
-  <nav>
-    <a href="index.html" class="nav-logo">Found Room</a>
-    <div class="nav-links">
-      <a href="about.html">About</a>
-      <a href="the-room.html">The Room</a>
-      <a href="retreats.html">Retreats</a>
-      <a href="identity-cost.html">The Identity Cost</a>
-      <a href="journal.html">Journal</a>
-    </div>
-    <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" class="nav-cta">Let's Talk</a>
-  </nav>
+<!-- =============================================
+   FOUND ROOM — Header / Nav
+   Edit this file to change navigation site-wide.
+   ============================================= -->
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">Journal</a>
+  </div>
+  <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" class="nav-cta">Let's Talk</a>
+</nav>
 
-  <!-- SECTION 1: HERO -->
+<!-- SECTION 1: HERO -->
   <section class="hero">
     <p class="eyebrow">The framework</p>
     <h1>Your business has been doing something you never asked it to do.</h1>
@@ -470,20 +475,15 @@
     </div>
   </section>
 
-  <footer>
-    <p>© 2026 Found Room</p>
-    <p>foundroom.co</p>
-  </footer>
+<!-- =============================================
+   FOUND ROOM — Footer
+   Edit this file to change the footer site-wide.
+   ============================================= -->
+<footer>
+  <p>© 2026 Found Room</p>
+  <p>foundroom.co</p>
+</footer>
 
-  <script>
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-      });
-    }, { threshold: 0.08 });
-    reveals.forEach(el => observer.observe(el));
-  </script>
-
+<script src="assets/js/global.js"></script>
 </body>
 </html>
