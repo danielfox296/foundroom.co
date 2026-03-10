@@ -1,0 +1,359 @@
+backend:
+  name: github
+  repo: danielfox296/foundroom.co
+  branch: main
+
+# Netlify Identity handles authentication
+local_backend: false
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+# Editor UI settings
+editor:
+  preview: false
+
+collections:
+
+  # ─── HOME PAGE ────────────────────────────────────────────────────────────────
+  - name: "home"
+    label: "Home Page"
+    files:
+      - label: "Hero — Founder story"
+        name: "home-hero"
+        file: "_src/pages/index/sections/01-hero.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+            hint: "The two-column hero. Left column has the eyebrow, title, and tagline. Right column has the founder story paragraphs."
+
+      - label: "What This Is"
+        name: "home-what"
+        file: "_src/pages/index/sections/02-what.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+            hint: "The 'A room, not a program.' section."
+
+      - label: "Outcomes Grid"
+        name: "home-outcomes"
+        file: "_src/pages/index/sections/03-outcomes.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+            hint: "The six-item outcomes grid (Lightness, Clarity, etc.). Edit as raw HTML to change grid items."
+
+      - label: "About / Identity Cost"
+        name: "home-about"
+        file: "_src/pages/index/sections/04-about.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "CTA — Express Interest"
+        name: "home-cta"
+        file: "_src/pages/index/sections/05-cta.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+            hint: "The email signup section. The form itself is HTML — edit the heading and description text."
+
+  # ─── ABOUT PAGE ───────────────────────────────────────────────────────────────
+  - name: "about"
+    label: "About Page"
+    files:
+      - label: "Hero"
+        name: "about-hero"
+        file: "_src/pages/about/sections/01-hero.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "Daniel's Story"
+        name: "about-story"
+        file: "_src/pages/about/sections/02-story.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+            hint: "The two-column story section — 'In Daniel's words' (left) and 'Found Room' (right)."
+
+      - label: "Pull Quote"
+        name: "about-quote"
+        file: "_src/pages/about/sections/03-pull-quote.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "Closing — From Daniel"
+        name: "about-closing"
+        file: "_src/pages/about/sections/04-closing.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "CTA Blocks"
+        name: "about-cta"
+        file: "_src/pages/about/sections/05-cta.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+  # ─── THE ROOM PAGE ────────────────────────────────────────────────────────────
+  - name: "the-room"
+    label: "The Room Page"
+    files:
+      - label: "Hero"
+        name: "room-hero"
+        file: "_src/pages/the-room/sections/01-hero.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "What the Room Is"
+        name: "room-what"
+        file: "_src/pages/the-room/sections/02-what-the-room-is.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "Three Formats Grid"
+        name: "room-formats"
+        file: "_src/pages/the-room/sections/03-formats.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+            hint: "The Retreats / Peer Cohorts / Community grid. Switch to raw mode to edit grid items."
+
+      - label: "Who Belongs"
+        name: "room-who"
+        file: "_src/pages/the-room/sections/04-who-belongs.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "CTA — Express Interest"
+        name: "room-cta"
+        file: "_src/pages/the-room/sections/05-cta.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+  # ─── RETREATS PAGE ────────────────────────────────────────────────────────────
+  - name: "retreats"
+    label: "Retreats Page"
+    files:
+      - label: "Hero"
+        name: "retreats-hero"
+        file: "_src/pages/retreats/sections/01-hero.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "The Vision"
+        name: "retreats-vision"
+        file: "_src/pages/retreats/sections/02-vision.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "Why In-Person"
+        name: "retreats-why"
+        file: "_src/pages/retreats/sections/03-why-inperson.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "What We're Building"
+        name: "retreats-building"
+        file: "_src/pages/retreats/sections/04-what-were-building.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+            hint: "The four-item grid (Small, Honest, Located, Unhurried). Switch to raw mode to edit."
+
+      - label: "Who These Are For"
+        name: "retreats-who"
+        file: "_src/pages/retreats/sections/05-who-these-are-for.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "CTA — First Retreat"
+        name: "retreats-cta"
+        file: "_src/pages/retreats/sections/06-cta.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+  # ─── JOURNAL PAGE ─────────────────────────────────────────────────────────────
+  - name: "journal"
+    label: "Journal Page"
+    files:
+      - label: "Hero"
+        name: "journal-hero"
+        file: "_src/pages/journal/sections/01-hero.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "Essay List"
+        name: "journal-essays"
+        file: "_src/pages/journal/sections/02-essays.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+            hint: "The list of essays. Switch to raw mode to add new essays or update titles/descriptions."
+
+  # ─── IDENTITY COST PAGE ───────────────────────────────────────────────────────
+  - name: "identity-cost"
+    label: "Identity Cost Page"
+    files:
+      - label: "Hero"
+        name: "ic-hero"
+        file: "_src/pages/identity-cost/sections/01-hero.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "Large Intro"
+        name: "ic-intro"
+        file: "_src/pages/identity-cost/sections/02-intro.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "How It Starts"
+        name: "ic-starts"
+        file: "_src/pages/identity-cost/sections/03-how-it-starts.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "What It Looks Like"
+        name: "ic-looks-like"
+        file: "_src/pages/identity-cost/sections/04-what-it-looks-like.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "What It Costs"
+        name: "ic-costs"
+        file: "_src/pages/identity-cost/sections/05-what-it-costs.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "What Changes"
+        name: "ic-changes"
+        file: "_src/pages/identity-cost/sections/06-what-changes.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "Found Room Connection"
+        name: "ic-foundroom"
+        file: "_src/pages/identity-cost/sections/07-found-room.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "CTA"
+        name: "ic-cta"
+        file: "_src/pages/identity-cost/sections/08-cta.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+  # ─── ESSAY: WHAT THE BUSINESS WAS DOING ───────────────────────────────────────
+  - name: "essay-01"
+    label: "Essay — What the Business Was Doing"
+    files:
+      - label: "Hero"
+        name: "essay01-hero"
+        file: "_src/pages/essay-what-the-business-was-doing/sections/01-hero.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+
+      - label: "Essay Body"
+        name: "essay01-body"
+        file: "_src/pages/essay-what-the-business-was-doing/sections/02-body.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]
+            hint: "The full essay text. Rich text mode works great here — this is pure prose."
+
+      - label: "Footer Navigation"
+        name: "essay01-footer"
+        file: "_src/pages/essay-what-the-business-was-doing/sections/03-footer-nav.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            modes: ["rich_text", "raw"]

@@ -17,17 +17,35 @@ Structure:
           config.json         — title, description, output filename
           style.css           — page-specific CSS
           sections/           — content modules in alphabetical order
-            01-hero.html
-            02-section.html
+            01-hero.md        — supports Markdown (.md) or HTML (.html)
+            02-section.md
             ...
 
 Output:
     Root-level HTML files (index.html, about.html, etc.)
+
+Notes:
+    - .md section files are rendered via the Python Markdown library
+    - If a sections/ directory contains any .md files, ALL .html files in
+      that directory are ignored (use .md exclusively after migrating)
+    - YAML frontmatter (---...---) at the top of .md files is stripped
+      before rendering, so CMS-managed files work correctly
 """
 
 import os
+import re
 import json
 import glob
+
+try:
+    import markdown as md_lib
+    MD_EXTENSIONS = ['extra', 'md_in_html']
+    HAS_MARKDOWN = True
+except ImportError:
+    HAS_MARKDOWN = False
+    print('Warning: markdown library not installed.')
+    print('Run: pip install Markdown')
+    print('.md section files will fall back to plain text.\n')
 
 REPO     = os.path.dirname(os.path.abspath(__file__))
 SRC      = os.path.join(REPO, '_src')
@@ -39,6 +57,51 @@ PAGES    = os.path.join(SRC, 'pages')
 def read(path):
     with open(path, 'r', encoding='utf-8') as f:
         return f.read()
+
+
+def strip_frontmatter(text):
+    """
+    Remove YAML frontmatter (---...---) from the start of a markdown file.
+    Returns the body content only.
+    """
+    m = re.match(r'^---\s*\n(.*?\n)?---\s*\n(.*)', text, re.DOTALL)
+    if m:
+        return m.group(2).strip()
+    return text.strip()
+
+
+def render_section(path):
+    """
+    Read a section file (.html or .md) and return its HTML content.
+    .md files are rendered via the Markdown library; frontmatter is stripped first.
+    """
+    raw = read(path).strip()
+
+    if path.endswith('.md'):
+        body = strip_frontmatter(raw)
+        if HAS_MARKDOWN:
+            return md_lib.markdown(body, extensions=MD_EXTENSIONS)
+        return body  # fallback: return as plain text
+
+    return raw
+
+
+def collect_sections(sections_dir):
+    """
+    Collect section files from a directory in alphabetical order.
+
+    Strategy:
+    - If ANY .md files exist in the directory, use ONLY .md files.
+    - Otherwise, fall back to .html files.
+    This lets pages migrate to Markdown incrementally; once you add
+    the first .md file, the old .html files in that directory are ignored.
+    """
+    md_files   = sorted(glob.glob(os.path.join(sections_dir, '*.md')))
+    html_files = sorted(glob.glob(os.path.join(sections_dir, '*.html')))
+
+    if md_files:
+        return md_files
+    return html_files
 
 
 def build():
@@ -60,7 +123,7 @@ def build():
             print(f'  ⚠ Skipping {page_dir} — no config.json')
             continue
 
-        config = json.loads(read(config_path))
+        config      = json.loads(read(config_path))
         title       = config.get('title', 'Found Room')
         description = config.get('description', '')
         output      = config.get('output', f'{page_dir}.html')
@@ -70,9 +133,9 @@ def build():
         page_style = read(style_path).strip() if os.path.exists(style_path) else ''
 
         # Assemble content from sections in order
-        sections_dir = os.path.join(page_path, 'sections')
-        section_files = sorted(glob.glob(os.path.join(sections_dir, '*.html')))
-        content = '\n\n'.join(read(f).strip() for f in section_files)
+        sections_dir  = os.path.join(page_path, 'sections')
+        section_files = collect_sections(sections_dir)
+        content = '\n\n'.join(render_section(f) for f in section_files)
 
         # Substitute into base layout
         html = base
