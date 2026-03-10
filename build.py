@@ -70,6 +70,26 @@ def strip_frontmatter(text):
     return text.strip()
 
 
+def dedent_html_tags(text):
+    """
+    Remove leading whitespace from lines that start with an HTML tag.
+
+    Markdown treats lines indented by 4+ spaces as code blocks, which causes
+    HTML tags inside markdown="1" divs to be escaped as <pre><code> if they
+    are indented (as they often are for readability in source files).
+    Stripping indentation from tag lines prevents this while leaving prose
+    lines and blank lines untouched.
+    """
+    result = []
+    for line in text.split('\n'):
+        stripped = line.lstrip()
+        if stripped.startswith('<') or stripped.startswith('</'):
+            result.append(stripped)
+        else:
+            result.append(line)
+    return '\n'.join(result)
+
+
 def render_section(path):
     """
     Read a section file (.html or .md) and return its HTML content.
@@ -80,6 +100,7 @@ def render_section(path):
     if path.endswith('.md'):
         body = strip_frontmatter(raw)
         if HAS_MARKDOWN:
+            body = dedent_html_tags(body)
             return md_lib.markdown(body, extensions=MD_EXTENSIONS)
         return body  # fallback: return as plain text
 
