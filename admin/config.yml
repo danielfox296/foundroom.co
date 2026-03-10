@@ -1,9 +1,7 @@
 backend:
-  name: github
-  repo: danielfox296/foundroom.co
+  name: git-gateway
   branch: main
 
-# Netlify Identity handles authentication
 local_backend: false
 
 media_folder: "assets/images"
