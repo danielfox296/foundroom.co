@@ -25,7 +25,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
             hint: "The two-column hero. Left column has the eyebrow, title, and tagline. Right column has the founder story paragraphs."
 
       - label: "What This Is"
@@ -35,7 +35,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
             hint: "The 'A room, not a program.' section."
 
       - label: "Outcomes Grid"
@@ -45,7 +45,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
             hint: "The six-item outcomes grid (Lightness, Clarity, etc.). Edit as raw HTML to change grid items."
 
       - label: "About / Identity Cost"
@@ -55,7 +55,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "CTA — Express Interest"
         name: "home-cta"
@@ -64,7 +64,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
             hint: "The email signup section. The form itself is HTML — edit the heading and description text."
 
   # ─── ABOUT PAGE ───────────────────────────────────────────────────────────────
@@ -78,7 +78,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "Daniel's Story"
         name: "about-story"
@@ -87,7 +87,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
             hint: "The two-column story section — 'In Daniel's words' (left) and 'Found Room' (right)."
 
       - label: "Pull Quote"
@@ -97,7 +97,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "Closing — From Daniel"
         name: "about-closing"
@@ -106,7 +106,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "CTA Blocks"
         name: "about-cta"
@@ -115,7 +115,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
   # ─── THE ROOM PAGE ────────────────────────────────────────────────────────────
   - name: "the-room"
@@ -128,7 +128,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "What the Room Is"
         name: "room-what"
@@ -137,7 +137,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "Three Formats Grid"
         name: "room-formats"
@@ -146,7 +146,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
             hint: "The Retreats / Peer Cohorts / Community grid. Switch to raw mode to edit grid items."
 
       - label: "Who Belongs"
@@ -156,7 +156,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "CTA — Express Interest"
         name: "room-cta"
@@ -165,7 +165,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
   # ─── RETREATS PAGE ────────────────────────────────────────────────────────────
   - name: "retreats"
@@ -178,7 +178,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "The Vision"
         name: "retreats-vision"
@@ -187,7 +187,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "Why In-Person"
         name: "retreats-why"
@@ -196,7 +196,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "What We're Building"
         name: "retreats-building"
@@ -205,7 +205,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
             hint: "The four-item grid (Small, Honest, Located, Unhurried). Switch to raw mode to edit."
 
       - label: "Who These Are For"
@@ -215,7 +215,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "CTA — First Retreat"
         name: "retreats-cta"
@@ -224,7 +224,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
   # ─── JOURNAL PAGE ─────────────────────────────────────────────────────────────
   - name: "journal"
@@ -237,7 +237,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "Essay List"
         name: "journal-essays"
@@ -246,7 +246,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
             hint: "The list of essays. Switch to raw mode to add new essays or update titles/descriptions."
 
   # ─── IDENTITY COST PAGE ───────────────────────────────────────────────────────
@@ -260,7 +260,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "Large Intro"
         name: "ic-intro"
@@ -269,7 +269,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "How It Starts"
         name: "ic-starts"
@@ -278,7 +278,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "What It Looks Like"
         name: "ic-looks-like"
@@ -287,7 +287,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "What It Costs"
         name: "ic-costs"
@@ -296,7 +296,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "What Changes"
         name: "ic-changes"
@@ -305,7 +305,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "Found Room Connection"
         name: "ic-foundroom"
@@ -314,7 +314,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "CTA"
         name: "ic-cta"
@@ -323,7 +323,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
   # ─── ESSAY: WHAT THE BUSINESS WAS DOING ───────────────────────────────────────
   - name: "essay-01"
@@ -336,7 +336,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
 
       - label: "Essay Body"
         name: "essay01-body"
@@ -345,7 +345,7 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
             hint: "The full essay text. Rich text mode works great here — this is pure prose."
 
       - label: "Footer Navigation"
@@ -355,4 +355,4 @@ collections:
           - label: "Content"
             name: "body"
             widget: "markdown"
-            modes: ["rich_text", "raw"]
+            modes: ["raw", "rich_text"]
