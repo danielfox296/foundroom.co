@@ -19,7 +19,7 @@
 
     /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.6rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.93); backdrop-filter: blur(14px); border-bottom: 1px solid var(--rule); }
-    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
+    .nav-logo { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1.05rem; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
     .nav-links { display: flex; gap: 2rem; align-items: center; }
     .nav-links a { font-family: 'Inter', sans-serif; font-size: 0.83rem; font-weight: 500; color: var(--ink-mid); text-decoration: none; transition: color 0.18s; }
     .nav-links a:hover { color: var(--accent); }
@@ -42,7 +42,7 @@
     /* ESSAY HERO */
     .essay-hero { padding: 12rem 6rem 6rem; max-width: 760px; }
     .essay-hero .eyebrow { opacity: 0; animation: fadeUp 0.7s ease forwards 0.1s; }
-    .essay-hero h1 { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.03em; opacity: 0; animation: fadeUp 0.8s ease forwards 0.25s; margin-bottom: 1.6rem; }
+    .essay-hero h1 { font-family: 'Manrope', sans-serif; font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.03em; opacity: 0; animation: fadeUp 0.8s ease forwards 0.25s; margin-bottom: 1.6rem; }
     .essay-hero .essay-date { font-size: 0.8rem; color: var(--ink-light); letter-spacing: 0.06em; opacity: 0; animation: fadeUp 0.7s ease forwards 0.4s; }
 
     /* ESSAY BODY */
