@@ -10,37 +10,38 @@
   <link rel="canonical" href="{{canonical}}">
 
   <!-- Open Graph -->
-  <meta property="og:type"        content="{{og_type}}">
-  <meta property="og:site_name"   content="Found Room">
-  <meta property="og:title"       content="{{title}}">
+  <meta property="og:type" content="{{og_type}}">
+  <meta property="og:site_name" content="Found Room">
+  <meta property="og:title" content="{{title}}">
   <meta property="og:description" content="{{description}}">
-  <meta property="og:url"         content="{{canonical}}">
-  <meta property="og:image"       content="{{og_image}}">
-  <meta property="og:image:width"  content="1200">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{og_image}}">
+  <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <!-- Twitter / X -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="{{title}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{title}}">
   <meta name="twitter:description" content="{{description}}">
-  <meta name="twitter:image"       content="{{og_image}}">
+  <meta name="twitter:image" content="{{og_image}}">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="icon" type="image/x-icon"  href="assets/favicon.ico">
-  <link rel="apple-touch-icon"          href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
   <!-- Lucide icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/global.css">
   <style>
-{{page_style}}
+    {{page_style}}
   </style>
 </head>
 <body>
@@ -52,17 +53,5 @@
 {{footer}}
 
 <script src="assets/js/global.js"></script>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", function(user) {
-      if (!user) {
-        window.netlifyIdentity.on("login", function() {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
 </body>
 </html>
