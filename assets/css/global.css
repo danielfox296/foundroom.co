@@ -320,6 +320,47 @@ footer {
   margin-bottom: 1.2rem;
 }
 
+
+/* ── Shared text utilities ────────────────── */
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+/* ── Shared button styles ─────────────────── */
+.btn-primary {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--accent);
+  text-decoration: none;
+  padding: 0.9rem 1.8rem;
+  transition: background 0.18s;
+  letter-spacing: 0.02em;
+}
+.btn-primary:hover { background: var(--accent-hover); }
+
+.btn-secondary {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.65);
+  background: transparent;
+  text-decoration: none;
+  padding: 0.9rem 1.8rem;
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: border-color 0.18s, color 0.18s;
+  letter-spacing: 0.02em;
+}
+.btn-secondary:hover { border-color: rgba(255,255,255,0.4); color: var(--white); }
+
 /* ── Responsive ───────────────────────────── */
 @media (max-width: 960px) {
   nav { padding: 1.3rem 1.5rem; }

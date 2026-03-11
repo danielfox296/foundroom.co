@@ -11,9 +11,29 @@
   <link rel="stylesheet" href="assets/css/global.css">
   <style>
 /* The Room page styles */
+/* Hero — full-bleed image */
 .hero {
-  padding: 12rem 6rem 7rem;
-  max-width: 860px;
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 35%;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.35) 0%, rgba(8,8,8,0.55) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 .hero .eyebrow {
   font-size: 0.72rem; font-weight: 500; letter-spacing: 0.13em;
