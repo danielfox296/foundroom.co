@@ -44,7 +44,8 @@
   position: relative;
   min-height: 72vh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 5rem 6rem;
   background-image: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1920&q=85&auto=format&fit=crop');
   background-size: cover;
@@ -67,6 +68,7 @@
   font-size: 0.72rem; font-weight: 500; letter-spacing: 0.13em;
   text-transform: uppercase; color: var(--accent); margin-bottom: 2rem;
   opacity: 0; animation: fadeUp 0.7s ease forwards 0.1s;
+  margin-bottom: auto;
 }
 .hero h1 {
   font-family: 'Manrope', sans-serif;
@@ -117,7 +119,22 @@
     <a href="journal.html">Journal</a>
   </div>
   <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="nav-cta">Let's Talk</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">Journal</a>
+    <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="mobile-nav-cta">Let's Talk</a>
+  </div>
+</div>
 
 <section class="hero">
 <p class="eyebrow">Membership</p>
@@ -161,6 +178,10 @@
 </section>
 <div class="section-rule"></div>
 
+<div class="parallax-band" style="background-image: url('https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=1920&q=80&auto=format&fit=crop')">
+<span class="parallax-band-caption">Found Room — the container for the question</span>
+</div>
+
 <section class="sidebar-section">
 <p class="section-label reveal">Who belongs</p>
 <div class="sidebar-content reveal">
@@ -175,7 +196,7 @@
 <section class="cta-section" id="join">
 <div class="cta-left reveal" markdown="1">
 
-## The room is <span style="color:var(--accent)">forming.</span>
+<h2>The room is <span style="color:var(--accent)">forming.</span></h2>
 
 Found Room is forming its founding member community now. Founding members shape what the room becomes — the formats, the culture, the standards. This is not a waitlist. It's a conversation.
 

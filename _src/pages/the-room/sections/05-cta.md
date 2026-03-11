@@ -3,7 +3,7 @@
 <section class="cta-section" id="join">
   <div class="cta-left reveal" markdown="1">
 
-## The room is <span style="color:var(--accent)">forming.</span>
+<h2>The room is <span style="color:var(--accent)">forming.</span></h2>
 
 Found Room is forming its founding member community now. Founding members shape what the room becomes — the formats, the culture, the standards. This is not a waitlist. It's a conversation.
 

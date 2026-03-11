@@ -6,7 +6,8 @@
   position: relative;
   min-height: 72vh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 5rem 6rem;
   background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=85&auto=format&fit=crop');
   background-size: cover;
@@ -29,6 +30,7 @@
 .about-hero .eyebrow {
   opacity: 0;
   animation: fadeUp 0.7s ease forwards 0.1s;
+  margin-bottom: auto;
 }
 
 .about-hero h1 {
@@ -41,42 +43,44 @@
   animation: fadeUp 0.8s ease forwards 0.25s;
 }
 
-/* Two-column story */
-.story {
+/* Editorial story modules */
+.story-module {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  min-height: 680px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
-.story-left {
-  padding: 7rem 5rem 7rem 6rem;
-  border-right: 1px solid rgba(255,255,255,0.06);
+.story-module--reverse .story-module-image { order: 2; }
+.story-module--reverse .story-module-text  { order: 1; }
+
+.story-module-image {
+  background-size: cover;
+  background-position: center;
+  min-height: 480px;
 }
 
-.story-right {
-  padding: 7rem 6rem 7rem 5rem;
+.story-module-text {
+  padding: 6rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: var(--dark-surface);
 }
 
-.story-label {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 2rem;
+.story-module--reverse .story-module-text {
+  background: var(--dark);
 }
 
-.story-left p,
-.story-right p {
-  font-size: 1.05rem;
+.story-prose p {
+  font-size: 1.02rem;
   line-height: 1.8;
   color: var(--ink-mid);
+  margin-bottom: 1.3rem;
   max-width: 520px;
-  margin-bottom: 1.4rem;
 }
 
-.story-left p:last-child,
-.story-right p:last-child { margin-bottom: 0; }
+.story-prose p:last-child { margin-bottom: 0; }
 
 /* Pull quote */
 .pull-quote {
@@ -174,9 +178,9 @@
 /* Responsive */
 @media (max-width: 960px) {
   .about-hero { padding: 8rem 1.5rem 4rem; }
-  .story { grid-template-columns: 1fr; }
-  .story-left { padding: 4rem 1.5rem; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
-  .story-right { padding: 4rem 1.5rem; }
+  .story-module { grid-template-columns: 1fr; min-height: unset; }
+  .story-module-image { min-height: 320px; order: 0 !important; }
+  .story-module-text { order: 1 !important; padding: 4rem 1.5rem; }
   .pull-quote { padding: 5rem 1.5rem; }
   .closing { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 2rem; }
   .closing-label { position: static; }

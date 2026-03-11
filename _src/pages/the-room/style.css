@@ -4,7 +4,8 @@
   position: relative;
   min-height: 72vh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 5rem 6rem;
   background-image: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1920&q=85&auto=format&fit=crop');
   background-size: cover;
@@ -27,6 +28,7 @@
   font-size: 0.72rem; font-weight: 500; letter-spacing: 0.13em;
   text-transform: uppercase; color: var(--accent); margin-bottom: 2rem;
   opacity: 0; animation: fadeUp 0.7s ease forwards 0.1s;
+  margin-bottom: auto;
 }
 .hero h1 {
   font-family: 'Manrope', sans-serif;

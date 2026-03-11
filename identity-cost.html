@@ -45,7 +45,8 @@
   position: relative;
   min-height: 72vh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 5rem 6rem;
   background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=85&auto=format&fit=crop');
   background-size: cover;
@@ -68,6 +69,7 @@
 .hero .eyebrow {
   opacity: 0;
   animation: fadeUp 0.7s ease forwards 0.1s;
+  margin-bottom: auto;
 }
 
 .hero h1 {
@@ -208,7 +210,22 @@
     <a href="journal.html">Journal</a>
   </div>
   <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="nav-cta">Let's Talk</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">Journal</a>
+    <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="mobile-nav-cta">Let's Talk</a>
+  </div>
+</div>
 
 <section class="hero">
 <p class="eyebrow">The framework</p>
@@ -251,6 +268,10 @@
 </div>
 </section>
 <div class="section-rule"></div>
+
+<div class="parallax-band" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1920&q=80&auto=format&fit=crop')">
+<span class="parallax-band-caption">The Identity Cost — what the business is doing instead</span>
+</div>
 
 <section class="sidebar-section">
 <p class="section-label reveal">What it costs</p>

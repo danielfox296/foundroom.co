@@ -46,7 +46,8 @@
   position: relative;
   min-height: 72vh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 5rem 6rem;
   background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=85&auto=format&fit=crop');
   background-size: cover;
@@ -69,6 +70,7 @@
 .about-hero .eyebrow {
   opacity: 0;
   animation: fadeUp 0.7s ease forwards 0.1s;
+  margin-bottom: auto;
 }
 
 .about-hero h1 {
@@ -81,42 +83,44 @@
   animation: fadeUp 0.8s ease forwards 0.25s;
 }
 
-/* Two-column story */
-.story {
+/* Editorial story modules */
+.story-module {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  min-height: 680px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
-.story-left {
-  padding: 7rem 5rem 7rem 6rem;
-  border-right: 1px solid rgba(255,255,255,0.06);
+.story-module--reverse .story-module-image { order: 2; }
+.story-module--reverse .story-module-text  { order: 1; }
+
+.story-module-image {
+  background-size: cover;
+  background-position: center;
+  min-height: 480px;
 }
 
-.story-right {
-  padding: 7rem 6rem 7rem 5rem;
+.story-module-text {
+  padding: 6rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: var(--dark-surface);
 }
 
-.story-label {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 2rem;
+.story-module--reverse .story-module-text {
+  background: var(--dark);
 }
 
-.story-left p,
-.story-right p {
-  font-size: 1.05rem;
+.story-prose p {
+  font-size: 1.02rem;
   line-height: 1.8;
   color: var(--ink-mid);
+  margin-bottom: 1.3rem;
   max-width: 520px;
-  margin-bottom: 1.4rem;
 }
 
-.story-left p:last-child,
-.story-right p:last-child { margin-bottom: 0; }
+.story-prose p:last-child { margin-bottom: 0; }
 
 /* Pull quote */
 .pull-quote {
@@ -214,9 +218,9 @@
 /* Responsive */
 @media (max-width: 960px) {
   .about-hero { padding: 8rem 1.5rem 4rem; }
-  .story { grid-template-columns: 1fr; }
-  .story-left { padding: 4rem 1.5rem; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
-  .story-right { padding: 4rem 1.5rem; }
+  .story-module { grid-template-columns: 1fr; min-height: unset; }
+  .story-module-image { min-height: 320px; order: 0 !important; }
+  .story-module-text { order: 1 !important; padding: 4rem 1.5rem; }
   .pull-quote { padding: 5rem 1.5rem; }
   .closing { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 2rem; }
   .closing-label { position: static; }
@@ -239,7 +243,22 @@
     <a href="journal.html">Journal</a>
   </div>
   <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="nav-cta">Let's Talk</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">Journal</a>
+    <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="mobile-nav-cta">Let's Talk</a>
+  </div>
+</div>
 
 <section class="about-hero">
 <p class="eyebrow">The story behind Found Room</p>
@@ -247,31 +266,63 @@
 </section>
 <div class="section-rule"></div>
 
-<section class="story">
-<div class="story-left reveal">
-<p class="story-label">In Daniel's words</p>
-<p>I put myself through design school doing freelance work. From the beginning, what drove me wasn't just the work — it was the feedback the work produced. Recognition. Legitimacy. A way of knowing I was doing something that mattered.</p>
-<p>I didn't pathologize that at the time. I still don't. It's a completely normal place to begin.</p>
-<p>What I didn't see was how that early hunger would shape everything that came after — the company I built, the decisions I made inside it, and what happened to me when it was gone.</p>
-<p>I scaled that company to 180 people and tens of millions in annual revenue. We were recognized publicly. By any measure the culture uses to keep score, it worked. And then I exited. And I spent years in a low-grade disorientation I didn't have language for.</p>
-<p>I kept working. Advising founders, consulting on strategy and positioning, ghostwriting for public figures, staying useful. What I was actually doing — though I couldn't name it then — was searching. For something that could replace what the company had quietly been doing for me all along. Giving me a place to stand. A way to know I mattered.</p>
-<p>What I found instead was that every founder I worked with was doing some version of the same thing. Making decisions not from first principles, but from a need for reassurance. Building structures that served their sense of legitimacy more than their business. Using the company to answer questions it was never designed to answer.</p>
-<p>I recognized it because I'd been doing it for years.</p>
-<p>Then the floor dropped. Illness. The loss of relationships I'd counted on. The slow disappearance of the external markers I'd used to know I was okay. At some point there was nothing left to optimize and nowhere left to hide from the actual question.</p>
-<p>That period produced The Identity Cost — a body of work examining how founders route personal needs through business systems, and what it costs them. And it produced Found Room.</p>
+<!-- Module 1: Daniel's story -->
+<section class="story-module reveal">
+<div class="story-module-image" style="background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=85&auto=format&fit=crop')"></div>
+<div class="story-module-text">
+<p class="eyebrow">In Daniel's words</p>
+<div class="story-prose" markdown="1">
+
+I put myself through design school doing freelance work. From the beginning, what drove me wasn't just the work — it was the feedback the work produced. Recognition. Legitimacy. A way of knowing I was doing something that mattered.
+
+I didn't pathologize that at the time. I still don't. It's a completely normal place to begin.
+
+What I didn't see was how that early hunger would shape everything that came after — the company I built, the decisions I made inside it, and what happened to me when it was gone.
+
+I scaled that company to 180 people and tens of millions in annual revenue. We were recognized publicly. By any measure the culture uses to keep score, it worked. And then I exited. And I spent years in a low-grade disorientation I didn't have language for.
+
+I kept working. Advising founders, consulting on strategy and positioning, ghostwriting for public figures, staying useful. What I was actually doing — though I couldn't name it then — was searching. For something that could replace what the company had quietly been doing for me all along. Giving me a place to stand. A way to know I mattered.
+
+What I found instead was that every founder I worked with was doing some version of the same thing. Making decisions not from first principles, but from a need for reassurance. Building structures that served their sense of legitimacy more than their business. Using the company to answer questions it was never designed to answer.
+
+I recognized it because I'd been doing it for years.
+
+Then the floor dropped. Illness. The loss of relationships I'd counted on. The slow disappearance of the external markers I'd used to know I was okay. At some point there was nothing left to optimize and nowhere left to hide from the actual question.
+
+That period produced The Identity Cost — a body of work examining how founders route personal needs through business systems, and what it costs them. And it produced Found Room.
+
 </div>
-<div class="story-right reveal">
-<p class="story-label">Found Room</p>
-<p>Found Room exists because that question — what am I building this for, and is it working — deserves a real container. Not a therapist's office. Not another mastermind. Not a podcast or a course or a weekend workshop with a certificate.</p>
-<p>A room. With other founders who are living the same question, at different stages, with different versions of the same weight.</p>
-<p>The community draws on The Identity Cost as one available lens — not a curriculum to follow, but a framework for seeing what's often invisible inside a business. Beyond that, Found Room takes no position on what members should do, want, or become. The room holds the question. The members bring everything else.</p>
-<p>Retreats, peer cohorts, and an ongoing private community form the structure. What happens inside them is determined by who shows up.</p>
 </div>
 </section>
+
+<!-- Module 2: Found Room -->
+<section class="story-module story-module--reverse reveal">
+<div class="story-module-image" style="background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=85&auto=format&fit=crop')"></div>
+<div class="story-module-text">
+<p class="eyebrow">Found Room</p>
+<div class="story-prose" markdown="1">
+
+Found Room exists because that question — what am I building this for, and is it working — deserves a real container. Not a therapist's office. Not another mastermind. Not a podcast or a course or a weekend workshop with a certificate.
+
+A room. With other founders who are living the same question, at different stages, with different versions of the same weight.
+
+The community draws on The Identity Cost as one available lens — not a curriculum to follow, but a framework for seeing what's often invisible inside a business. Beyond that, Found Room takes no position on what members should do, want, or become. The room holds the question. The members bring everything else.
+
+Retreats, peer cohorts, and an ongoing private community form the structure. What happens inside them is determined by who shows up.
+
+</div>
+</div>
+</section>
+
+<div class="section-rule"></div>
 
 <section class="pull-quote reveal">
 <blockquote>"The most successful founders are often carrying the most — and have the fewest places to set it down honestly."</blockquote>
 </section>
+
+<div class="parallax-band" style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1920&q=80&auto=format&fit=crop')">
+<span class="parallax-band-caption">Found Room — a place to set it down</span>
+</div>
 
 <section class="closing">
 <p class="closing-label reveal">From Daniel</p>

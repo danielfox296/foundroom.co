@@ -5,7 +5,8 @@
   position: relative;
   min-height: 68vh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 5rem 6rem;
   background-image: url('https://images.unsplash.com/photo-1456324463128-7ff6903988d8?w=1920&q=85&auto=format&fit=crop');
   background-size: cover;
@@ -28,6 +29,7 @@
 .journal-hero .eyebrow {
   opacity: 0;
   animation: fadeUp 0.7s ease forwards 0.1s;
+  margin-bottom: auto;
 }
 
 .journal-hero h1 {

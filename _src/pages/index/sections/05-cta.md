@@ -3,7 +3,7 @@
 <section class="cta-section" id="join">
   <div class="cta-left reveal" markdown="1">
 
-## The room is <span>opening.</span>
+<h2>The room is <span>opening.</span></h2>
 
 Found Room is forming its founding member community now. Express your interest and be among the first to hear when the room is open.
 

@@ -3,7 +3,7 @@
 <section class="cta-section" id="join">
   <div class="cta-left reveal" markdown="1">
 
-## Be part of the <span style="color:var(--accent)">first retreat.</span>
+<h2>Be part of the <span style="color:var(--accent)">first retreat.</span></h2>
 
 Found Room's first retreat is in development. We're looking for a small group of founding members to help shape what it becomes — the format, the location, the focus. If this resonates, express your interest. Daniel will be in touch directly.
 

@@ -45,7 +45,8 @@
   position: relative;
   min-height: 68vh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 5rem 6rem;
   background-image: url('https://images.unsplash.com/photo-1485988412941-77a197dbb2ca?w=1920&q=85&auto=format&fit=crop');
   background-size: cover;
@@ -68,6 +69,7 @@
 .essay-hero .eyebrow {
   opacity: 0;
   animation: fadeUp 0.7s ease forwards 0.1s;
+  margin-bottom: auto;
 }
 
 .essay-hero h1 {
@@ -174,7 +176,22 @@
     <a href="journal.html">Journal</a>
   </div>
   <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="nav-cta">Let's Talk</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">Journal</a>
+    <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="mobile-nav-cta">Let's Talk</a>
+  </div>
+</div>
 
 <section class="essay-hero">
 <p class="eyebrow">Journal — Essay 01</p>

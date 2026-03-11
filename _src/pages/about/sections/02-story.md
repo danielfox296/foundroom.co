@@ -1,9 +1,11 @@
 ---
 ---
-<section class="story" markdown="1">
-  <div class="story-left reveal" markdown="1">
-
-<p class="story-label">In Daniel's words</p>
+<!-- Module 1: Daniel's story -->
+<section class="story-module reveal">
+  <div class="story-module-image" style="background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&q=85&auto=format&fit=crop')"></div>
+  <div class="story-module-text">
+    <p class="eyebrow">In Daniel's words</p>
+    <div class="story-prose" markdown="1">
 
 I put myself through design school doing freelance work. From the beginning, what drove me wasn't just the work — it was the feedback the work produced. Recognition. Legitimacy. A way of knowing I was doing something that mattered.
 
@@ -23,10 +25,16 @@ Then the floor dropped. Illness. The loss of relationships I'd counted on. The s
 
 That period produced The Identity Cost — a body of work examining how founders route personal needs through business systems, and what it costs them. And it produced Found Room.
 
+    </div>
   </div>
-  <div class="story-right reveal" markdown="1">
+</section>
 
-<p class="story-label">Found Room</p>
+<!-- Module 2: Found Room -->
+<section class="story-module story-module--reverse reveal">
+  <div class="story-module-image" style="background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=85&auto=format&fit=crop')"></div>
+  <div class="story-module-text">
+    <p class="eyebrow">Found Room</p>
+    <div class="story-prose" markdown="1">
 
 Found Room exists because that question — what am I building this for, and is it working — deserves a real container. Not a therapist's office. Not another mastermind. Not a podcast or a course or a weekend workshop with a certificate.
 
@@ -36,5 +44,8 @@ The community draws on The Identity Cost as one available lens — not a curricu
 
 Retreats, peer cohorts, and an ongoing private community form the structure. What happens inside them is determined by who shows up.
 
+    </div>
   </div>
 </section>
+
+<div class="section-rule"></div>
