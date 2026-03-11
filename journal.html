@@ -34,6 +34,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/global.css">
@@ -99,9 +101,36 @@
   border-top: 1px solid rgba(255,255,255,0.06);
   padding: 3rem 0;
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2rem;
-  align-items: start;
+  grid-template-columns: 120px 1fr auto;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* Square thumbnail */
+.essay-thumb {
+  display: block;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.essay-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%) brightness(0.85);
+  transition: filter 0.3s ease, transform 0.4s ease;
+}
+
+.essay-thumb:hover img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.04);
+}
+
+.essay-thumb--soon img {
+  filter: grayscale(60%) brightness(0.55);
 }
 
 .essay-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.07); }
@@ -157,7 +186,14 @@
 @media (max-width: 960px) {
   .journal-hero { padding: 8rem 1.5rem 4rem; }
   .essay-list { padding: 0 1.5rem 5rem; }
-  .essay-item { grid-template-columns: 1fr; gap: 1rem; }
+  .essay-item { grid-template-columns: 80px 1fr; gap: 1.2rem; flex-wrap: wrap; }
+  .essay-thumb { width: 80px; height: 80px; }
+  .essay-read { grid-column: 2; padding-top: 0; }
+}
+
+@media (max-width: 480px) {
+  .essay-item { grid-template-columns: 1fr; }
+  .essay-thumb { width: 100%; height: 180px; }
 }
   </style>
 </head>
@@ -203,6 +239,9 @@
 
 <section class="essay-list">
 <div class="essay-item reveal">
+<p><a href="essay-what-the-business-was-doing.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
 <div class="essay-meta">
 <p><span class="essay-number">01</span></p>
 <p class="essay-title">What the business was doing for you that you never asked it to do</p>
@@ -212,6 +251,9 @@
 <p><a href="essay-what-the-business-was-doing.html" class="essay-read">Read →</a></p>
 </div>
 <div class="essay-item reveal">
+<div class="essay-thumb essay-thumb--soon">
+<img src="https://images.unsplash.com/photo-1532153975070-2e9ab71f1b14?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</div>
 <div class="essay-meta">
 <p><span class="essay-number">02</span></p>
 <p class="essay-title">The long unwinding: what happens after you sell</p>
@@ -221,6 +263,9 @@
 <p><a href="#" class="essay-read coming-soon">Coming soon</a></p>
 </div>
 <div class="essay-item reveal">
+<div class="essay-thumb essay-thumb--soon">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</div>
 <div class="essay-meta">
 <p><span class="essay-number">03</span></p>
 <p class="essay-title">Why optimization stops working</p>
@@ -230,6 +275,9 @@
 <p><a href="#" class="essay-read coming-soon">Coming soon</a></p>
 </div>
 <div class="essay-item reveal">
+<div class="essay-thumb essay-thumb--soon">
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</div>
 <div class="essay-meta">
 <p><span class="essay-number">04</span></p>
 <p class="essay-title">The founder who stays</p>
@@ -239,6 +287,9 @@
 <p><a href="#" class="essay-read coming-soon">Coming soon</a></p>
 </div>
 <div class="essay-item reveal">
+<div class="essay-thumb essay-thumb--soon">
+<img src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</div>
 <div class="essay-meta">
 <p><span class="essay-number">05</span></p>
 <p class="essay-title">On authorship</p>
@@ -248,6 +299,9 @@
 <p><a href="#" class="essay-read coming-soon">Coming soon</a></p>
 </div>
 <div class="essay-item reveal">
+<div class="essay-thumb essay-thumb--soon">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</div>
 <div class="essay-meta">
 <p><span class="essay-number">06</span></p>
 <p class="essay-title">What founders actually need that no community is providing</p>

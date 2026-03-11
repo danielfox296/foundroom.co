@@ -8,9 +8,9 @@
   --ink: #F0EDE8;
   --ink-mid: #A89F98;
   --ink-light: #706B64;
-  --accent: #C96B4A;
-  --accent-hover: #B35A3A;
-  --accent-pale: rgba(201,107,74,0.12);
+  --accent: #C8F135;
+  --accent-hover: #AEDA1A;
+  --accent-pale: rgba(200,241,53,0.10);
   --rule: rgba(255,255,255,0.07);
   --dark: #080808;
   --dark-surface: #111010;
@@ -308,7 +308,7 @@ nav.scrolled {
 
 .about-aside {
   background: var(--accent-pale);
-  border: 1px solid rgba(201,107,74,0.2);
+  border: 1px solid rgba(200,241,53,0.18);
   padding: 2.5rem;
   position: sticky;
   top: 6rem;

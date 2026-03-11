@@ -4,32 +4,32 @@
   <h2 class="reveal">What founders find here.</h2>
   <div class="outcomes-grid" markdown="1">
     <div class="outcome-item reveal" markdown="1">
-      <p class="outcome-number">01</p>
+      <div class="icon-feature"><i data-lucide="feather"></i></div>
       <h3>Lightness</h3>
       <p>Less weight carried alone. More ease in decisions, relationships, and the ordinary moments of a day.</p>
     </div>
     <div class="outcome-item reveal" markdown="1">
-      <p class="outcome-number">02</p>
+      <div class="icon-feature"><i data-lucide="focus"></i></div>
       <h3>Clarity</h3>
       <p>A clearer sense of what matters, what doesn't, and what you're actually building toward — in work and in life.</p>
     </div>
     <div class="outcome-item reveal" markdown="1">
-      <p class="outcome-number">03</p>
+      <div class="icon-feature"><i data-lucide="door-open"></i></div>
       <h3>The right rooms</h3>
       <p>Founders who've been somewhere worth going. Honest peers. Conversations that don't require you to perform.</p>
     </div>
     <div class="outcome-item reveal" markdown="1">
-      <p class="outcome-number">04</p>
+      <div class="icon-feature"><i data-lucide="anchor"></i></div>
       <h3>Groundedness</h3>
       <p>A stable place to stand that doesn't depend on outcomes, valuations, or whether this quarter went well.</p>
     </div>
     <div class="outcome-item reveal" markdown="1">
-      <p class="outcome-number">05</p>
+      <div class="icon-feature"><i data-lucide="maximize-2"></i></div>
       <h3>Expansion</h3>
       <p>More of yourself available — for the work, for the people you love, for the life you're actually trying to build.</p>
     </div>
     <div class="outcome-item reveal" markdown="1">
-      <p class="outcome-number">06</p>
+      <div class="icon-feature"><i data-lucide="trending-up"></i></div>
       <h3>Progress</h3>
       <p>Visible, real movement. Not optimized metrics. A life that looks and feels different than it did before.</p>
     </div>

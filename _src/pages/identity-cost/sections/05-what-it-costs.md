@@ -4,15 +4,15 @@
   <p class="section-label reveal">What it costs</p>
   <div class="sidebar-section-content reveal" markdown="1">
     <div class="cost-group" markdown="1">
-      <p class="cost-label">The business pays:</p>
+      <div class="cost-group-header"><div class="icon-feature"><i data-lucide="building-2"></i></div><p class="cost-label">The business pays:</p></div>
       <p>Decisions made from identity rather than logic. Resources held back defensively. Processes that serve the founder's need for control rather than operational efficiency. Symbolic labor — work that signals rather than produces. Difficulty scaling because scaling requires releasing what the founder is using to feel okay.</p>
     </div>
     <div class="cost-group" markdown="1">
-      <p class="cost-label">The founder pays:</p>
+      <div class="cost-group-header"><div class="icon-feature"><i data-lucide="user"></i></div><p class="cost-label">The founder pays:</p></div>
       <p>Volatility tied to outcomes. Difficulty resting. The sense of being perpetually on call — not because the business demands it, but because the need is always active. Relationships that exist in the shadow of the company. An identity so merged with the business that imagining life without it produces something close to dread.</p>
     </div>
     <div class="cost-group" markdown="1">
-      <p class="cost-label">After exit, the cost becomes visible:</p>
+      <div class="cost-group-header"><div class="icon-feature"><i data-lucide="log-out"></i></div><p class="cost-label">After exit, the cost becomes visible:</p></div>
       <p>The mechanism disappears. The need remains. The founder is left holding a question they've been outsourcing for years.</p>
       <p class="italic">Who am I without this?</p>
     </div>

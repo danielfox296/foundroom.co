@@ -3,6 +3,9 @@
 <section class="essay-list" markdown="1">
 
   <div class="essay-item reveal" markdown="1">
+    <a href="essay-what-the-business-was-doing.html" class="essay-thumb">
+      <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+    </a>
     <div class="essay-meta" markdown="1">
       <span class="essay-number">01</span>
       <p class="essay-title">What the business was doing for you that you never asked it to do</p>
@@ -13,6 +16,9 @@
   </div>
 
   <div class="essay-item reveal" markdown="1">
+    <div class="essay-thumb essay-thumb--soon">
+      <img src="https://images.unsplash.com/photo-1532153975070-2e9ab71f1b14?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+    </div>
     <div class="essay-meta" markdown="1">
       <span class="essay-number">02</span>
       <p class="essay-title">The long unwinding: what happens after you sell</p>
@@ -23,6 +29,9 @@
   </div>
 
   <div class="essay-item reveal" markdown="1">
+    <div class="essay-thumb essay-thumb--soon">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+    </div>
     <div class="essay-meta" markdown="1">
       <span class="essay-number">03</span>
       <p class="essay-title">Why optimization stops working</p>
@@ -33,6 +42,9 @@
   </div>
 
   <div class="essay-item reveal" markdown="1">
+    <div class="essay-thumb essay-thumb--soon">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+    </div>
     <div class="essay-meta" markdown="1">
       <span class="essay-number">04</span>
       <p class="essay-title">The founder who stays</p>
@@ -43,6 +55,9 @@
   </div>
 
   <div class="essay-item reveal" markdown="1">
+    <div class="essay-thumb essay-thumb--soon">
+      <img src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+    </div>
     <div class="essay-meta" markdown="1">
       <span class="essay-number">05</span>
       <p class="essay-title">On authorship</p>
@@ -53,6 +68,9 @@
   </div>
 
   <div class="essay-item reveal" markdown="1">
+    <div class="essay-thumb essay-thumb--soon">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+    </div>
     <div class="essay-meta" markdown="1">
       <span class="essay-number">06</span>
       <p class="essay-title">What founders actually need that no community is providing</p>

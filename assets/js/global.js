@@ -89,3 +89,8 @@ function handleSubmit() {
     button.disabled = false;
   });
 }
+
+// Lucide icons — render all <i data-lucide="..."> elements
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.lucide) lucide.createIcons();
+});

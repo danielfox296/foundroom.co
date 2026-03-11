@@ -10,9 +10,9 @@
   --ink: #F0EDE8;             /* main text on dark backgrounds */
   --ink-mid: #A89F98;         /* secondary text */
   --ink-light: #706B64;       /* tertiary / muted text */
-  --accent: #C96B4A;          /* terracotta */
-  --accent-hover: #B35A3A;    /* darker terracotta */
-  --accent-pale: rgba(201,107,74,0.12);
+  --accent: #C8F135;          /* electric lime */
+  --accent-hover: #AEDA1A;    /* lime hover */
+  --accent-pale: rgba(200,241,53,0.10);
   --rule: rgba(255,255,255,0.07);
   --dark: #080808;            /* main page background */
   --dark-surface: #111010;    /* card / section surface */
@@ -402,21 +402,21 @@ footer {
 
 /* ── Button hover glow ────────────────────── */
 .btn-primary {
-  box-shadow: 0 0 0 rgba(201,107,74,0);
+  box-shadow: 0 0 0 rgba(200,241,53,0);
   transition: background 0.18s, box-shadow 0.25s;
 }
 .btn-primary:hover {
   background: var(--accent-hover);
-  box-shadow: 0 0 28px rgba(201,107,74,0.42), 0 0 8px rgba(201,107,74,0.2);
+  box-shadow: 0 0 28px rgba(200,241,53,0.38), 0 0 8px rgba(200,241,53,0.18);
 }
 
 .btn-secondary {
   transition: border-color 0.18s, color 0.18s, box-shadow 0.25s;
 }
 .btn-secondary:hover {
-  border-color: rgba(201,107,74,0.7);
+  border-color: rgba(200,241,53,0.65);
   color: var(--white);
-  box-shadow: 0 0 20px rgba(201,107,74,0.15);
+  box-shadow: 0 0 20px rgba(200,241,53,0.12);
 }
 
 /* ── Hamburger button ─────────────────────── */
@@ -514,4 +514,50 @@ footer {
   .cta-section { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 3rem; }
   .footer-inner { grid-template-columns: 1fr 1fr; padding: 3rem 1.5rem 2rem; gap: 2.5rem; }
   .footer-bottom { padding: 1.2rem 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+
+/* ── Lucide icon styles ───────────────────── */
+[data-lucide] {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  fill: none;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.icon-feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(200,241,53,0.25);
+  border-radius: 2px;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.icon-feature [data-lucide] {
+  width: 20px;
+  height: 20px;
+}
+
+/* ── Cost group icon header ───────────────── */
+.cost-group-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.cost-group-header .icon-feature {
+  margin-bottom: 0;
+}
+
+.cost-group-header .cost-label {
+  margin-bottom: 0;
 }
