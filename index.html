@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO -->
-  <title>Found Room</title>
-  <meta name="description" content="A private community for founders who are ready to invest in the full picture — the company and the life.">
+  <title>Found Room — For Founders Who've Built Something Real</title>
+  <meta name="description" content="A private community for experienced founders navigating what comes after — and what comes next. Not a program. A room.">
   <link rel="canonical" href="https://foundroom.co/">
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website">
   <meta property="og:site_name"   content="Found Room">
-  <meta property="og:title"       content="Found Room">
-  <meta property="og:description" content="A private community for founders who are ready to invest in the full picture — the company and the life.">
+  <meta property="og:title"       content="Found Room — For Founders Who've Built Something Real">
+  <meta property="og:description" content="A private community for experienced founders navigating what comes after — and what comes next. Not a program. A room.">
   <meta property="og:url"         content="https://foundroom.co/">
   <meta property="og:image"       content="https://images.unsplash.com/photo-1584392480816-eaad92a75e60?w=1200&h=630&q=85&auto=format&fit=crop">
   <meta property="og:image:width"  content="1200">
@@ -21,8 +21,8 @@
 
   <!-- Twitter / X -->
   <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Found Room">
-  <meta name="twitter:description" content="A private community for founders who are ready to invest in the full picture — the company and the life.">
+  <meta name="twitter:title"       content="Found Room — For Founders Who've Built Something Real">
+  <meta name="twitter:description" content="A private community for experienced founders navigating what comes after — and what comes next. Not a program. A room.">
   <meta name="twitter:image"       content="https://images.unsplash.com/photo-1584392480816-eaad92a75e60?w=1200&h=630&q=85&auto=format&fit=crop">
 
   <!-- Favicon -->
@@ -178,10 +178,10 @@ nav.scrolled {
 
 .hero-title {
   font-family: 'Manrope', sans-serif;
-  font-size: clamp(4.5rem, 9vw, 8.5rem);
+  font-size: clamp(3rem, 6vw, 5.5rem);
   font-weight: 800;
-  line-height: 0.9;
-  letter-spacing: -0.035em;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   color: #fff;
   margin-bottom: 2.2rem;
   opacity: 0;
@@ -266,57 +266,28 @@ nav.scrolled {
   margin-bottom: 1.3rem;
 }
 
-/* ── Outcomes ── */
-.outcomes {
-  background: var(--dark-surface);
-  padding: 8rem 6rem;
+/* ── Recognition paragraph ── */
+.recognition {
+  padding: 10rem 6rem;
   border-top: 1px solid rgba(255,255,255,0.05);
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.outcomes h2 {
-  font-family: 'Manrope', sans-serif;
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  margin-bottom: 4rem;
-  color: var(--ink);
+.recognition-inner {
+  max-width: 720px;
 }
 
-.outcomes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0 4rem;
-}
-
-.outcome-item {
-  padding: 2.5rem 0;
-  border-top: 1px solid rgba(255,255,255,0.12);
-}
-
-.outcome-number {
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  color: var(--accent);
-  margin-bottom: 1.2rem;
-  text-transform: uppercase;
-}
-
-.outcome-item h3 {
-  font-family: 'Manrope', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-}
-
-.outcome-item p {
-  font-size: 0.9rem;
-  line-height: 1.65;
+.recognition p {
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.95;
   color: var(--ink-mid);
+  margin-bottom: 2.2rem;
+}
+
+.recognition p:first-child {
+  font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+  color: var(--ink);
+  line-height: 1.85;
 }
 
 /* ── About ── */
@@ -328,6 +299,16 @@ nav.scrolled {
   align-items: start;
 }
 
+.about-content h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  color: var(--ink);
+}
+
 .about-content blockquote {
   font-family: 'Manrope', sans-serif;
   font-size: clamp(1.4rem, 2.3vw, 2rem);
@@ -336,7 +317,7 @@ nav.scrolled {
   letter-spacing: -0.02em;
   border-left: 2px solid var(--accent);
   padding-left: 2rem;
-  margin-bottom: 3rem;
+  margin: 2.5rem 0;
   color: var(--ink);
 }
 
@@ -347,6 +328,14 @@ nav.scrolled {
   max-width: 580px;
   margin-bottom: 1.3rem;
 }
+
+.about-content a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.18s;
+}
+.about-content a:hover { opacity: 0.75; }
 
 .about-aside {
   background: var(--accent-pale);
@@ -381,12 +370,11 @@ nav.scrolled {
 @media (max-width: 960px) {
   nav { padding: 1.3rem 1.5rem; }
   .nav-links { display: none; }
-  .hero-title { font-size: clamp(3.5rem, 13vw, 5rem); }
+  .hero-title { font-size: clamp(2.5rem, 10vw, 4rem); }
   .hero-tagline { font-size: 0.95rem; }
   .what { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 2rem; }
   .what-label { position: static; }
-  .outcomes { padding: 5rem 1.5rem; }
-  .outcomes-grid { grid-template-columns: 1fr; gap: 0; }
+  .recognition { padding: 6rem 1.5rem; }
   .about { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 3rem; }
   .about-aside { position: static; }
 }
@@ -407,7 +395,7 @@ nav.scrolled {
     <a href="identity-cost.html">The Identity Cost</a>
     <a href="journal.html">Journal</a>
   </div>
-  <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="nav-cta">Let's Talk</a>
+  <a href="#join" class="nav-cta">Express Interest</a>
   <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -421,16 +409,16 @@ nav.scrolled {
     <a href="retreats.html">Retreats</a>
     <a href="identity-cost.html">The Identity Cost</a>
     <a href="journal.html">Journal</a>
-    <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="mobile-nav-cta">Let's Talk</a>
+    <a href="#join" class="mobile-nav-cta">Express Interest</a>
   </div>
 </div>
 
 <section class="hero">
 <div class="hero-content">
-<p class="eyebrow">A community for founders</p>
-<h1 class="hero-title">Found<br>Room.</h1>
-<p class="hero-tagline">For founders building great companies and great lives.</p>
-<a href="#what" class="hero-cta">Explore Found Room</a>
+<p class="eyebrow">foundroom.co</p>
+<h1 class="hero-title">You got here.<br>It doesn't feel the way<br>you thought it would.</h1>
+<p class="hero-tagline">Found Room is a private community for founders who've built something real — and are ready to be honest about what comes next.</p>
+<a href="#join" class="hero-cta">Express Interest</a>
 </div>
 <p class="hero-scroll">Scroll to explore</p>
 </section>
@@ -442,80 +430,60 @@ nav.scrolled {
 <p>What this is</p>
 </div>
 <div class="what-content reveal">
-<h2>A room, not a program.</h2>
-<p>Found Room is a private community for experienced founders. Not a course. Not a coaching program. Not a mastermind with a curriculum and an outcome promise.</p>
-<p>A room where founders can be honest about what they're carrying — and find others who understand what that actually means. Through retreats, peer conversations, and an ongoing community, Found Room creates conditions for the kind of clarity that rarely happens alone.</p>
-<p>The members are the point. What they've built, what they're navigating, and who they're becoming.</p>
+<h2>A room. Not a program.</h2>
+<p>Found Room is not a coaching program. Not a mastermind. Not a curriculum with an outcome promise attached to it.</p>
+<p>It's a room — a private community built around the specific experience of being a founder who has operated at a high level and is now living with questions that high performance doesn't answer.</p>
+<p>The members are founders who've built something significant. They're not here to optimize. They're here because they've run out of things to optimize and the underlying question is still active.</p>
+<p>Retreats, peer cohorts, and an ongoing private community form the structure. The members are the point.</p>
 </div>
 </section>
 
-<section class="outcomes">
-<h2 class="reveal">What founders find here.</h2>
-<div class="outcomes-grid">
-<div class="outcome-item reveal">
-<div class="icon-feature"><i data-lucide="feather"></i></div>
-<h3>Lightness</h3>
-<p>Less weight carried alone. More ease in decisions, relationships, and the ordinary moments of a day.</p>
-</div>
-<div class="outcome-item reveal">
-<div class="icon-feature"><i data-lucide="focus"></i></div>
-<h3>Clarity</h3>
-<p>A clearer sense of what matters, what doesn't, and what you're actually building toward — in work and in life.</p>
-</div>
-<div class="outcome-item reveal">
-<div class="icon-feature"><i data-lucide="door-open"></i></div>
-<h3>The right rooms</h3>
-<p>Founders who've been somewhere worth going. Honest peers. Conversations that don't require you to perform.</p>
-</div>
-<div class="outcome-item reveal">
-<div class="icon-feature"><i data-lucide="anchor"></i></div>
-<h3>Groundedness</h3>
-<p>A stable place to stand that doesn't depend on outcomes, valuations, or whether this quarter went well.</p>
-</div>
-<div class="outcome-item reveal">
-<div class="icon-feature"><i data-lucide="maximize-2"></i></div>
-<h3>Expansion</h3>
-<p>More of yourself available — for the work, for the people you love, for the life you're actually trying to build.</p>
-</div>
-<div class="outcome-item reveal">
-<div class="icon-feature"><i data-lucide="trending-up"></i></div>
-<h3>Progress</h3>
-<p>Visible, real movement. Not optimized metrics. A life that looks and feels different than it did before.</p>
-</div>
+<section class="recognition">
+<div class="recognition-inner reveal">
+<p>Here's the thing nobody says about building a successful company: it ends. And when it does, everything it was quietly doing for you ends with it.</p>
+<p>Not just the work. The structure. The direction. The daily answer to the question of who you are and whether you're doing something that matters.</p>
+<p>Most founders don't see this coming. They exit — or they stay — and somewhere between six months and several years later, they find themselves in a life that looks right from the outside and feels subtly off from the inside. The praise is hollow. The obvious next moves feel like substitutes. The things that used to work as motivation stopped working, and no one around them knows that's happening.</p>
+<p>This is the experience Found Room is built for.</p>
+<p>Not crisis. Something slower and harder to name. The sense that the map that got you here isn't the map for what's next — and that nobody in your immediate orbit is equipped to help you draw a new one.</p>
 </div>
 </section>
 
 <section class="about">
 <div class="about-content reveal">
+<h2>Who belongs here.</h2>
+<p>Founders who've built something real. Companies that required years of genuine execution — not a venture story, not a pitch deck that got funded, but something that grew because they showed up and figured it out.</p>
+<p>They're pre-exit, post-exit, or continuing to operate. What they share is not a stage. It's a moment — the specific point where the gap between external success and internal experience has become too wide to ignore.</p>
+<p>They are high-functioning, private about what they're carrying, and deeply skeptical of any room that asks them to perform.</p>
 <blockquote>
-<p>"The business stops carrying personal weight it was never designed to carry. And something opens up."</p>
+<p>"The most successful founders I know are often carrying the most — and have the fewest places to set it down honestly."</p>
 </blockquote>
-<p>Found Room emerged from a simple observation: the most successful founders are often carrying the most — and have the fewest places to set it down honestly.</p>
-<p>The community draws on The Identity Cost, a body of work examining how founders route personal needs through business systems — and what becomes possible when they stop. Not as a framework to follow, but as a lens available to those who want it.</p>
-<p>Retreats, peer cohorts, and an ongoing private community form the structure. The work is whatever each member brings.</p>
+<p>Daniel Fox built a bootstrapped company to 180 people and tens of millions annually. He exited, and spent several years in the slow work of figuring out what he was without it. Found Room is built from that experience — and from years of working with founders navigating the same territory.</p>
+<p><a href="about.html">Read Daniel's full story →</a></p>
 </div>
 <div class="about-aside reveal">
-<p class="about-aside-label">Who belongs here</p>
-<p>Founders who've built something real. Pre-exit, post-exit, or continuing to operate. What they share isn't a stage — it's a willingness to look at themselves honestly and invest in a life that matches what they've built.</p>
+<p class="about-aside-label">Founding members</p>
+<p>Found Room is curated. Founding members are selected personally — not by revenue threshold or application form, but by whether they make the right room better for everyone in it.</p>
 </div>
 </section>
 
 <section class="cta-section" id="join">
 <div class="cta-left reveal" markdown="1">
 
-<h2>The room is <span>opening.</span></h2>
+<h2>The right room is <span>forming.</span></h2>
 
-Found Room is forming its founding member community now. Express your interest and be among the first to hear when the room is open.
+Found Room is building its founding member community now. Founding members shape what the right room becomes — the format, the culture, the standards for who's in it.
+
+This isn't a waitlist. Express your interest and Daniel will be in touch directly.
 
 </div>
 <div class="cta-right reveal" markdown="1">
-<p class="cta-form-label">Express interest</p>
+<p class="cta-form-label">I'm interested.</p>
 <div class="cta-input-row" id="formRow">
-<input type="email" id="emailInput" placeholder="Your email address" />
-<button onclick="handleSubmit()">I'm interested</button>
+<input type="email" id="emailInput" placeholder="Email address" />
+<button onclick="handleSubmit()">Send</button>
 </div>
-<p class="cta-note">No pitch. No newsletter. Just a note when Found Room is ready.</p>
-<p class="success-message" id="successMsg">You're in the room. We'll be in touch.</p>
+<p class="cta-note">No pitch. No newsletter. A direct conversation about whether this is the right room for you.</p>
+<p class="success-message" id="successMsg">You're in. Daniel will be in touch.</p>
 </div>
 </section>
 
