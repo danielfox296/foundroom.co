@@ -19,10 +19,10 @@
   max-width: 560px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s;
 }
 .formats-section {
-  background: var(--off-white);
+  background: var(--dark-surface);
   padding: 8rem 6rem;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 .formats-section h2 {
   font-family: 'Manrope', sans-serif;
@@ -33,7 +33,7 @@
 .format-item { padding: 2.5rem 0; border-top: 2px solid var(--ink); }
 .format-number { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 1.2rem; }
 .format-item h3 { font-family: 'Manrope', sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.8rem; }
-.format-item p { font-size: 0.95rem; line-height: 1.75; color: var(--ink-mid); }
+.format-item p { font-size: 0.95rem; line-height: 1.6; color: var(--ink-mid); }
 @media (max-width: 960px) {
   .hero { padding: 8rem 1.5rem 4rem; }
   .formats-section { padding: 5rem 1.5rem; }

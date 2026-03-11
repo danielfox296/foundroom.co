@@ -1,28 +1,28 @@
 /* about page styles */
 :root {
-      --white: #FFFFFF;
-      --off-white: #F5F1EB;
-      --ink: #1A1714;
-      --ink-mid: #3C3830;
-      --ink-light: #88817A;
-      --accent: #2A5FD4;
-      --accent-hover: #1E4DB8;
-      --accent-pale: #EAF0FB;
-      --rule: #E2DAD0;
-      --dark: #1A1714;
-      --dark-surface: #201D18;
-    }
+  --white: #F0EDE8;
+  --off-white: #131110;
+  --ink: #F0EDE8;
+  --ink-mid: #A89F98;
+  --ink-light: #706B64;
+  --accent: #C96B4A;
+  --accent-hover: #B35A3A;
+  --accent-pale: rgba(201,107,74,0.12);
+  --rule: rgba(255,255,255,0.07);
+  --dark: #080808;
+  --dark-surface: #111010;
+}
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { font-size: 18px; scroll-behavior: smooth; }
+    html { font-size: 16px; scroll-behavior: smooth; }
 
     body {
-      background: var(--white);
+      background: var(--dark);
       color: var(--ink);
       font-family: 'Inter', system-ui, sans-serif;
       font-weight: 400;
-      line-height: 1.75;
+      line-height: 1.6;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -38,9 +38,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(255,255,255,0.93);
+      background: rgba(8,8,8,0.82);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--rule);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
     .nav-logo {
@@ -119,12 +119,12 @@
 
     .story-left {
       padding: 7rem 5rem 7rem 6rem;
-      border-right: 1px solid var(--rule);
+      border-right: 1px solid rgba(255,255,255,0.06);
     }
 
     .story-right {
       padding: 7rem 6rem 7rem 5rem;
-      background: var(--off-white);
+      background: var(--dark-surface);
     }
 
     .story-label {
@@ -151,9 +151,9 @@
     /* Pull quote */
     .pull-quote {
       padding: 8rem 6rem;
-      background: var(--off-white);
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
+      background: var(--dark-surface);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
     .pull-quote blockquote {
@@ -239,7 +239,7 @@
 
     .cta-block p {
       font-size: 0.95rem;
-      line-height: 1.75;
+      line-height: 1.6;
       color: rgba(255,255,255,0.45);
       margin-bottom: 2rem;
     }
@@ -305,7 +305,7 @@
       .nav-links { display: none; }
       .about-hero { padding: 8rem 1.5rem 4rem; }
       .story { grid-template-columns: 1fr; }
-      .story-left { padding: 4rem 1.5rem; border-right: none; border-bottom: 1px solid var(--rule); }
+      .story-left { padding: 4rem 1.5rem; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
       .story-right { padding: 4rem 1.5rem; }
       .pull-quote { padding: 5rem 1.5rem; }
       .closing { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 2rem; }

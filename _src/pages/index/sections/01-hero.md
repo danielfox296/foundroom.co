@@ -1,26 +1,9 @@
----
----
-<section class="hero" markdown="1">
-  <div class="hero-left" markdown="1">
+<section class="hero">
+  <div class="hero-content">
     <p class="eyebrow">A community for founders</p>
     <h1 class="hero-title">Found<br>Room.</h1>
     <p class="hero-tagline">For founders building great companies and great lives.</p>
+    <a href="#what" class="hero-cta">Explore Found Room</a>
   </div>
-  <div class="hero-right" markdown="1">
-    <div class="hero-story" markdown="1">
-
-Here's what nobody told me about building a successful company: it ends. And when it does, everything it was quietly doing for you ends with it.
-
-I built a company that employed 180 people and generated tens of millions of dollars a year. We were recognized. By any measure people use, it worked. And then I exited. And I spent years trying to figure out what I was without it.
-
-Not in crisis. Just quietly, persistently — advising, consulting, staying useful. Looking for something that could replace what the company had given me without my ever asking it to.
-
-What I found instead was that every founder I worked with was doing some version of the same thing. Then illness came. Relationships ended. The things I'd used to know who I was stopped working, one by one.
-
-Found Room is built from that. A room for founders who are ready to look honestly — at themselves, at their lives, at what they're actually building toward. With other people who are living it too.
-
-<p class="byline">— Daniel Fox, Founder</p>
-
-    </div>
-  </div>
+  <p class="hero-scroll">Scroll to explore</p>
 </section>

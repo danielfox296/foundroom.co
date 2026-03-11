@@ -1,6 +1,6 @@
 ---
 ---
-<div class="section-rule"></div>
+<div id="what" class="section-rule"></div>
 
 <section class="what" markdown="1">
   <div class="what-label reveal" markdown="1">What this is</div>

@@ -7,35 +7,38 @@
   <meta name="description" content="Writing on founders, identity, and the life behind the company.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/global.css">
   <style>
 /* journal page styles */
 :root {
-      --white: #FFFFFF;
-      --off-white: #F7F7F9;
-      --ink: #0C0C14;
-      --ink-mid: #2C2C3A;
-      --ink-light: #6B6B80;
-      --accent: #2A5FD4;
-      --accent-hover: #1E4DB8;
-      --accent-pale: #EBF0FB;
-      --rule: #E2E2EC;
-      --dark: #0C0C14;
-      --dark-surface: #13131F;
-    }
+  --white: #F0EDE8;
+  --off-white: #131110;
+  --ink: #F0EDE8;
+  --ink-mid: #A89F98;
+  --ink-light: #706B64;
+  --accent: #C96B4A;
+  --accent-hover: #B35A3A;
+  --accent-pale: rgba(201,107,74,0.12);
+  --rule: rgba(255,255,255,0.07);
+  --dark: #080808;
+  --dark-surface: #111010;
+}
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { font-size: 18px; scroll-behavior: smooth; }
+    html { font-size: 16px; scroll-behavior: smooth; }
 
     body {
-      background: var(--white);
+      background: var(--dark);
       color: var(--ink);
       font-family: 'Inter', system-ui, sans-serif;
       font-weight: 400;
-      line-height: 1.7;
+      line-height: 1.6;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     }
 
     /* Nav */
@@ -47,13 +50,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(255,255,255,0.93);
+      background: rgba(8,8,8,0.82);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--rule);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
     .nav-logo {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Manrope', sans-serif;
       font-weight: 700;
       font-size: 1.05rem;
       letter-spacing: 0.02em;
@@ -100,7 +103,7 @@
     .eyebrow {
       font-size: 0.72rem;
       font-weight: 500;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 2rem;
@@ -109,7 +112,7 @@
     }
 
     .journal-hero h1 {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Manrope', sans-serif;
       font-size: clamp(2.4rem, 4vw, 4.2rem);
       font-weight: 800;
       line-height: 1.06;
@@ -137,7 +140,7 @@
     }
 
     .essay-item {
-      border-top: 1px solid var(--rule);
+      border-top: 1px solid rgba(255,255,255,0.06);
       padding: 3rem 0;
       display: grid;
       grid-template-columns: 1fr auto;
@@ -146,7 +149,7 @@
     }
 
     .essay-item:last-child {
-      border-bottom: 1px solid var(--rule);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
     .essay-meta {
@@ -163,7 +166,7 @@
     }
 
     .essay-title {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Manrope', sans-serif;
       font-size: clamp(1.1rem, 1.8vw, 1.4rem);
       font-weight: 700;
       letter-spacing: -0.01em;
@@ -332,10 +335,61 @@
    Edit this file to change the footer site-wide.
    ============================================= -->
 <footer>
-  <p>© 2026 Found Room</p>
-  <p>foundroom.co</p>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="the-room.html">The Room</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">The Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank">Book a Call</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
 </footer>
 
 <script src="assets/js/global.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function(user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function() {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>

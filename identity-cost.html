@@ -7,35 +7,38 @@
   <meta name="description" content="The Identity Cost examines how founders route personal needs through business systems — and what becomes possible when they stop.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/global.css">
   <style>
 /* identity-cost page styles */
 :root {
-      --white: #FFFFFF;
-      --off-white: #F7F7F9;
-      --ink: #0C0C14;
-      --ink-mid: #2C2C3A;
-      --ink-light: #6B6B80;
-      --accent: #2A5FD4;
-      --accent-hover: #1E4DB8;
-      --accent-pale: #EBF0FB;
-      --rule: #E2E2EC;
-      --dark: #0C0C14;
-      --dark-surface: #13131F;
-    }
+  --white: #F0EDE8;
+  --off-white: #131110;
+  --ink: #F0EDE8;
+  --ink-mid: #A89F98;
+  --ink-light: #706B64;
+  --accent: #C96B4A;
+  --accent-hover: #B35A3A;
+  --accent-pale: rgba(201,107,74,0.12);
+  --rule: rgba(255,255,255,0.07);
+  --dark: #080808;
+  --dark-surface: #111010;
+}
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html { font-size: 18px; scroll-behavior: smooth; }
+    html { font-size: 16px; scroll-behavior: smooth; }
 
     body {
-      background: var(--white);
+      background: var(--dark);
       color: var(--ink);
       font-family: 'Inter', system-ui, sans-serif;
       font-weight: 400;
-      line-height: 1.7;
+      line-height: 1.6;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     }
 
     /* Nav */
@@ -47,13 +50,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(255,255,255,0.93);
+      background: rgba(8,8,8,0.82);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--rule);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
     .nav-logo {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Manrope', sans-serif;
       font-weight: 700;
       font-size: 1.05rem;
       letter-spacing: 0.02em;
@@ -112,7 +115,7 @@
     .eyebrow {
       font-size: 0.72rem;
       font-weight: 500;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 2rem;
@@ -122,7 +125,7 @@
     .section-label {
       font-size: 0.72rem;
       font-weight: 500;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
       color: var(--accent);
       position: sticky;
@@ -141,7 +144,7 @@
     }
 
     .hero h1 {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Manrope', sans-serif;
       font-size: clamp(2.4rem, 4vw, 4.2rem);
       font-weight: 800;
       line-height: 1.06;
@@ -162,9 +165,9 @@
 
     /* Large intro */
     .large-intro {
-      background: var(--off-white);
+      background: var(--dark-surface);
       padding: 7rem 6rem;
-      border-bottom: 1px solid var(--rule);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
     .large-intro-inner {
@@ -174,7 +177,7 @@
 
     .large-intro p.italic-large {
       font-size: 1.2rem;
-      line-height: 1.9;
+      line-height: 1.8;
       color: var(--ink-mid);
       font-style: italic;
       margin-bottom: 2rem;
@@ -190,7 +193,7 @@
     .large-intro p.closing-line {
       font-size: 1.05rem;
       color: var(--ink-mid);
-      line-height: 1.9;
+      line-height: 1.8;
     }
 
     /* Sidebar sections */
@@ -203,7 +206,7 @@
     }
 
     .sidebar-section-content h2 {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Manrope', sans-serif;
       font-size: clamp(2rem, 3vw, 2.8rem);
       font-weight: 700;
       line-height: 1.15;
@@ -213,7 +216,7 @@
 
     .sidebar-section-content p {
       font-size: 1.05rem;
-      line-height: 1.9;
+      line-height: 1.8;
       color: var(--ink-mid);
       max-width: 600px;
       margin-bottom: 1.4rem;
@@ -225,7 +228,7 @@
     .cost-label {
       font-size: 0.72rem;
       font-weight: 500;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
       color: var(--ink);
       margin-bottom: 0.8rem;
@@ -251,7 +254,7 @@
     }
 
     .cta-left h2 {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Manrope', sans-serif;
       font-size: clamp(2.5rem, 4vw, 4rem);
       font-weight: 800;
       line-height: 1.0;
@@ -264,7 +267,7 @@
 
     .cta-left p {
       font-size: 1.05rem;
-      line-height: 1.75;
+      line-height: 1.6;
       color: rgba(255,255,255,0.45);
       max-width: 420px;
     }
@@ -466,10 +469,61 @@
    Edit this file to change the footer site-wide.
    ============================================= -->
 <footer>
-  <p>© 2026 Found Room</p>
-  <p>foundroom.co</p>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="the-room.html">The Room</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">The Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank">Book a Call</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
 </footer>
 
 <script src="assets/js/global.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function(user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function() {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>

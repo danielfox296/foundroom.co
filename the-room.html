@@ -7,7 +7,7 @@
   <meta name="description" content="Found Room is a private community for experienced founders. Not a course. Not a coaching program. A room where the real conversations happen.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/global.css">
   <style>
 /* The Room page styles */
@@ -16,12 +16,12 @@
   max-width: 860px;
 }
 .hero .eyebrow {
-  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.16em;
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.13em;
   text-transform: uppercase; color: var(--accent); margin-bottom: 2rem;
   opacity: 0; animation: fadeUp 0.7s ease forwards 0.1s;
 }
 .hero h1 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(2.4rem, 4vw, 4.2rem); font-weight: 800;
   line-height: 1.06; letter-spacing: -0.03em; margin-bottom: 2rem;
   opacity: 0; animation: fadeUp 0.8s ease forwards 0.25s;
@@ -31,21 +31,21 @@
   max-width: 560px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s;
 }
 .formats-section {
-  background: var(--off-white);
+  background: var(--dark-surface);
   padding: 8rem 6rem;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 .formats-section h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 700;
   line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 4rem;
 }
 .formats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 4rem; }
 .format-item { padding: 2.5rem 0; border-top: 2px solid var(--ink); }
 .format-number { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 1.2rem; }
-.format-item h3 { font-family: 'Syne', sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.8rem; }
-.format-item p { font-size: 0.95rem; line-height: 1.75; color: var(--ink-mid); }
+.format-item h3 { font-family: 'Manrope', sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.8rem; }
+.format-item p { font-size: 0.95rem; line-height: 1.6; color: var(--ink-mid); }
 @media (max-width: 960px) {
   .hero { padding: 8rem 1.5rem 4rem; }
   .formats-section { padding: 5rem 1.5rem; }
@@ -148,10 +148,61 @@ Found Room is forming its founding member community now. Founding members shape 
    Edit this file to change the footer site-wide.
    ============================================= -->
 <footer>
-  <p>© 2026 Found Room</p>
-  <p>foundroom.co</p>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="the-room.html">The Room</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">The Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank">Book a Call</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
 </footer>
 
 <script src="assets/js/global.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function(user) {
+      if (!user) {
+        window.netlifyIdentity.on("login", function() {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>

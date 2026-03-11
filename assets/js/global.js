@@ -3,6 +3,17 @@
    Edit this file to change JS behaviour site-wide.
    ============================================= */
 
+// Nav: transparent → dark glass on scroll
+(function() {
+  const nav = document.querySelector('nav');
+  if (!nav) return;
+  function update() {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
 // Scroll reveal
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(entries => {
