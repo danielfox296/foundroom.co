@@ -9,7 +9,7 @@
 
 Found Room is building its founding member community. Express your interest and be among the first to hear when the room is open.
 
-<a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" class="btn-primary">Let's Talk</a>
+<a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="btn-primary">Let's Talk</a>
 
   </div>
   <div class="cta-block reveal" markdown="1">

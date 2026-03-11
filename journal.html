@@ -3,11 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
   <title>Journal — Found Room</title>
   <meta name="description" content="Writing on founders, identity, and the life behind the company.">
+  <link rel="canonical" href="https://foundroom.co/journal.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="Found Room">
+  <meta property="og:title"       content="Journal — Found Room">
+  <meta property="og:description" content="Writing on founders, identity, and the life behind the company.">
+  <meta property="og:url"         content="https://foundroom.co/journal.html">
+  <meta property="og:image"       content="https://images.unsplash.com/photo-1456324463128-7ff6903988d8?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Journal — Found Room">
+  <meta name="twitter:description" content="Writing on founders, identity, and the life behind the company.">
+  <meta name="twitter:image"       content="https://images.unsplash.com/photo-1456324463128-7ff6903988d8?w=1200&h=630&q=85&auto=format&fit=crop">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon"  href="assets/favicon.ico">
+  <link rel="apple-touch-icon"          href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/global.css">
   <style>
 /* journal — page-specific styles only */
@@ -146,7 +174,7 @@
     <a href="identity-cost.html">The Identity Cost</a>
     <a href="journal.html">Journal</a>
   </div>
-  <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" class="nav-cta">Let's Talk</a>
+  <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="nav-cta">Let's Talk</a>
 </nav>
 
 <section class="journal-hero">
@@ -224,7 +252,7 @@
       <a href="index.html" class="footer-brand-name">Found Room</a>
       <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
       <div class="footer-social">
-        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
 
@@ -249,7 +277,7 @@
     <div class="footer-col">
       <p class="footer-col-label">Connect</p>
       <div class="footer-col-links">
-        <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank">Book a Call</a>
+        <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer">Book a Call</a>
         <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
       </div>
     </div>
@@ -262,7 +290,7 @@
 </footer>
 
 <script src="assets/js/global.js"></script>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
 <script>
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", function(user) {

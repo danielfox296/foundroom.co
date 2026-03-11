@@ -158,10 +158,19 @@ def build():
         section_files = collect_sections(sections_dir)
         content = '\n\n'.join(render_section(f) for f in section_files)
 
+        # Page metadata
+        base_url  = 'https://foundroom.co'
+        canonical = (base_url + '/') if output == 'index.html' else f'{base_url}/{output}'
+        og_image  = config.get('og_image', f'{base_url}/assets/og-default.jpg')
+        og_type   = config.get('og_type', 'website')
+
         # Substitute into base layout
         html = base
         html = html.replace('{{title}}',       title)
         html = html.replace('{{description}}', description)
+        html = html.replace('{{canonical}}',   canonical)
+        html = html.replace('{{og_image}}',    og_image)
+        html = html.replace('{{og_type}}',     og_type)
         html = html.replace('{{page_style}}',  page_style)
         html = html.replace('{{header}}',      header.strip())
         html = html.replace('{{content}}',     content)

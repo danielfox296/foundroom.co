@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temp / one-off scripts (remove after use)
+apply-dark-mode.py
+fix-css-arch.py
+add-hero-images.py
+fix-audit-issues.py
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Node (if ever used)
+node_modules/
