@@ -1,16 +1,16 @@
 /* about page styles */
 :root {
       --white: #FFFFFF;
-      --off-white: #F7F7F9;
-      --ink: #0C0C14;
-      --ink-mid: #2C2C3A;
-      --ink-light: #6B6B80;
+      --off-white: #F5F1EB;
+      --ink: #1A1714;
+      --ink-mid: #3C3830;
+      --ink-light: #88817A;
       --accent: #2A5FD4;
       --accent-hover: #1E4DB8;
-      --accent-pale: #EBF0FB;
-      --rule: #E2E2EC;
-      --dark: #0C0C14;
-      --dark-surface: #13131F;
+      --accent-pale: #EAF0FB;
+      --rule: #E2DAD0;
+      --dark: #1A1714;
+      --dark-surface: #201D18;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,8 +22,11 @@
       color: var(--ink);
       font-family: 'Inter', system-ui, sans-serif;
       font-weight: 400;
-      line-height: 1.7;
+      line-height: 1.75;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     }
 
     /* Nav */
@@ -87,7 +90,7 @@
     .eyebrow {
       font-size: 0.72rem;
       font-weight: 500;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 2rem;
@@ -127,7 +130,7 @@
     .story-label {
       font-size: 0.72rem;
       font-weight: 500;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 2rem;
@@ -136,7 +139,7 @@
     .story-left p,
     .story-right p {
       font-size: 1.05rem;
-      line-height: 1.9;
+      line-height: 1.8;
       color: var(--ink-mid);
       max-width: 520px;
       margin-bottom: 1.4rem;
@@ -177,7 +180,7 @@
     .closing-label {
       font-size: 0.72rem;
       font-weight: 500;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
       color: var(--accent);
       padding-top: 0.5rem;
@@ -187,7 +190,7 @@
 
     .closing-content p {
       font-size: 1.05rem;
-      line-height: 1.9;
+      line-height: 1.8;
       color: var(--ink-mid);
       max-width: 600px;
       margin-bottom: 1.4rem;
@@ -218,7 +221,7 @@
     .cta-block-label {
       font-size: 0.72rem;
       font-weight: 500;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
       color: rgba(255,255,255,0.35);
       margin-bottom: 1.2rem;

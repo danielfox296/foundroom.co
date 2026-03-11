@@ -4,7 +4,7 @@
   max-width: 860px;
 }
 .hero .eyebrow {
-  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.16em;
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.13em;
   text-transform: uppercase; color: var(--accent); margin-bottom: 2rem;
   opacity: 0; animation: fadeUp 0.7s ease forwards 0.1s;
 }

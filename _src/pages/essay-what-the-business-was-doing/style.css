@@ -1,20 +1,24 @@
 /* essay-what-the-business-was-doing page styles */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { font-size: 18px; scroll-behavior: smooth; }
-    body { background: var(--white); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; font-weight: 400; line-height: 1.7; overflow-x: hidden; }
+    body { background: var(--white); color: var(--ink); font-family: 'Inter', system-ui, sans-serif; font-weight: 400; line-height: 1.7; overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
 
     :root {
       --white: #FFFFFF;
-      --off-white: #F7F7F9;
-      --ink: #0C0C14;
-      --ink-mid: #2C2C3A;
-      --ink-light: #6B6B80;
+      --off-white: #F5F1EB;
+      --ink: #1A1714;
+      --ink-mid: #3C3830;
+      --ink-light: #88817A;
       --accent: #2A5FD4;
       --accent-hover: #1E4DB8;
-      --accent-pale: #EBF0FB;
-      --rule: #E2E2EC;
-      --dark: #0C0C14;
-      --dark-surface: #13131F;
+      --accent-pale: #EAF0FB;
+      --rule: #E2DAD0;
+      --dark: #1A1714;
+      --dark-surface: #201D18;
     }
 
     /* NAV */
@@ -30,7 +34,7 @@
     .section-rule { width: 100%; height: 1px; background: var(--rule); }
 
     /* EYEBROW */
-    .eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; }
+    .eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem; }
 
     /* REVEAL */
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -48,7 +52,7 @@
     /* ESSAY BODY */
     .essay-body { padding: 5rem 6rem 8rem; }
     .essay-body .prose { max-width: 660px; }
-    .essay-body p { font-size: 1.05rem; line-height: 1.9; color: var(--ink-mid); margin-bottom: 1.6rem; }
+    .essay-body p { font-size: 1.05rem; line-height: 1.8; color: var(--ink-mid); margin-bottom: 1.6rem; }
     .essay-body p em { font-style: italic; color: var(--ink); }
     .essay-body .section-break { width: 40px; height: 2px; background: var(--rule); margin: 4rem 0; }
     .essay-byline { font-size: 0.85rem; font-weight: 500; color: var(--ink-light); margin-top: 3rem; }

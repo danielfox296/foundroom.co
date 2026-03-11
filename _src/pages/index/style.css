@@ -24,7 +24,7 @@
 .eyebrow {
   font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 2rem;
@@ -60,7 +60,7 @@
 
 .hero-story p {
   font-size: 1.05rem;
-  line-height: 1.9;
+  line-height: 1.8;
   color: var(--ink-mid);
   margin-bottom: 1.4rem;
   max-width: 500px;
@@ -91,7 +91,7 @@
 .what-label {
   font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--accent);
   padding-top: 0.5rem;
@@ -110,7 +110,7 @@
 
 .what-content p {
   font-size: 1.05rem;
-  line-height: 1.9;
+  line-height: 1.8;
   color: var(--ink-mid);
   max-width: 600px;
   margin-bottom: 1.4rem;
@@ -186,7 +186,7 @@
 
 .about-content p {
   font-size: 1.05rem;
-  line-height: 1.9;
+  line-height: 1.8;
   color: var(--ink-mid);
   max-width: 580px;
   margin-bottom: 1.4rem;
@@ -202,7 +202,7 @@
 .about-aside-label {
   font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 1.2rem;
