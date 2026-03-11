@@ -79,7 +79,7 @@ nav {
   font-family: 'Inter', sans-serif;
   font-size: 0.68rem;
   font-weight: 500;
-  color: var(--white);
+  color: #0a0905;
   background: var(--accent);
   text-decoration: none;
   padding: 0.55rem 1.3rem;
@@ -246,7 +246,7 @@ footer {
   font-family: 'Inter', sans-serif;
   font-size: 0.83rem;
   font-weight: 500;
-  color: var(--white);
+  color: #0a0905;
   cursor: pointer;
   transition: background 0.18s;
   white-space: nowrap;
@@ -376,7 +376,7 @@ footer {
   font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--white);
+  color: #0a0905;
   background: var(--accent);
   text-decoration: none;
   padding: 0.9rem 1.8rem;
