@@ -3,14 +3,20 @@ backend:
   repo: danielfox296/foundroom.co
   branch: main
   auth_type: pkce
-  app_id: YOUR_GITHUB_OAUTH_APP_CLIENT_ID
+  app_id: Ov23lipomLpbo4iVrFk3
+
+
 
 
 local_backend: false
 
 
+
+
 media_folder: "assets/images"
 public_folder: "/assets/images"
+
+
 
 
 # Editor UI settings
@@ -18,7 +24,11 @@ editor:
   preview: false
 
 
+
+
 collections:
+
+
 
 
   # ─── HOME PAGE ────────────────────────────────────────────────────────────────
@@ -34,11 +44,3 @@ collections:
             widget: "markdown"
             modes: ["raw", "rich_text"]
             hint: "The two-column hero. Left column has the eyebrow, title, and tagline. Right column has the founder story paragraphs."
-
-
-      - label: "What This Is"
-        name: "home-what"
-        file: "_src/pages/index/sections/02-what.md"
-        fields:
-          - label: "Content"
-            name: "body"
