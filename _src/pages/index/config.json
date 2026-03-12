@@ -3,5 +3,6 @@
   "description": "A private community for founders who are ready to invest in the full picture \u2014 the company and the life.",
   "output": "index.html",
   "og_image": "https://images.unsplash.com/photo-1584392480816-eaad92a75e60?w=1200&h=630&q=85&auto=format&fit=crop",
-  "og_type": "website"
+  "og_type": "website",
+  "body_class": "page-home"
 }

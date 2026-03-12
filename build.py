@@ -14,8 +14,8 @@ Structure:
       partials/footer.html    — shared footer
       pages/
         <page-name>/
-          config.json         — title, description, output filename
-          style.css           — page-specific CSS
+          config.json         — title, description, output filename, body_class (optional)
+          style.css           — page-specific CSS (never override global components here)
           sections/           — content modules in alphabetical order
             01-hero.md        — supports Markdown (.md) or HTML (.html)
             02-section.md
@@ -148,6 +148,7 @@ def build():
         title       = config.get('title', 'Found Room')
         description = config.get('description', '')
         output      = config.get('output', f'{page_dir}.html')
+        body_class  = config.get('body_class', '')
 
         # Load page-specific CSS
         style_path = os.path.join(page_path, 'style.css')
@@ -172,6 +173,7 @@ def build():
         html = html.replace('{{og_image}}',    og_image)
         html = html.replace('{{og_type}}',     og_type)
         html = html.replace('{{page_style}}',  page_style)
+        html = html.replace('{{body_class}}',  body_class)
         html = html.replace('{{header}}',      header.strip())
         html = html.replace('{{content}}',     content)
         html = html.replace('{{footer}}',      footer.strip())
