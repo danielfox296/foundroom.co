@@ -46,7 +46,7 @@ assets/
 | `output` | yes | Output filename (e.g. `about.html`) |
 | `og_image` | no | Full URL to OG image (defaults to `/assets/og-default.jpg`) |
 | `og_type` | no | OG type — `website` (default) or `article` |
-| `body_class` | no | Class added to `<body>`. Use `"page-home"` for the home page transparent nav variant. |
+| `body_class` | no | Class added to `<body>`. Reserved for future page variants. Leave blank unless needed. |
 
 ---
 
@@ -70,14 +70,6 @@ assets/
 - `body`, `html` resets (already in `global.css`)
 - `nav`, `.nav-logo`, `.nav-links`, `.nav-cta` (shared component — use `body.page-home nav` in `global.css` for variants)
 - Any style that would need to be kept in sync across multiple files
-
-### Adding a new page variant
-
-If a page needs a different visual treatment for a shared component (e.g. a different nav colour):
-
-1. Add `"body_class": "page-yourname"` to that page's `config.json`
-2. Add `body.page-yourname nav { ... }` (or whatever component) to `global.css`
-3. Do **not** redeclare the component in the page's `style.css`
 
 ---
 

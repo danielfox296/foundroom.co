@@ -89,20 +89,6 @@ nav {
 }
 .nav-cta:hover { background: var(--accent-hover); }
 
-/* ── Nav: transparent variant (home page via body.page-home) ── */
-/* Applied when config.json sets "body_class": "page-home"       */
-body.page-home nav {
-  background: transparent;
-  backdrop-filter: none;
-  border-bottom-color: transparent;
-  transition: background 0.3s ease, border-bottom-color 0.3s ease, backdrop-filter 0.3s ease;
-}
-body.page-home nav.scrolled {
-  background: rgba(8,8,8,0.88);
-  backdrop-filter: blur(20px);
-  border-bottom-color: rgba(255,255,255,0.06);
-}
-
 /* ── Section rule ─────────────────────────── */
 .section-rule { width: 100%; height: 1px; background: var(--rule); }
 
