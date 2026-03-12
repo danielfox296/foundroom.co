@@ -6,13 +6,15 @@
   <div class="what-label reveal" markdown="1">What this is</div>
   <div class="what-content reveal" markdown="1">
 
-## A room, not a program.
+## A room. Not a program.
 
-Found Room is a private community for experienced founders. Not a course. Not a coaching program. Not a mastermind with a curriculum and an outcome promise.
+Found Room is not a coaching program. Not a mastermind. Not a curriculum with an outcome promise attached to it.
 
-A room where founders can be honest about what they're carrying — and find others who understand what that actually means. Through retreats, peer conversations, and an ongoing community, Found Room creates conditions for the kind of clarity that rarely happens alone.
+It's a room — a private community built around the specific experience of being a founder who has operated at a high level and is now living with questions that high performance doesn't answer.
 
-The members are the point. What they've built, what they're navigating, and who they're becoming.
+The members are founders who've built something significant. They're not here to optimize. They're here because they've run out of things to optimize and the underlying question is still active.
+
+Retreats, peer cohorts, and an ongoing private community form the structure. The members are the point.
 
   </div>
 </section>

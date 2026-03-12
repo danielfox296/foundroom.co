@@ -138,57 +138,28 @@
   margin-bottom: 1.3rem;
 }
 
-/* ── Outcomes ── */
-.outcomes {
-  background: var(--dark-surface);
-  padding: 8rem 6rem;
+/* ── Recognition ── */
+.recognition {
+  padding: 10rem 6rem;
   border-top: 1px solid rgba(255,255,255,0.05);
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.outcomes h2 {
-  font-family: 'Manrope', sans-serif;
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  margin-bottom: 4rem;
-  color: var(--ink);
+.recognition-inner {
+  max-width: 720px;
 }
 
-.outcomes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0 4rem;
-}
-
-.outcome-item {
-  padding: 2.5rem 0;
-  border-top: 1px solid rgba(255,255,255,0.12);
-}
-
-.outcome-number {
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  color: var(--accent);
-  margin-bottom: 1.2rem;
-  text-transform: uppercase;
-}
-
-.outcome-item h3 {
-  font-family: 'Manrope', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-}
-
-.outcome-item p {
-  font-size: 0.9rem;
-  line-height: 1.65;
+.recognition p {
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.95;
   color: var(--ink-mid);
+  margin-bottom: 2.2rem;
+}
+
+.recognition p:first-child {
+  font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+  color: var(--ink);
+  line-height: 1.85;
 }
 
 /* ── About ── */
@@ -255,8 +226,7 @@
   .hero-tagline { font-size: 0.95rem; }
   .what { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 2rem; }
   .what-label { position: static; }
-  .outcomes { padding: 5rem 1.5rem; }
-  .outcomes-grid { grid-template-columns: 1fr; gap: 0; }
+  .recognition { padding: 6rem 1.5rem; }
   .about { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 3rem; }
   .about-aside { position: static; }
 }
