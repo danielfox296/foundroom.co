@@ -1,23 +1,43 @@
 # Found Room
 
-> A private community for experienced founders — not a course, coaching program, or mastermind, but an honest room where founders can set down what they're carrying and find peers who understand what that actually means.
+> A private community for experienced founders who built something real, arrived at the destination they aimed for, and found that the arrival didn't produce what they expected — and have few places where they can say that out loud.
 
-Found Room was created by Daniel Fox, who scaled a company to 180 people, exited, and spent years navigating a disorientation that most founder communities don't name. The community draws on The Identity Cost — a body of work examining how founders route personal needs through business systems — as one available lens, not a curriculum.
+Found Room is for founders in a specific situation: the external markers of success are in place, but something has quietly shifted. The company may still be running, or the exit may have already happened. Either way, the mechanism that used to supply direction, identity, and forward motion has stopped working the way it did.
 
-The structure includes retreats, peer cohorts, and an ongoing private community. What happens inside them is determined by who shows up.
+This is not burnout in the conventional sense. It is not a crisis that announces itself clearly. It is something slower: a sustained misalignment between what a founder has built and what it is actually doing for them. The business has been carrying psychological weight it was never designed to carry — supplying worth, answering identity questions, providing a daily argument for relevance — and the return on that routing has diminished or disappeared.
+
+Found Room exists for founders who have noticed this and are looking for a room where that observation is already understood, not explained.
+
+## Who This Is For
+
+Founders who built something real — bootstrapped or nearly so, operationally complex, genuinely earned. Typically late 30s to early 50s. Pre-exit, post-exit, or continuing to operate. What they share is not a stage or a company size. It is a willingness to look honestly at what they have been using the business for.
+
+The presenting experience tends to arrive as: tired, not sure what I'm doing this for anymore, can't motivate myself the same way, looking for something more meaningful. These are entry-level descriptions of a more structural situation. The community provides the language and the company to go deeper.
+
+## What Founders Find Here
+
+Not a coaching program. Not a mastermind. Not a curriculum or a transformation promise. A room — with peers who have been somewhere worth going, who don't need anything from each other, and who can hold an honest conversation without performing it.
+
+The structure includes in-person retreats, peer cohorts, and an ongoing private community. The work is whatever each member brings.
 
 ## Pages
 
-- [Home](https://foundroom.co/): Overview of Found Room — what it is, what founders find here, and how to express interest in founding membership.
-- [About](https://foundroom.co/about.html): Daniel Fox's story — how Found Room came to exist and the personal and intellectual foundation behind it.
-- [The Room](https://foundroom.co/the-room.html): What membership looks like — the ongoing community, peer cohorts, and the structure founders enter.
+- [Home](https://foundroom.co/): What Found Room is, who it is for, and how to express interest in founding membership.
+- [About](https://foundroom.co/about.html): The origin of Found Room and the observation it was built around.
+- [The Room](https://foundroom.co/the-room.html): What membership looks like — the ongoing community, peer cohorts, and structure.
 - [Retreats](https://foundroom.co/retreats.html): Found Room's in-person retreat experiences for founders.
-- [Journal](https://foundroom.co/journal.html): Writing from Daniel Fox on founders, identity, and the questions Found Room was built to hold.
+- [Journal](https://foundroom.co/journal.html): Essays on the specific internal experiences founders in this situation carry — written to name what is already true, not to explain or diagnose.
 
 ## Writing
 
-- [The Identity Cost](https://foundroom.co/identity-cost.html): The central body of work — examining how founders route personal needs through business systems, and what it costs them in clarity, relationships, and the quality of their lives.
-- [What the Business Was Doing](https://foundroom.co/essay-what-the-business-was-doing.html): An essay on the unconscious functions founders assign to their companies, and what becomes visible when they stop.
+- [The Identity Cost](https://foundroom.co/identity-cost.html): An examination of how founders route personal needs through business systems — how it happens, what it costs in decision quality and capacity, and what becomes possible when it stops.
+- [What the Business Was Doing](https://foundroom.co/essay-what-the-business-was-doing.html): On the unconscious functions a company serves for its founder, and what those functions reveal about what the founder is actually looking for.
+
+## Key Concepts
+
+**The Identity Cost**: The pattern in which a founder's sense of worth, direction, and meaning becomes entangled with the business — creating distortions in decision-making, information processing, and the founder's relationship to their own life.
+
+**The Found Room**: The space that opens when a founder stops routing their identity through external structures. Not built — found. Available to founders willing to stop long enough to look.
 
 ## Contact
 
