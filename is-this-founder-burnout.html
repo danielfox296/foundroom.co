@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Is This Founder Burnout, or Something Else? — Found Room</title>
+  <meta name="description" content="Most founders apply the burnout model to something it can't fix. If rest isn't working, the problem probably isn't the workload.">
+  <link rel="canonical" href="https://foundroom.co/is-this-founder-burnout.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Found Room">
+  <meta property="og:title" content="Is This Founder Burnout, or Something Else? — Found Room">
+  <meta property="og:description" content="Most founders apply the burnout model to something it can't fix. If rest isn't working, the problem probably isn't the workload.">
+  <meta property="og:url" content="https://foundroom.co/is-this-founder-burnout.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Is This Founder Burnout, or Something Else? — Found Room">
+  <meta name="twitter:description" content="Most founders apply the burnout model to something it can't fix. If rest isn't working, the problem probably isn't the workload.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=1200&h=630&q=85&auto=format&fit=crop">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* essay — page-specific styles only */
+
+/* Hero — full-bleed image */
+.essay-hero {
+  position: relative;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 40%;
+  overflow: hidden;
+}
+
+.essay-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.3) 0%, rgba(8,8,8,0.6) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.essay-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.essay-hero .eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.1s;
+}
+
+.essay-hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.25s;
+  margin-bottom: 1.6rem;
+}
+
+.essay-hero .essay-date {
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  letter-spacing: 0.06em;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.4s;
+}
+
+/* Essay body */
+.essay-body { padding: 5rem 6rem 8rem; }
+
+.essay-body .prose { max-width: 660px; }
+
+.essay-body p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  margin-bottom: 1.6rem;
+}
+
+.essay-body p em { font-style: italic; color: var(--ink); }
+
+.essay-body .section-break {
+  width: 40px;
+  height: 2px;
+  background: var(--rule);
+  margin: 4rem 0;
+}
+
+.essay-byline {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-light);
+  margin-top: 3rem;
+}
+
+/* Essay footer nav */
+.essay-footer-nav {
+  padding: 4rem 6rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.back-link:hover { color: var(--ink); }
+
+.essay-cta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--accent);
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  transition: background 0.18s;
+}
+
+.essay-cta:hover { background: var(--accent-hover); }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .essay-hero { padding: 8rem 1.5rem 4rem; }
+  .essay-body { padding: 3rem 1.5rem 5rem; }
+  .essay-footer-nav { padding: 3rem 1.5rem; flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+}
+  </style>
+</head>
+<body>
+
+<!-- =============================================
+   FOUND ROOM — Header / Nav
+   Edit this file to change navigation site-wide.
+   ============================================= -->
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">Journal</a>
+  </div>
+  <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="nav-cta">Let's Talk</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">Journal</a>
+    <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="mobile-nav-cta">Let's Talk</a>
+  </div>
+</div>
+
+<section class="essay-hero">
+<p class="eyebrow">Journal</p>
+<h1>Is this founder burnout, or something else?</h1>
+<p class="essay-date">2026</p>
+</section>
+<div class="section-rule"></div>
+
+<section class="essay-body">
+<div class="prose reveal">
+<p>Burnout has a clear model behind it. Researchers describe it as depletion: you had a certain amount of capacity, demands exceeded replenishment for long enough, and now there's less capacity than you started with. The prescription follows from the diagnosis. Rest. Remove the source of demand. Allow recovery. Repeat until the capacity returns.</p>
+<p>That model is coherent. If you've been running too hard on too little for too long, it fits.</p>
+<p>But a lot of founders apply that model to something different, and then wonder why the remedies aren't working.</p>
+<p>You take the vacation. Things ease slightly, then return to where they were. You hand off some of what used to land on you. The relief is real, but it's partial, and it doesn't stay. You sleep better for a while. The thing you were hoping would lift doesn't lift.</p>
+<p>Burnout responds to rest. If you've given yourself rest and the thing is still there, the model probably isn't matching the problem.</p>
+<div class="section-break"></div>
+<p>The version that gets called burnout among founders often has a different mechanism behind it. A growing gap between the effort going in and the signal that used to make the effort feel like it was pointed somewhere.</p>
+<p>To understand where that gap comes from, you have to go back a little.</p>
+<p>Building a company is one of the more efficient ways to answer certain questions about yourself. Can you actually do this? Do you have what it takes? Will people follow your lead, buy what you're selling, back what you're building? In the early days, every problem solved was data. Every hire who worked out, every customer who stayed, every quarter that closed above plan came back as confirmation: yes, you can. This is working. You're the person who can do this.</p>
+<p>Most founders don't say that out loud. You're building a business. But alongside that, you're running an experiment in self-confirmation, mostly without naming it as such. For most founders who build something real, what the experiment is producing starts to matter as much as the business results. Sometimes more.</p>
+<p>There's nothing wrong with that. It's what keeps you going when the rational case for continuing is thin and other people would stop. It works.</p>
+<p>But running on proof has a specific cost that only shows up when conditions change.</p>
+<div class="section-break"></div>
+<p>When the company is young and the questions are genuinely open, you keep getting answers back from the work. Will this work? Can I raise money? Will anyone actually buy this? As long as those questions are live, the work keeps generating answers, and the answers carry weight.</p>
+<p>At some point, the questions get answered. Not perfectly, and not all of them, but enough that the original uncertainty is gone. The company works. The team is solid. Revenue is real. You built the thing you were trying to build.</p>
+<p>A lot of founders move immediately to the next question. Bigger target, harder problem, new market. They reset. The proof-seeking starts again on new terms.</p>
+<p>Some founders, though, hit that point and notice the reset doesn't come the way it used to. The work isn't too hard. The results are roughly what they should be. But the feeling that used to connect effort and outcome has shifted. You're doing the same things. The numbers are moving. And somewhere between the doing and the result, something is different.</p>
+<p>The work feels different because the job changed. The questions you were actually answering got answered. The company kept running, but you ran out of new things to prove through it.</p>
+<div class="section-break"></div>
+<p>What usually happens next is that you turn the same intensity toward other domains. Diet. Fitness. The marriage. Some kind of spiritual practice. A side project or two. Each one gets the treatment. You do for the domain what you did for the company: you identify the gap, you close it, you optimize the thing. Each one improves, roughly. None of them relieves the underlying pressure, because none of them is the actual problem. You brought the problem with you.</p>
+<p>This is a pretty reliable tell. When a founder starts methodically working through the domains of his life in sequence, getting each one measurably better, and still can't name what would feel like enough, the issue is probably structural. The company was doing a job outside of its commercial function. Now that job has no home, and the work of finding it a home has gone underground.</p>
+<p>The domains are stand-ins. The optimization is real. But it's solving for something that sequential improvement can't address, which is why the sequence never ends.</p>
+<div class="section-break"></div>
+<p>For most founders who build something real, the company became the primary way they knew how they were doing. Revenue moved or it didn't. Headcount grew or it didn't. The numbers gave a clean read on whether the thing was working, and by extension, on whether you were.</p>
+<p>When that meter starts measuring something you've already proven, the meter keeps working but the reading changes on you. The new numbers arrive. The old sense of what those numbers meant doesn't come with them the same way.</p>
+<p>That's the difference between what you might be dealing with and clinical burnout. Burnout is running low. What a lot of founders describe, when you sit with them long enough, is more or less the opposite. The capacity is there. The direction is what's unclear.</p>
+<p>The interventions that work for burnout don't work for this. Rest brings capacity back; it doesn't address where you're pointing it. Another goal can work for a while, but it tends to work less well than the last goal did. You hit the number and the lift is shorter. The pattern repeats because the same underlying question keeps going unanswered.</p>
+<div class="section-break"></div>
+<p>Most founders keep running the business while this is open. You check the numbers, run the meetings, make the calls. You call it burnout because it's the word available, and because burnout at least suggests a recovery path.</p>
+<p>But you can take the vacation, sleep the hours, hand off the work. You'll still be here.</p>
+<p class="essay-byline">— Daniel Fox</p>
+</div>
+</section>
+
+<div class="essay-footer-nav">
+<p><a href="journal.html" class="back-link">← Journal</a>
+<a href="the-room.html" class="essay-cta">Join Found Room</a></p>
+</div>
+
+<!-- =============================================
+   FOUND ROOM — Footer
+   Edit this file to change the footer site-wide.
+   ============================================= -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="the-room.html">The Room</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">The Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer">Book a Call</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
+</footer>
+
+<script src="assets/js/global.js"></script>
+</body>
+</html>
