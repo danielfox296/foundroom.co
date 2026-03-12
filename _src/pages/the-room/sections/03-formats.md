@@ -1,22 +1,22 @@
 ---
 ---
 <section class="formats-section" markdown="1">
-  <h2 class="reveal">Three ways to be in the room.</h2>
+  <h2 class="reveal">What the membership includes.</h2>
   <div class="formats-grid" markdown="1">
+    <div class="format-item reveal" markdown="1">
+      <div class="icon-feature"><i data-lucide="users"></i></div>
+      <h3>Monthly conversations</h3>
+      <p>Two live sessions per month. Small group. Real conversation — not a presentation, not a check-in. You can bring the actual question.</p>
+    </div>
+    <div class="format-item reveal" markdown="1">
+      <div class="icon-feature"><i data-lucide="book-open"></i></div>
+      <h3>Member reflections</h3>
+      <p>One essay or audio reflection from a member each month. Someone in the room writing honestly about where they are. Not content. Honest contact.</p>
+    </div>
     <div class="format-item reveal" markdown="1">
       <div class="icon-feature"><i data-lucide="compass"></i></div>
       <h3>Retreats</h3>
-      <p>Immersive in-person experiences designed to create genuine discontinuity — a break from the usual context, the usual roles, the usual answers. Where the real conversations happen.</p>
-    </div>
-    <div class="format-item reveal" markdown="1">
-      <div class="icon-feature"><i data-lucide="users"></i></div>
-      <h3>Peer Cohorts</h3>
-      <p>Small groups of founders meeting regularly over a defined period. Structured enough to create momentum, open enough to follow what's actually alive in the room.</p>
-    </div>
-    <div class="format-item reveal" markdown="1">
-      <div class="icon-feature"><i data-lucide="circle-dot"></i></div>
-      <h3>Community</h3>
-      <p>An ongoing private space — not a Slack firehose, not a networking forum. A room where founders can think out loud, ask real questions, and find people who understand without explanation.</p>
+      <p>Founding members are invited to in-person gatherings. Two to four days. A small group. The room becomes real.</p>
     </div>
   </div>
 </section>
