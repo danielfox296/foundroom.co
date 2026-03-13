@@ -3,13 +3,13 @@
 <section class="cta-section" markdown="1">
   <div class="cta-block reveal" markdown="1">
 
-<p class="cta-block-label">Join the community</p>
+<p class="cta-block-label">Talk to Daniel</p>
 
-### The room is forming now.
+### Book a conversation.
 
-Found Room is building its founding member community. Express your interest and be among the first to hear when the room is open.
+I do a short introductory conversation with founders who are curious about The Right Room or who want to think out loud with someone who has been paying attention. Thirty minutes. No pitch from my side.
 
-<a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="btn-primary">Let's Talk</a>
+<a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="btn-primary">Book a Conversation</a>
 
   </div>
   <div class="cta-block reveal" markdown="1">

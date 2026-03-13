@@ -18,6 +18,8 @@ The promise is not constant engagement. The promise is a serious room — one wh
 
 Annual membership. No performance required. No pitch. No scoreboard.
 
+$6,000 per year. Founding member rate: $5,400.
+
   </div>
 </section>
 

@@ -1,7 +1,7 @@
 ---
 ---
 <section class="sidebar-section" markdown="1">
-  <p class="section-label reveal">Ways to start</p>
+  <p class="section-label reveal">Start here</p>
   <div class="sidebar-content reveal" markdown="1">
 
 Most founders who join The Right Room have had one conversation with Daniel first.
