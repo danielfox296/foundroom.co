@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>What to Do After You Exit Your Company — Found Room</title>
+  <meta name="description" content="The activity search that follows most exits — and why it usually doesn't resolve what it's trying to resolve.">
+  <link rel="canonical" href="https://foundroom.co/after-the-exit.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Found Room">
+  <meta property="og:title" content="What to Do After You Exit Your Company — Found Room">
+  <meta property="og:description" content="The activity search that follows most exits — and why it usually doesn't resolve what it's trying to resolve.">
+  <meta property="og:url" content="https://foundroom.co/after-the-exit.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What to Do After You Exit Your Company — Found Room">
+  <meta name="twitter:description" content="The activity search that follows most exits — and why it usually doesn't resolve what it's trying to resolve.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=630&q=85&auto=format&fit=crop">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* essay — page-specific styles only */
+
+/* Hero — full-bleed image */
+.essay-hero {
+  position: relative;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 40%;
+  overflow: hidden;
+}
+
+.essay-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.3) 0%, rgba(8,8,8,0.6) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.essay-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.essay-hero .eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.1s;
+}
+
+.essay-hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.25s;
+  margin-bottom: 1.6rem;
+}
+
+.essay-hero .essay-date {
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  letter-spacing: 0.06em;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.4s;
+}
+
+/* Essay body */
+.essay-body { padding: 5rem 6rem 8rem; }
+
+.essay-body .prose { max-width: 660px; }
+
+.essay-body p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  margin-bottom: 1.6rem;
+}
+
+.essay-body p em { font-style: italic; color: var(--ink); }
+
+.essay-body .section-break {
+  width: 40px;
+  height: 2px;
+  background: var(--rule);
+  margin: 4rem 0;
+}
+
+.essay-byline {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-light);
+  margin-top: 3rem;
+}
+
+/* Essay footer nav */
+.essay-footer-nav {
+  padding: 4rem 6rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.back-link:hover { color: var(--ink); }
+
+.essay-cta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--accent);
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  transition: background 0.18s;
+}
+
+.essay-cta:hover { background: var(--accent-hover); }
+
+/* Footer read-next block */
+.footer-read-next {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-read-next-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-read-next-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.footer-read-next-link:hover { color: var(--accent); }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .essay-hero { padding: 8rem 1.5rem 4rem; }
+  .essay-body { padding: 3rem 1.5rem 5rem; }
+  .essay-footer-nav { padding: 3rem 1.5rem; flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+}
+  </style>
+</head>
+<body class="">
+
+<!-- =============================================
+   FOUND ROOM — Header / Nav
+   Edit this file to change navigation site-wide.
+   ============================================= -->
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Right Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">The Found Journal</a>
+  </div>
+  <a href="https://calendly.com/danielchristopherfox/30-minute" class="nav-cta" target="_blank" rel="noopener">Book a Conversation</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Right Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">The Found Journal</a>
+    <a href="https://calendly.com/danielchristopherfox/30-minute" class="mobile-nav-cta" target="_blank" rel="noopener">Book a Conversation</a>
+  </div>
+</div>
+
+<section class="essay-hero">
+<p class="eyebrow">Journal — Essay 05</p>
+<h1>What to do after you exit your company.</h1>
+<p class="essay-date">2026</p>
+</section>
+<div class="section-rule"></div>
+
+<section class="essay-body">
+<div class="prose reveal">
+<p>The question gets asked in a lot of different forms. What's next? What are you working on? Have you found the right thing yet? Founders who've recently exited spend a surprising amount of time fielding versions of it, which turns out to be its own kind of pressure — the sense that the answer should be available, that you should have a good one, that having built and sold a company entitles you to know where you're going.</p>
+<p>Most of the advice treats the question as a resource allocation problem. You have time, capital, experience, and energy. You need to find the right vehicles for deploying them. Board seats. Angel investing. A new venture. Philanthropy. Travel. The self-improvement project you've been deferring for a decade. The implicit promise is that if you find the right combination of activities, the discomfort of the transition will resolve.</p>
+<p>Some founders find this framing useful. They exit, move quickly to the next thing, and it works. The forward motion is genuine and the engagement holds.</p>
+<p>But a lot of founders find that it doesn't work — or that it works for six months and then stops. The board seat is interesting but thin. The angel deals are stimulating but not quite right. The new project is compelling at first and then strangely flat. They start to wonder if they're doing it wrong, if they've chosen the wrong activities, if they're missing something obvious.</p>
+<p>The activities aren't the problem.</p>
+<div class="section-break"></div>
+<p>The operating role — running a company you built, for years, at full intensity — provides a set of things that are easy to take for granted until they're gone.</p>
+<p>Your time has default purpose. You don't decide each morning whether what you're doing matters; the calendar is full of things that matter, and you show up. Your competence is tested continuously and visibly. You know whether you're good at your job because the job gives you ongoing, concrete evidence. Your identity is legible — to yourself, to the people around you, to anyone who asks. You're the founder. You built this. That's a clear answer to who you are.</p>
+<p>The exit removes all three at once.</p>
+<p>Suddenly your calendar is blank by default. You have to generate purpose rather than receive it. Your competence isn't being tested the way it was, so the evidence stops arriving. And the identity that organized your self-understanding for the last decade is grammatically past tense. You used to be the founder. You built something. What are you now?</p>
+<p>The activity search — board seats, new ventures, deployment of capital — is an attempt to answer those questions through substitution. Find something that will fill the calendar, test the competence, restore the legibility. Sometimes that works. More often it partially works, because the substitutes don't produce the same depth of answer.</p>
+<div class="section-break"></div>
+<p>The uncomfortable version of this is that "what to do after you exit" is, in many cases, the wrong question.</p>
+<p>Not because doing things doesn't matter. It does. But the activities available to a recently exited founder don't automatically restore what the operating role was providing. The depth of engagement that comes from building something from zero, over years, against real stakes — there's no obvious substitute for that. Board seats are part-time. Angel deals are episodic. New ventures take years to generate the same pull.</p>
+<p>What the activity search tends to skip is the prior question: what exactly was the operating role providing, and what do you actually want from what comes next?</p>
+<p>Most founders haven't answered that question, because there was never a reason to ask it while the company was running. The answers were just there, embedded in the daily work. The exit surfaces the question for the first time, and the instinct is to solve it by finding a new activity rather than by sitting with it long enough to understand it.</p>
+<div class="section-break"></div>
+<p>The founders who navigate the post-exit period most usefully are generally not the ones who found the right activity fastest. They're the ones who got honest about what they were actually looking for. Not what they should want, not what looks right from the outside — what they actually want their days to feel like, what kind of engagement they find genuine, what they're willing to build again at the cost that building requires.</p>
+<p>That's slower work than filling a calendar. It tends to produce less to say at dinner parties. But the activities that come out of it tend to hold in a way that the substitution plays don't.</p>
+<p>The question isn't what to do after you exit your company. The question is what you're actually trying to get to. The activities are downstream of that.</p>
+<p class="essay-byline">— Daniel Fox</p>
+</div>
+</section>
+
+<div class="essay-footer-nav">
+<div class="footer-read-next">
+<span class="footer-read-next-label">Read next</span>
+<a href="identity-cost.html" class="footer-read-next-link">The Identity Cost →</a>
+</div>
+<a href="https://fox296.substack.com/subscribe" class="essay-cta" target="_blank" rel="noopener">Subscribe on Substack</a>
+</div>
+
+<!-- =============================================
+   FOUND ROOM — Footer
+   Edit this file to change the footer site-wide.
+   ============================================= -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="the-room.html">The Room</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">The Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer">Book a Call</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
+</footer>
+
+<script src="assets/js/global.js"></script>
+</body>
+</html>

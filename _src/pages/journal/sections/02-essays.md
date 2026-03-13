@@ -55,16 +55,16 @@
   </div>
 
   <div class="essay-item reveal" markdown="1">
-    <div class="essay-thumb essay-thumb--soon">
-      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
-    </div>
+    <a href="after-the-exit.html" class="essay-thumb">
+      <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+    </a>
     <div class="essay-meta" markdown="1">
       <span class="essay-number">05</span>
-      <p class="essay-title">The founder who stays</p>
-      <p class="essay-desc">Continuing to operate isn't simpler than exiting. It's a different version of the same question.</p>
+      <p class="essay-title">What to do after you exit your company</p>
+      <p class="essay-desc">The activity search that follows most exits — and why it usually doesn't resolve what it's trying to resolve.</p>
       <p class="essay-date">2026</p>
     </div>
-    <a href="#" class="essay-read coming-soon">Coming soon</a>
+    <a href="after-the-exit.html" class="essay-read">Read →</a>
   </div>
 
   <div class="essay-item reveal" markdown="1">
