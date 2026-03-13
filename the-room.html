@@ -99,10 +99,71 @@
 .format-number { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 1.2rem; }
 .format-item h3 { font-family: 'Manrope', sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.8rem; }
 .format-item p { font-size: 0.95rem; line-height: 1.6; color: var(--ink-mid); }
+/* ── Entry-point offer cards ── */
+.offer-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.offer-card {
+  border-top: 2px solid var(--accent);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.offer-card h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--white);
+}
+.offer-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink-mid);
+  max-width: none;
+  margin: 0;
+  flex-grow: 1;
+}
+.offer-pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.offer-price-main {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.offer-price-unit {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--ink-mid);
+  letter-spacing: 0.04em;
+}
+.offer-price-founding {
+  font-size: 0.78rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+.offer-card .btn-secondary {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
 @media (max-width: 960px) {
   .hero { padding: 8rem 1.5rem 4rem; }
   .formats-section { padding: 5rem 1.5rem; }
   .formats-grid { grid-template-columns: 1fr; }
+  .offer-cards { grid-template-columns: 1fr; }
 }
   </style>
 </head>
@@ -192,6 +253,34 @@
 <p>The Right Room is for founders who have built something real and are willing to look honestly at themselves as part of what they've built. Pre-exit, post-exit, or continuing to operate. The stage doesn't matter. The willingness does.</p>
 <p>The founding cohort is being selected personally. The criteria are not application forms, revenue thresholds, or reputation. The question is whether you're the kind of founder who makes the room better for everyone in it.</p>
 <p>If you're reading this and it lands — that's usually the right signal.</p>
+</div>
+</section>
+<div class="section-rule"></div>
+
+<section class="sidebar-section">
+<p class="section-label reveal">Ways to start</p>
+<div class="sidebar-content reveal">
+<p>Most founders who join The Right Room have had one conversation with Daniel first.</p>
+<div class="offer-cards">
+<div class="offer-card">
+<h3>Group Conversation</h3>
+<p>Four to six founders. One subject. Two hours. Daniel runs the room. You can bring the actual question.</p>
+<div class="offer-pricing">
+<span class="offer-price-main">$200 <span class="offer-price-unit">per seat</span></span>
+<span class="offer-price-founding">Founding member: $180</span>
+</div>
+<a href="https://calendly.com/danielchristopherfox/30-minute" class="btn-secondary" target="_blank" rel="noopener">Book a seat</a>
+</div>
+<div class="offer-card">
+<h3>Private Conversation</h3>
+<p>One-on-one with Daniel. You bring whatever you haven't been able to get to the bottom of. Two to three hours.</p>
+<div class="offer-pricing">
+<span class="offer-price-main">$1,125</span>
+<span class="offer-price-founding">Founding member: $1,000</span>
+</div>
+<a href="https://calendly.com/danielchristopherfox/30-minute" class="btn-secondary" target="_blank" rel="noopener">Schedule a session</a>
+</div>
+</div>
 </div>
 </section>
 <div class="section-rule"></div>
