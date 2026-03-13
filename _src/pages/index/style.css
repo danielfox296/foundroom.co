@@ -162,6 +162,44 @@
   line-height: 1.85;
 }
 
+/* ── Identity Cost bridge ── */
+.identity-bridge {
+  padding: 5rem 6rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 6rem;
+  align-items: start;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.identity-bridge-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-top: 0.5rem;
+}
+
+.identity-bridge-lead {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink-mid);
+  margin-bottom: 1.2rem;
+}
+
+.identity-bridge-link {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.identity-bridge-link:hover { color: var(--accent); }
+
 /* ── About ── */
 .about {
   padding: 8rem 6rem;
@@ -227,6 +265,7 @@
   .what { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 2rem; }
   .what-label { position: static; }
   .recognition { padding: 6rem 1.5rem; }
+  .identity-bridge { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 1.5rem; }
   .about { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 3rem; }
   .about-aside { position: static; }
 }
