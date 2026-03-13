@@ -29,16 +29,16 @@
   </div>
 
   <div class="essay-item reveal" markdown="1">
-    <div class="essay-thumb essay-thumb--soon">
-      <img src="https://images.unsplash.com/photo-1532153975070-2e9ab71f1b14?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
-    </div>
+    <a href="stepping-back-as-ceo.html" class="essay-thumb">
+      <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+    </a>
     <div class="essay-meta" markdown="1">
       <span class="essay-number">03</span>
-      <p class="essay-title">The long unwinding: what happens after you sell</p>
-      <p class="essay-desc">Why the exit is the beginning of a harder question, not the end of one.</p>
+      <p class="essay-title">What I got wrong about stepping back as CEO</p>
+      <p class="essay-desc">The version of the transition most founders expect — and what the first year actually looks like.</p>
       <p class="essay-date">2026</p>
     </div>
-    <a href="#" class="essay-read coming-soon">Coming soon</a>
+    <a href="stepping-back-as-ceo.html" class="essay-read">Read →</a>
   </div>
 
   <div class="essay-item reveal" markdown="1">
