@@ -68,16 +68,16 @@
   </div>
 
   <div class="essay-item reveal" markdown="1">
-    <div class="essay-thumb essay-thumb--soon">
-      <img src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
-    </div>
+    <a href="should-i-sell-my-company.html" class="essay-thumb">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+    </a>
     <div class="essay-meta" markdown="1">
       <span class="essay-number">06</span>
-      <p class="essay-title">On authorship</p>
-      <p class="essay-desc">What it means to write your own meaning instead of inheriting it from outcomes and roles.</p>
+      <p class="essay-title">Should I sell my company</p>
+      <p class="essay-desc">The financial question and the personal question that lives inside it — and why they need to be answered separately.</p>
       <p class="essay-date">2026</p>
     </div>
-    <a href="#" class="essay-read coming-soon">Coming soon</a>
+    <a href="should-i-sell-my-company.html" class="essay-read">Read →</a>
   </div>
 
   <div class="essay-item reveal" markdown="1">
