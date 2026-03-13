@@ -42,16 +42,16 @@
   </div>
 
   <div class="essay-item reveal" markdown="1">
-    <div class="essay-thumb essay-thumb--soon">
-      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
-    </div>
+    <a href="bored-after-startup-success.html" class="essay-thumb">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+    </a>
     <div class="essay-meta" markdown="1">
       <span class="essay-number">04</span>
-      <p class="essay-title">Why optimization stops working</p>
-      <p class="essay-desc">On the moment when tightening processes stops reducing pressure — and what that signal means.</p>
+      <p class="essay-title">Why am I bored after my startup succeeded</p>
+      <p class="essay-desc">The boredom that shows up when everything is working. What it actually is, and why a new project usually doesn't fix it.</p>
       <p class="essay-date">2026</p>
     </div>
-    <a href="#" class="essay-read coming-soon">Coming soon</a>
+    <a href="bored-after-startup-success.html" class="essay-read">Read →</a>
   </div>
 
   <div class="essay-item reveal" markdown="1">

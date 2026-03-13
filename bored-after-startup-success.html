@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Why Am I Bored After My Startup Succeeded — Found Room</title>
+  <meta name="description" content="The boredom that shows up after you've built something real. What it is, and what it isn't.">
+  <link rel="canonical" href="https://foundroom.co/bored-after-startup-success.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Found Room">
+  <meta property="og:title" content="Why Am I Bored After My Startup Succeeded — Found Room">
+  <meta property="og:description" content="The boredom that shows up after you've built something real. What it is, and what it isn't.">
+  <meta property="og:url" content="https://foundroom.co/bored-after-startup-success.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why Am I Bored After My Startup Succeeded — Found Room">
+  <meta name="twitter:description" content="The boredom that shows up after you've built something real. What it is, and what it isn't.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=630&q=85&auto=format&fit=crop">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* essay — page-specific styles only */
+
+/* Hero — full-bleed image */
+.essay-hero {
+  position: relative;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 40%;
+  overflow: hidden;
+}
+
+.essay-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.3) 0%, rgba(8,8,8,0.6) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.essay-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.essay-hero .eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.1s;
+}
+
+.essay-hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.25s;
+  margin-bottom: 1.6rem;
+}
+
+.essay-hero .essay-date {
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  letter-spacing: 0.06em;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.4s;
+}
+
+/* Essay body */
+.essay-body { padding: 5rem 6rem 8rem; }
+
+.essay-body .prose { max-width: 660px; }
+
+.essay-body p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  margin-bottom: 1.6rem;
+}
+
+.essay-body p em { font-style: italic; color: var(--ink); }
+
+.essay-body .section-break {
+  width: 40px;
+  height: 2px;
+  background: var(--rule);
+  margin: 4rem 0;
+}
+
+.essay-byline {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-light);
+  margin-top: 3rem;
+}
+
+/* Essay footer nav */
+.essay-footer-nav {
+  padding: 4rem 6rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.back-link:hover { color: var(--ink); }
+
+.essay-cta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--accent);
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  transition: background 0.18s;
+}
+
+.essay-cta:hover { background: var(--accent-hover); }
+
+/* Footer read-next block */
+.footer-read-next {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-read-next-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-read-next-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.footer-read-next-link:hover { color: var(--accent); }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .essay-hero { padding: 8rem 1.5rem 4rem; }
+  .essay-body { padding: 3rem 1.5rem 5rem; }
+  .essay-footer-nav { padding: 3rem 1.5rem; flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+}
+  </style>
+</head>
+<body class="">
+
+<!-- =============================================
+   FOUND ROOM — Header / Nav
+   Edit this file to change navigation site-wide.
+   ============================================= -->
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Right Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">The Found Journal</a>
+  </div>
+  <a href="https://calendly.com/danielchristopherfox/30-minute" class="nav-cta" target="_blank" rel="noopener">Book a Conversation</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Right Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">The Found Journal</a>
+    <a href="https://calendly.com/danielchristopherfox/30-minute" class="mobile-nav-cta" target="_blank" rel="noopener">Book a Conversation</a>
+  </div>
+</div>
+
+<section class="essay-hero">
+<p class="eyebrow">Journal — Essay 04</p>
+<h1>Why am I bored after my startup succeeded.</h1>
+<p class="essay-date">2026</p>
+</section>
+<div class="section-rule"></div>
+
+<section class="essay-body">
+<div class="prose reveal">
+<p>There's a specific version of this that shows up around year seven or eight, sometimes earlier, sometimes later. The company is working. Revenue is consistent or growing. The team is capable. You've built what you set out to build, or close enough to it that the gap is minor. By every external measure, you're succeeding.</p>
+<p>And you're bored.</p>
+<p>Not burned out. Not tired. Not in need of a vacation. The word most founders use, quietly, is bored. Which is embarrassing, because bored sounds ungrateful. It sounds like a problem rich people have. It sounds like something you're not allowed to say when the thing you built is still standing and people still depend on it.</p>
+<p>But there it is.</p>
+<div class="section-break"></div>
+<p>The standard explanation is that the early stage is exciting and the later stage is operational, and most founders are wired for the former. Some truth there. But it doesn't explain why the boredom lands the way it does — not as restlessness exactly, but as a kind of flatness. Like the signal got turned off.</p>
+<p>Here's a more useful way to think about it.</p>
+<p>In the early years, the company is generating a continuous stream of genuine uncertainty. Will this work? Can we make payroll? Will this customer renew? Will this hire work out? That uncertainty produces engagement, not because uncertainty is fun, but because your judgment is constantly being tested and refined against real stakes. Every week contains multiple moments where you don't know the answer and have to figure it out.</p>
+<p>By year seven or eight, most of that uncertainty has been resolved. You know the business. You know the patterns. You know which problems are actually problems and which ones resolve on their own. The stakes are real but the questions are familiar. And somewhere in there, the signal that was keeping you sharp and engaged stopped arriving at the same frequency.</p>
+<p>What founders call boredom is often the experience of running out of new problems to solve.</p>
+<div class="section-break"></div>
+<p>The instinct is to find a new project. Add a product line. Make an acquisition. Start something on the side. The boredom reads like a resource allocation problem — you have capacity left over, and something needs to absorb it.</p>
+<p>Sometimes that's right. Some founders genuinely need more complexity, more stakes, more surface area. They're built for scale and they've been operating below their threshold.</p>
+<p>But a lot of the time, the new project doesn't fix it. It produces a few months of engagement and then flattens out again. The pattern repeats. The founder starts another project. Or they start to wonder if something is wrong with them.</p>
+<p>What's worth looking at in those cases is what exactly the original company was producing that the boredom signals the absence of. Because it probably wasn't just problem-solving. It was also a daily, concrete answer to a question about who you are and whether what you're doing matters. The company was providing proof. Revenue, headcount, growth, recognition — these are all forms of evidence. Evidence that you're competent, that you're building something real, that your judgment is sound.</p>
+<p>When the company stabilizes, the evidence machine stabilizes with it. Consistent performance stops being proof of anything, because you're no longer earning it against uncertainty. It's just there.</p>
+<p>The boredom might not be about novelty. It might be about the evidence having stopped arriving.</p>
+<div class="section-break"></div>
+<p>This matters because the two problems have different responses.</p>
+<p>If you're genuinely under-challenged, a new project probably helps. More complexity, more stakes, more surface area for your skills to work against. That's a reasonable diagnosis and a reasonable solution.</p>
+<p>If what's missing is the sense that what you're doing matters — the evidence of your own worth arriving on a daily basis through the work — a new project doesn't fix it. It delays it. You'll be engaged for six months and then you'll be back here, wondering why the thing you started isn't doing it for you either.</p>
+<p>The second version is more common than founders tend to admit, because admitting it requires acknowledging that the work was doing something for you that had nothing to do with the work. That the motivation wasn't purely about building something good. That some part of what drove you was the daily answer to a question you didn't fully recognize you were asking.</p>
+<p>That's not a character flaw. It's how the thing works. The problem is treating a new project as the answer when the question is actually about something else.</p>
+<div class="section-break"></div>
+<p>The boredom, in that case, is worth sitting with before reaching for a solution. Not because sitting with it is comfortable, but because what it surfaces tends to be more clarifying than anything the next project will produce.</p>
+<p>Most founders who do this work — who actually look at what the company was providing that the boredom signals the absence of — describe the same experience: disorienting at first, then useful. Not because they find an answer, but because they find the actual question.</p>
+<p>Which is different from the one they started with.</p>
+<p class="essay-byline">— Daniel Fox</p>
+</div>
+</section>
+
+<div class="essay-footer-nav">
+<div class="footer-read-next">
+<span class="footer-read-next-label">Read next</span>
+<a href="identity-cost.html" class="footer-read-next-link">The Identity Cost →</a>
+</div>
+<a href="https://fox296.substack.com/subscribe" class="essay-cta" target="_blank" rel="noopener">Subscribe on Substack</a>
+</div>
+
+<!-- =============================================
+   FOUND ROOM — Footer
+   Edit this file to change the footer site-wide.
+   ============================================= -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="the-room.html">The Room</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">The Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer">Book a Call</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
+</footer>
+
+<script src="assets/js/global.js"></script>
+</body>
+</html>
