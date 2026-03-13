@@ -155,6 +155,33 @@
 
 .essay-cta:hover { background: var(--accent-hover); }
 
+/* Footer read-next block */
+.footer-read-next {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-read-next-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-read-next-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.footer-read-next-link:hover { color: var(--accent); }
+
 /* Responsive */
 @media (max-width: 960px) {
   .essay-hero { padding: 8rem 1.5rem 4rem; }
@@ -242,8 +269,11 @@
 </section>
 
 <div class="essay-footer-nav">
-<p><a href="journal.html" class="back-link">← Journal</a>
-<a href="the-room.html" class="essay-cta">Join Found Room</a></p>
+<div class="footer-read-next">
+<span class="footer-read-next-label">Read next</span>
+<a href="identity-cost.html" class="footer-read-next-link">The Identity Cost →</a>
+</div>
+<a href="https://fox296.substack.com/subscribe" class="essay-cta" target="_blank" rel="noopener">Subscribe on Substack</a>
 </div>
 
 <!-- =============================================
