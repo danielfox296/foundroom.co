@@ -146,7 +146,7 @@ The length of the transition tends to correlate with how much identity weight th
 
 ---
 
-## The Found Room: Full Explanation
+## Found Room: Full Explanation
 
 The found room is the space that opens when a founder stops routing his identity through external structures.
 
