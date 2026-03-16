@@ -5,9 +5,9 @@
 
 <h2>The right room is <span style="color:var(--accent)">forming.</span></h2>
 
-The Right Room is assembling its founding cohort now. Founding members set the tone — the standards, the culture, what this room becomes over time.
+The Right Room is assembling its founding cohort now. Founding members set the tone. What gets said in this room, how vulnerability is met, whether the work is real or performative. All of it.
 
-This is not a waitlist. It's a conversation about whether this is the right room for you.
+This is not a waitlist. It's a conversation about whether you're in the middle of what this room is actually for, and whether you want to sit with that question in the company of other founders who are too.
 
   </div>
   <div class="cta-right reveal" markdown="1">
