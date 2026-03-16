@@ -1,16 +1,22 @@
 ---
 ---
 <section class="sidebar-section" markdown="1">
-  <p class="section-label">Why in-person</p>
+  <p class="section-label">The work</p>
   <div class="sidebar-content reveal" markdown="1">
 
-## Something about leaving matters.
+## Three things get built over four days.
 
-Not just the change of scenery. The discontinuity. The physical act of stepping out of the environment where you perform your usual roles. The absence of your usual routines, your usual responsibilities, your usual self.
+**01 — The Values Audit**
 
-In that space, different things become possible. Questions that felt too large to hold at a desk become manageable. Conversations that would feel risky in a familiar context feel natural. Rest that wouldn't come at home arrives on its own.
+A lot of what founders call their values were absorbed, not chosen. From family, from culture, from the specific social math of being ambitious in your twenties. The audit surfaces which values are actually yours — revealed by your decisions over time, not your self-description. The gap between those two lists is usually where the interesting work is.
 
-Found Room retreats are designed around that discontinuity. Not as a vacation — as a genuine container for the work that the rest of life doesn't make room for.
+**02 — The Compromise Inventory**
+
+Every founder makes agreements they didn't fully examine at the time. In the business, in relationships, in how they spend time, in who they perform themselves as to different audiences. The inventory isn't a grievance exercise. It's a way of seeing clearly what you're carrying so you can decide what you want to carry forward.
+
+**03 — The Forward Draft**
+
+What sovereignty actually looks like for you, specifically. The details, not the category. What are you building? What does a day look like when your actions match what you actually want? Where are you directing energy, and toward what? This is the map. It's a document you write during the retreat and leave with.
 
   </div>
 </section>

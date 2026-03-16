@@ -3,9 +3,9 @@
 <section class="cta-section" id="join">
   <div class="cta-left reveal" markdown="1">
 
-<h2>Be part of the <span style="color:var(--accent)">first retreat.</span></h2>
+<h2>The right room is <span style="color:var(--accent)">forming.</span></h2>
 
-Found Room's first retreat is in development. We're looking for a small group of founding members to help shape what it becomes — the format, the location, the focus. If this resonates, express your interest. Daniel will be in touch directly.
+If this has landed and you want to know whether it's the right room for you, reach out. Daniel will be in touch directly. No pitch. A real conversation.
 
   </div>
   <div class="cta-right reveal" markdown="1">
@@ -14,7 +14,7 @@ Found Room's first retreat is in development. We're looking for a small group of
       <input id="emailInput" type="email" placeholder="Your email address">
       <button onclick="handleSubmit()">I'm interested</button>
     </div>
-    <p class="cta-note">No commitment. A conversation about whether this is right for you.</p>
+    <p class="cta-note">Colorado, fall 2026. Exact dates forming.</p>
     <p class="success-message" id="successMsg">You're in the room. We'll be in touch.</p>
   </div>
 </section>

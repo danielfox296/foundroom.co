@@ -1,9 +1,9 @@
 ---
 ---
 <section class="hero" markdown="1">
-  <p class="eyebrow">Found Room Retreats</p>
-  <h1>Some things can only happen when you leave.</h1>
-  <p class="hero-sub">Found Room retreats are designed to create the conditions for honest conversation, genuine rest, and the kind of clarity that doesn't happen at a desk.</p>
+  <p class="eyebrow">Found Room Retreat — Colorado, Fall 2026</p>
+  <h1>The Next Map</h1>
+  <p class="hero-sub">Four days in the Colorado mountains with a small group of founders who have built something real and are ready to be honest about what comes next.</p>
 </section>
 
 <div class="section-rule"></div>

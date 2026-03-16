@@ -1,28 +1,19 @@
 ---
 ---
-<section class="building-section" markdown="1">
-  <h2 class="reveal">What we're building.</h2>
-  <div class="building-grid" markdown="1">
-    <div class="building-item reveal" markdown="1">
-      <div class="icon-feature"><i data-lucide="minimize-2"></i></div>
-      <h3>Small</h3>
-      <p>Intimate enough that everyone in the room knows everyone else by the end. Not a conference. Not a cohort of fifty. A room where real conversation is possible.</p>
-    </div>
-    <div class="building-item reveal" markdown="1">
-      <div class="icon-feature"><i data-lucide="eye"></i></div>
-      <h3>Honest</h3>
-      <p>Structured around genuine exchange, not performance. No keynotes. No panels. No one selling anything.</p>
-    </div>
-    <div class="building-item reveal" markdown="1">
-      <div class="icon-feature"><i data-lucide="map-pin"></i></div>
-      <h3>Located</h3>
-      <p>In places that earn the trip. Environments chosen for their capacity to create the right kind of space — natural, removed, genuinely beautiful.</p>
-    </div>
-    <div class="building-item reveal" markdown="1">
-      <div class="icon-feature"><i data-lucide="hourglass"></i></div>
-      <h3>Unhurried</h3>
-      <p>Long enough to actually land somewhere. Not a weekend of back-to-back sessions. Time to think, to walk, to sit with what comes up.</p>
-    </div>
+<section class="sidebar-section" markdown="1">
+  <p class="section-label">Why this is different</p>
+  <div class="sidebar-content reveal" markdown="1">
+
+## Most work in this space starts in the wrong place.
+
+It assumes you have values and need help aligning your life to them. The work here starts one level earlier: with the question of whether the values you've been living were yours to begin with, or whether they were installed by culture, success, family, and social pressure and never examined.
+
+The goal isn't alignment to a better version of the same map. The goal is authorship. Knowing what you actually want, why, and what you're willing to do about it from a foundation that's genuinely yours.
+
+Daniel has been through this work personally. He built a bootstrapped company to 180 people and tens of millions in revenue, exited, and spent several years in the slow work of rebuilding from a foundation he actually chose. That experience gives him patience for this process that doesn't come from theory, and a specific understanding of what it costs in a business, in relationships, and day to day that someone who hasn't been through it would miss.
+
+For members who want it, the work can extend to include meditation and plant medicine as tools within this process. That's a conversation for before the retreat.
+
   </div>
 </section>
 
