@@ -1,9 +1,7 @@
 <section class="essay-body" markdown="1">
 <div class="prose reveal" markdown="1">
 
-Most founders arrive at the exit with a version of this question already forming. Not the financial version. That one gets handled by advisors and closing documents and wire transfers. The one that tends to linger is harder to answer because it's harder to name.
-
-You sold. The thing you built is no longer yours in the way it was. Now what?
+You sold. Now what?
 
 What follows are the questions founders actually ask, and what the honest answers tend to be.
 
@@ -15,17 +13,17 @@ That's not a prediction. Some founders move faster. Some slower. But if you're t
 
 <p class="faq-q">Should I start something new right away?</p>
 
-Most founders who start something new in the first six to twelve months report that it doesn't produce what they expected. Initial momentum shows up. Then the familiar flatness. This happens not because starting is wrong. It happens because starting becomes a way of not sitting with what the exit opened.
+You probably already did. Or you're thinking about it. The founders I know either jumped into something in the first six months or they're sitting with that pressure right now. The ones who started something new report the same thing: initial momentum showed up, then the familiar flatness. This happens not because starting is wrong. It happens because starting becomes a way of not sitting with what the exit opened.
 
-For a founder, building is how you answer questions. It's the only tool in the toolkit that's reliable. Starting something new is the move that delays whatever the exit was trying to surface.
+For a founder, building is how you answer questions. It's the only tool that ever reliably worked. Starting something new doesn't just look like what's next. It's often still the same machinery running on the same question: am I heading somewhere.
 
-The founders who end up somewhere different usually sat still a little longer than felt comfortable.
+The ones who end up somewhere different usually sat still a little longer than felt comfortable. Not forever. Just longer.
 
 <p class="faq-q">What do I do with all the time?</p>
 
-You probably won't know until you stop filling it. Most founders replicate the structure of the working week immediately. Calls. Commitments. Advisory roles. Learning projects. This is understandable. It's also a way of not finding out what the time is actually for.
+You know what staying busy feels like. Calls. Commitments. Advisory roles. Learning projects. The structure replicated almost automatically from the working week. The real question under the schedule question is one you probably already know to ask: who am I without the company to tell me what to do today.
 
-The question underneath the schedule question is: who am I without the company to tell me what to do today. That's harder. It doesn't get answered by staying busy.
+That's the hard one. It doesn't get answered by filling the time, and you already know that.
 
 <p class="faq-q">I feel worse than I expected. Is that normal?</p>
 
@@ -39,9 +37,9 @@ The money resolves the financial question. For most founders in a post-exit situ
 
 <p class="faq-q">What actually helps?</p>
 
-Research points to a few things. Relationships and interests that existed outside the business before the exit. Peer connection with others who have been through it. Honest conversation about what the exit actually meant.
+Relationships and interests that existed outside the business before the exit. Peer connection with others who have been through it. Honest conversation about what the exit actually meant.
 
-Advisory roles and boards help some. Coaching helps many. What seems to matter most is having somewhere to take the real version of the experience. Not the version suited for a LinkedIn announcement.
+Some founders do good work with advisory roles or coaching. What seems to matter most is somewhere to take the real version of the experience. Not the version suited for a LinkedIn announcement. Someone who gets what the silence is actually about. The proof is gone. Now what was the proof doing.
 
 <p class="faq-q">Is this a midlife crisis?</p>
 

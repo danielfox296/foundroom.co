@@ -1,9 +1,7 @@
 <section class="essay-body" markdown="1">
 <div class="prose reveal" markdown="1">
 
-There is a version of the exit day that most founders have imagined long before it arrives. Not in detail necessarily, but in emotional texture. The sense that something has been completed. That the years of work, uncertainty, and sacrifice have resolved into something permanent and good. That you will feel, in some durable way, that it was worth it.
-
-The closing dinner happens. The wire hits the account. People say things that are kind and probably true. And then, usually within a few days or weeks, the texture shifts.
+The closing dinner happens. The wire hits the account. People say things that are kind and probably true. And then, usually within a few days or weeks, something shifts.
 
 Not dramatically. The money is real. The deal happened. The company is now someone else's problem. But the feeling that was supposed to come with all of that either doesn't arrive or arrives and leaves faster than expected.
 
@@ -29,11 +27,11 @@ Something else doesn't get said at the closing dinner. The company was doing a j
 
 The exit ends that arrangement.
 
-What the business was doing for you is worth understanding. Not as an exercise in looking back. As practical accounting. The business was producing something. Now it isn't. What was that. Where does it come from now.
+The business was producing something. Now it isn't. What was that. Where does it come from now.
 
 The founders who don't lose a year or two to restlessness are the ones who sit with that question long enough to actually name what the company was providing. Not what they thought it should have been providing. What it was actually doing. A founder realizes one Tuesday morning that the company wasn't just providing structure. It was providing proof that she was heading somewhere. Every board meeting, every funding round, every new hire. All of it was evidence that the trajectory was real.
 
-Now that's gone. She has the money. She still doesn't have the proof that the days matter.
+Now that's gone. She has the money. She's checking her email at six in the morning.
 
 <p class="essay-byline">— Daniel Fox</p>
 
