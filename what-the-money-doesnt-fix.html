@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>What the Money Doesn't Fix — Found Room</title>
+  <meta name="description" content="On financial freedom and the specific things it doesn't resolve.">
+  <link rel="canonical" href="https://foundroom.co/what-the-money-doesnt-fix.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Found Room">
+  <meta property="og:title" content="What the Money Doesn't Fix — Found Room">
+  <meta property="og:description" content="On financial freedom and the specific things it doesn't resolve.">
+  <meta property="og:url" content="https://foundroom.co/what-the-money-doesnt-fix.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What the Money Doesn't Fix — Found Room">
+  <meta name="twitter:description" content="On financial freedom and the specific things it doesn't resolve.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1200&h=630&q=85&auto=format&fit=crop">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0W9D4LQ59"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K0W9D4LQ59');
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* essay — page-specific styles only */
+
+/* Hero — full-bleed image */
+.essay-hero {
+  position: relative;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 40%;
+  overflow: hidden;
+}
+
+.essay-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.3) 0%, rgba(8,8,8,0.6) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.essay-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.essay-hero .eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.1s;
+}
+
+.essay-hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.25s;
+  margin-bottom: 1.6rem;
+}
+
+.essay-hero .essay-date {
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  letter-spacing: 0.06em;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.4s;
+}
+
+/* Essay body */
+.essay-body { padding: 5rem 6rem 8rem; }
+
+.essay-body .prose { max-width: 660px; }
+
+.essay-body p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  margin-bottom: 1.6rem;
+}
+
+.essay-body p em { font-style: italic; color: var(--ink); }
+
+.essay-body h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 3.5rem 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.essay-body .section-break {
+  width: 40px;
+  height: 2px;
+  background: var(--rule);
+  margin: 4rem 0;
+}
+
+.essay-byline {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-light);
+  margin-top: 3rem;
+}
+
+/* FAQ variant */
+.faq-q {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 3rem 0 0.8rem;
+  letter-spacing: -0.02em;
+}
+
+/* Essay footer nav */
+.essay-footer-nav {
+  padding: 4rem 6rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.essay-cta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--accent);
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  transition: background 0.18s;
+}
+
+.essay-cta:hover { background: var(--accent-hover); }
+
+.footer-read-next {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-read-next-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-read-next-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.footer-read-next-link:hover { color: var(--accent); }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .essay-hero { padding: 8rem 1.5rem 4rem; }
+  .essay-body { padding: 3rem 1.5rem 5rem; }
+  .essay-footer-nav { padding: 3rem 1.5rem; flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+}
+  </style>
+</head>
+<body class="">
+
+<!-- =============================================
+   FOUND ROOM — Header / Nav
+   Edit this file to change navigation site-wide.
+   ============================================= -->
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Right Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">The Found Journal</a>
+  </div>
+  <a href="https://calendly.com/danielchristopherfox/30-minute" class="nav-cta" target="_blank" rel="noopener">Book a Conversation</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Right Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">The Found Journal</a>
+    <a href="https://calendly.com/danielchristopherfox/30-minute" class="mobile-nav-cta" target="_blank" rel="noopener">Book a Conversation</a>
+  </div>
+</div>
+
+<section class="essay-hero">
+<p class="eyebrow">Journal</p>
+<h1>What the money doesn't fix</h1>
+<p class="essay-date">2026</p>
+</section>
+<div class="section-rule"></div>
+
+<section class="essay-body">
+<div class="prose reveal">
+<p>The money is real. Let's start there. An exit that produces financial freedom is a genuine thing. The ability to stop doing what you don't want to do, to not make decisions from scarcity, to give your kids options, to stop checking what things cost. These are real. They improve life in concrete ways.</p>
+<p>What the money doesn't do is equally real and less discussed.</p>
+<div class="section-break"></div>
+<p>The specific things the money doesn't fix are the specific things the company was providing that had nothing to do with revenue.</p>
+<p>The company was giving you a reason to be somewhere at a particular time. That sounds trivial and it isn't. Unstructured time is not what most founders expect it to be. The first weeks of genuine freedom feel like possibility. The following weeks tend to surface something harder to name: a low-grade restlessness, a difficulty settling, a sense that the day doesn't have weight.</p>
+<p>The money didn't cause this. It just made it visible. Before the exit, the structure of the company was doing the work of filling the time. Now the filling is your problem.</p>
+<div class="section-break"></div>
+<p>The company was also giving you a daily read on how you were doing. Revenue, headcount, product metrics, customer satisfaction, deal flow. Whatever your version was, you had a dashboard that told you whether things were going well. And because you routed a significant part of your sense of yourself through the business, the dashboard was also, implicitly, telling you how you were doing as a person.</p>
+<p>The money can't replicate that. There's no dashboard for whether your life is going well in the way a business going well feels like it's going well. Wealth managers can give you portfolio performance. That's not the same thing.</p>
+<div class="section-break"></div>
+<p>There is also a social dimension that money doesn't address and sometimes makes harder.</p>
+<p>The founder identity comes with a community: other founders, investors, the team, the industry. These relationships exist partly because of shared context, and partly because of the implicit transaction. You were building something. They were building something. The shared language and the implicit mutual interest made conversation easy.</p>
+<p>After the exit, that community has a different relationship to you. You're no longer building. The people who were drawn to you because of what you were building have their own companies to return to. The relationships that seemed solid turn out to have been partly structural. The money doesn't fill that. It can fund a lot of things. It can't fund the sense of being in a room with people who understand what you've been through.</p>
+<div class="section-break"></div>
+<p>None of this is an argument against exits or against money. It's an argument for honesty about what the money resolves and what it doesn't.</p>
+<p>The founders who navigate the post-exit period well tend to be the ones who treat the money as the beginning of the real question, not the answer to it. The financial freedom is there. Now what is it for?</p>
+<p>That question takes longer to answer than the exit took to complete. But it's the one that was waiting behind all the work.</p>
+<p class="essay-byline">— Daniel Fox</p>
+</div>
+</section>
+
+<div class="essay-footer-nav">
+<div class="footer-read-next">
+<span class="footer-read-next-label">Read next</span>
+<a href="why-doesnt-selling-feel.html" class="footer-read-next-link">Why doesn't selling feel the way you thought it would? &rarr;</a>
+</div>
+<a href="https://fox296.substack.com/subscribe" class="essay-cta" target="_blank" rel="noopener">Subscribe on Substack</a>
+</div>
+
+<!-- =============================================
+   FOUND ROOM — Footer
+   Edit this file to change the footer site-wide.
+   ============================================= -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="the-room.html">The Room</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">The Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer">Book a Call</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
+</footer>
+
+<script src="assets/js/global.js"></script>
+</body>
+</html>

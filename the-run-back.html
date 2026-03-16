@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>The Run Back — Found Room</title>
+  <meta name="description" content="Why starting something new immediately after an exit tends not to work, and what it's usually trying to solve.">
+  <link rel="canonical" href="https://foundroom.co/the-run-back.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Found Room">
+  <meta property="og:title" content="The Run Back — Found Room">
+  <meta property="og:description" content="Why starting something new immediately after an exit tends not to work, and what it's usually trying to solve.">
+  <meta property="og:url" content="https://foundroom.co/the-run-back.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Run Back — Found Room">
+  <meta name="twitter:description" content="Why starting something new immediately after an exit tends not to work, and what it's usually trying to solve.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200&h=630&q=85&auto=format&fit=crop">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0W9D4LQ59"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K0W9D4LQ59');
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* essay — page-specific styles only */
+
+/* Hero — full-bleed image */
+.essay-hero {
+  position: relative;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 40%;
+  overflow: hidden;
+}
+
+.essay-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.3) 0%, rgba(8,8,8,0.6) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.essay-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.essay-hero .eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.1s;
+}
+
+.essay-hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.25s;
+  margin-bottom: 1.6rem;
+}
+
+.essay-hero .essay-date {
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  letter-spacing: 0.06em;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.4s;
+}
+
+/* Essay body */
+.essay-body { padding: 5rem 6rem 8rem; }
+
+.essay-body .prose { max-width: 660px; }
+
+.essay-body p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  margin-bottom: 1.6rem;
+}
+
+.essay-body p em { font-style: italic; color: var(--ink); }
+
+.essay-body h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 3.5rem 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.essay-body .section-break {
+  width: 40px;
+  height: 2px;
+  background: var(--rule);
+  margin: 4rem 0;
+}
+
+.essay-byline {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-light);
+  margin-top: 3rem;
+}
+
+/* FAQ variant */
+.faq-q {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 3rem 0 0.8rem;
+  letter-spacing: -0.02em;
+}
+
+/* Essay footer nav */
+.essay-footer-nav {
+  padding: 4rem 6rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.essay-cta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--accent);
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  transition: background 0.18s;
+}
+
+.essay-cta:hover { background: var(--accent-hover); }
+
+.footer-read-next {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-read-next-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-read-next-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.footer-read-next-link:hover { color: var(--accent); }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .essay-hero { padding: 8rem 1.5rem 4rem; }
+  .essay-body { padding: 3rem 1.5rem 5rem; }
+  .essay-footer-nav { padding: 3rem 1.5rem; flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+}
+  </style>
+</head>
+<body class="">
+
+<!-- =============================================
+   FOUND ROOM — Header / Nav
+   Edit this file to change navigation site-wide.
+   ============================================= -->
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Right Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">The Found Journal</a>
+  </div>
+  <a href="https://calendly.com/danielchristopherfox/30-minute" class="nav-cta" target="_blank" rel="noopener">Book a Conversation</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Right Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">The Found Journal</a>
+    <a href="https://calendly.com/danielchristopherfox/30-minute" class="mobile-nav-cta" target="_blank" rel="noopener">Book a Conversation</a>
+  </div>
+</div>
+
+<section class="essay-hero">
+<p class="eyebrow">Journal</p>
+<h1>The run back</h1>
+<p class="essay-date">2026</p>
+</section>
+<div class="section-rule"></div>
+
+<section class="essay-body">
+<div class="prose reveal">
+<p>The most common move after an exit is to start something new. Not immediately, usually. But within a year, sometimes within months, most founders are back in motion. A new company. An investment that becomes an operating role. A side project that becomes a real project. The run back to the thing they know.</p>
+<p>The VC world loves this. Repeat founders with exits get funded almost on the basis of pattern alone. The logic is that a founder who built and sold something once has already done the thing that most people can't do. The assumption is that it will go better the second time.</p>
+<p>Sometimes it does. But the founders who struggled most in the years after their first significant exit, across a range of conversations I've had, were usually back building within twelve months. Not because building is wrong. Because the run back was doing something other than what it looked like.</p>
+<div class="section-break"></div>
+<p>Starting a company resolves the questions that follow an exit. What am I doing? Where am I pointing? What is my day for? All of those open up in the space after a close, and a new company answers all of them in one move. There's a direction. There's a reason to get up. There's a daily argument for relevance again.</p>
+<p>This is why the run back feels right. It's returning to the thing that was working. It's applying the knowledge from the first one. It's not giving up or sitting still. To people around the founder, it looks like recovery. To the founder, it feels like it.</p>
+<div class="section-break"></div>
+<p>But the new company inherits the same routing that made the exit feel incomplete. The identity that was flowing through the first business flows through the second one. The proof-seeking that drove the first company shows up in the second one with more sophisticated justification. The founder is back building, and building is what they do, and none of the work that the exit was trying to initiate actually happens.</p>
+<p>The second company usually does less than the first one did for how the founder feels about themselves. Not because the business is worse, but because the return on proof has been declining for years. The new company was supposed to reset it. The reset doesn't come.</p>
+<div class="section-break"></div>
+<p>None of this means don't start something new. It means be honest about what starting something new is for, and what it's trying to avoid.</p>
+<p>The founders who come out of the post-exit period with something that actually changed for them usually spent some period not building. Not because not building is the point, but because the thing the exit was trying to surface takes time to surface. The gap between the close and the next thing is where that happens. The run back closes the gap before the thing can come up.</p>
+<p>There's no right timeline. Some founders need six months. Some need two years. The tell is usually whether you're running toward something or away from the question the exit opened.</p>
+<p class="essay-byline">— Daniel Fox</p>
+</div>
+</section>
+
+<div class="essay-footer-nav">
+<div class="footer-read-next">
+<span class="footer-read-next-label">Read next</span>
+<a href="after-the-exit.html" class="footer-read-next-link">What to do after you exit your company &rarr;</a>
+</div>
+<a href="https://fox296.substack.com/subscribe" class="essay-cta" target="_blank" rel="noopener">Subscribe on Substack</a>
+</div>
+
+<!-- =============================================
+   FOUND ROOM — Footer
+   Edit this file to change the footer site-wide.
+   ============================================= -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="the-room.html">The Room</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">The Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer">Book a Call</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
+</footer>
+
+<script src="assets/js/global.js"></script>
+</body>
+</html>

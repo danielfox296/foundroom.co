@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Founding Membership — Found Room</title>
+  <meta name="description" content="Found Room is opening its first cohort of founding members. A private annual membership for founders who have built something real and are ready for honest conversation about what comes next.">
+  <link rel="canonical" href="https://foundroom.co/founding-member.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Found Room">
+  <meta property="og:title" content="Founding Membership — Found Room">
+  <meta property="og:description" content="Found Room is opening its first cohort of founding members. A private annual membership for founders who have built something real and are ready for honest conversation about what comes next.">
+  <meta property="og:url" content="https://foundroom.co/founding-member.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Founding Membership — Found Room">
+  <meta name="twitter:description" content="Found Room is opening its first cohort of founding members. A private annual membership for founders who have built something real and are ready for honest conversation about what comes next.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&h=630&q=85&auto=format&fit=crop">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0W9D4LQ59"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K0W9D4LQ59');
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* founding-member — page-specific styles only */
+
+.founding-hero {
+  padding: 10rem 6rem 7rem;
+  max-width: 820px;
+}
+
+.founding-hero .eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.founding-hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 2rem;
+}
+
+.founding-hero .hero-sub {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--ink-mid);
+  max-width: 580px;
+}
+
+.founding-body {
+  padding: 5rem 6rem 8rem;
+  max-width: 820px;
+}
+
+.founding-body p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  margin-bottom: 1.6rem;
+  max-width: 660px;
+}
+
+.founding-body h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 4rem 0 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.founding-body .section-break {
+  width: 40px;
+  height: 2px;
+  background: var(--rule);
+  margin: 4rem 0;
+}
+
+/* Offer card */
+.offer-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 3rem;
+  margin: 3rem 0;
+  max-width: 560px;
+}
+
+.offer-card .offer-price {
+  font-family: 'Manrope', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.offer-card .offer-price-note {
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.offer-card .offer-line {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.offer-card .offer-line:last-of-type {
+  border-bottom: none;
+}
+
+.offer-note {
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  font-style: italic;
+  max-width: 480px;
+}
+
+/* CTA block */
+.founding-cta {
+  margin-top: 5rem;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.founding-cta h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.founding-cta p {
+  font-size: 1rem;
+  color: var(--ink-mid);
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--accent);
+  text-decoration: none;
+  padding: 1rem 2.2rem;
+  transition: background 0.18s;
+  letter-spacing: 0.02em;
+}
+
+.cta-btn:hover { background: var(--accent-hover); }
+
+@media (max-width: 960px) {
+  .founding-hero { padding: 8rem 1.5rem 5rem; }
+  .founding-body { padding: 3rem 1.5rem 5rem; }
+  .offer-card { padding: 2rem 1.5rem; }
+}
+  </style>
+</head>
+<body class="">
+
+<!-- =============================================
+   FOUND ROOM — Header / Nav
+   Edit this file to change navigation site-wide.
+   ============================================= -->
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Right Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">The Found Journal</a>
+  </div>
+  <a href="https://calendly.com/danielchristopherfox/30-minute" class="nav-cta" target="_blank" rel="noopener">Book a Conversation</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Right Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">The Found Journal</a>
+    <a href="https://calendly.com/danielchristopherfox/30-minute" class="mobile-nav-cta" target="_blank" rel="noopener">Book a Conversation</a>
+  </div>
+</div>
+
+<section class="founding-hero reveal">
+<p class="eyebrow">Founding Membership</p>
+<h1>The first cohort.</h1>
+<p class="hero-sub">Found Room is accepting a small first group of founding members. If the writing has landed, you probably already know whether this is for you.</p>
+</section>
+<div class="section-rule"></div>
+
+<section class="founding-body reveal">
+<p>Found Room is a private annual membership for founders who have built something real and found that the arrival didn't produce what they expected. Not a coaching program. Not a mastermind. A room with peers who are in the same territory and don't need anything from each other.</p>
+<p>The founding cohort is the first group through the door. It's smaller than what Found Room will eventually become, and founding members help shape what the community is. The rate is set below the standard annual price. It stays that rate for as long as you're a member.</p>
+<div class="section-break"></div>
+<h2>What membership includes</h2>
+<p>The Right Room is the ongoing private community. Monthly peer conversations with a small cohort of founders in a similar situation. Access to the full archive of Found Journal writing. Direct contact with Daniel.</p>
+<p>Founding members also get first access to Threshold Conversations (private 90-minute sessions) at the founding rate, and first access to Found Room retreats as they come online.</p>
+<div class="offer-card">
+<div class="offer-price">$5,400</div>
+<div class="offer-price-note">per year &mdash; founding member rate (standard rate: $6,000)</div>
+<div class="offer-line">Annual membership in The Right Room</div>
+<div class="offer-line">Monthly peer cohort sessions</div>
+<div class="offer-line">Found Journal access and direct correspondence</div>
+<div class="offer-line">First access to retreats and Threshold Conversations</div>
+<div class="offer-line">Rate locked for the life of your membership</div>
+</div>
+<p class="offer-note">Founding membership is by invitation or direct application. The cohort is small. If you're not sure whether you qualify or whether this is right for you, the answer is probably in the writing.</p>
+<div class="section-break"></div>
+<h2>Who this is for</h2>
+<p>Founders who have built something real. Typically bootstrapped or nearly so. Post-exit or still operating but at the point where the mechanism has stopped working the way it used to. The presenting experience tends to be some version of tired, not sure, something isn't working. The underlying situation is more specific than that, and the essays on this site are probably the best description of it.</p>
+<p>This is not for founders in acute external crisis. It's for founders whose external situation is broadly intact and whose internal situation is the question.</p>
+<p>The cohort is kept small because the quality of conversation in a room depends on who is in it. Founding members are chosen for the fit, not the resume.</p>
+<div class="founding-cta">
+<h2>Express interest</h2>
+<p>If you want to be considered for the founding cohort, reach out directly. A short note about where you are and what made you look is enough. No pitch needed.</p>
+<p><a href="https://calendly.com/danielchristopherfox/30-minute" class="cta-btn" target="_blank" rel="noopener">Book a 30-minute call</a></p>
+</div>
+</section>
+
+<!-- =============================================
+   FOUND ROOM — Footer
+   Edit this file to change the footer site-wide.
+   ============================================= -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="the-room.html">The Room</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">The Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer">Book a Call</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
+</footer>
+
+<script src="assets/js/global.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Always — Found Room</title>
+  <meta name="description" content="On building a company around a version of yourself that the building eventually changes.">
+  <link rel="canonical" href="https://foundroom.co/always-case-study.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Found Room">
+  <meta property="og:title" content="Always — Found Room">
+  <meta property="og:description" content="On building a company around a version of yourself that the building eventually changes.">
+  <meta property="og:url" content="https://foundroom.co/always-case-study.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Always — Found Room">
+  <meta name="twitter:description" content="On building a company around a version of yourself that the building eventually changes.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1200&h=630&q=85&auto=format&fit=crop">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0W9D4LQ59"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K0W9D4LQ59');
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* essay — page-specific styles only */
+
+/* Hero — full-bleed image */
+.essay-hero {
+  position: relative;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 40%;
+  overflow: hidden;
+}
+
+.essay-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.3) 0%, rgba(8,8,8,0.6) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.essay-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.essay-hero .eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.1s;
+}
+
+.essay-hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.25s;
+  margin-bottom: 1.6rem;
+}
+
+.essay-hero .essay-date {
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  letter-spacing: 0.06em;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.4s;
+}
+
+/* Essay body */
+.essay-body { padding: 5rem 6rem 8rem; }
+
+.essay-body .prose { max-width: 660px; }
+
+.essay-body p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  margin-bottom: 1.6rem;
+}
+
+.essay-body p em { font-style: italic; color: var(--ink); }
+
+.essay-body h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 3.5rem 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.essay-body .section-break {
+  width: 40px;
+  height: 2px;
+  background: var(--rule);
+  margin: 4rem 0;
+}
+
+.essay-byline {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-light);
+  margin-top: 3rem;
+}
+
+/* FAQ variant */
+.faq-q {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 3rem 0 0.8rem;
+  letter-spacing: -0.02em;
+}
+
+/* Essay footer nav */
+.essay-footer-nav {
+  padding: 4rem 6rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.essay-cta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--accent);
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  transition: background 0.18s;
+}
+
+.essay-cta:hover { background: var(--accent-hover); }
+
+.footer-read-next {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-read-next-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-read-next-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.footer-read-next-link:hover { color: var(--accent); }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .essay-hero { padding: 8rem 1.5rem 4rem; }
+  .essay-body { padding: 3rem 1.5rem 5rem; }
+  .essay-footer-nav { padding: 3rem 1.5rem; flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+}
+  </style>
+</head>
+<body class="">
+
+<!-- =============================================
+   FOUND ROOM — Header / Nav
+   Edit this file to change navigation site-wide.
+   ============================================= -->
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Right Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">The Found Journal</a>
+  </div>
+  <a href="https://calendly.com/danielchristopherfox/30-minute" class="nav-cta" target="_blank" rel="noopener">Book a Conversation</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Right Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">The Found Journal</a>
+    <a href="https://calendly.com/danielchristopherfox/30-minute" class="mobile-nav-cta" target="_blank" rel="noopener">Book a Conversation</a>
+  </div>
+</div>
+
+<section class="essay-hero">
+<p class="eyebrow">Journal</p>
+<h1>Always</h1>
+<p class="essay-date">2026</p>
+</section>
+<div class="section-rule"></div>
+
+<section class="essay-body">
+<div class="prose reveal">
+<!-- DRAFT — This essay uses the Always apparel company as a personal case study on identity cost. Daniel to fill in specific details, dates, and personal narrative. The structure below is a scaffold. -->
+<p>There was a company called Always. I built it. And it taught me something about identity that I couldn't have learned any other way, which is that the business you build eventually shapes you whether you're paying attention to it or not.</p>
+<div class="section-break"></div>
+<p>The apparel industry has a particular relationship to identity. You are making something people put on their bodies, something that tells a story about who they are or want to be seen as. That is the explicit transaction. What I didn't fully see at the start was that the same transaction was happening inside the company, between me and the work.</p>
+<p>[Daniel: personal details here — how the company started, what it was about, who it was for]</p>
+<div class="section-break"></div>
+<p>What I was building, underneath the product, was a version of myself I wanted to believe in. The brand had a voice, and the voice was mine, and making the brand successful was making the voice matter. That's a reasonable thing to want. It's also a very specific kind of load to put on a company.</p>
+<p>[Daniel: the moment when you first noticed the company and the self-concept were entangled]</p>
+<div class="section-break"></div>
+<p>The identity cost isn't visible from inside the building. You're too busy building. The cost shows up on the exit side, or when things go wrong, or in the specific ways you defend certain decisions that turn out to be more about you than about the business.</p>
+<p>I defended some things at Always that I knew were not purely business decisions. The brand needed to feel a certain way. The product needed to look a certain way. These were real convictions, and they weren't separate from the fact that the brand was, at some level, me.</p>
+<p>[Daniel: specific decision that cost money but served identity — this is the resonant concrete detail]</p>
+<div class="section-break"></div>
+<p>The thing I understand now that I didn't understand then is that you can build a better company and a better relationship to it at the same time. The routing of identity through the business isn't the problem. The unconscious routing is the problem. The decisions you make about the company that you think are business decisions but are actually decisions about yourself, those are where the cost accumulates.</p>
+<p>When I look back at Always, I see both things clearly. A real company. And a long conversation with myself that the company was the medium for.</p>
+<p>I don't think that's unusual. I think it's the thing that nobody names.</p>
+<p class="essay-byline">— Daniel Fox</p>
+</div>
+</section>
+
+<div class="essay-footer-nav">
+<div class="footer-read-next">
+<span class="footer-read-next-label">Read next</span>
+<a href="identity-cost.html" class="footer-read-next-link">The Identity Cost &rarr;</a>
+</div>
+<a href="https://fox296.substack.com/subscribe" class="essay-cta" target="_blank" rel="noopener">Subscribe on Substack</a>
+</div>
+
+<!-- =============================================
+   FOUND ROOM — Footer
+   Edit this file to change the footer site-wide.
+   ============================================= -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="the-room.html">The Room</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">The Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer">Book a Call</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
+</footer>
+
+<script src="assets/js/global.js"></script>
+</body>
+</html>
