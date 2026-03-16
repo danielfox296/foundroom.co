@@ -21,7 +21,7 @@ The exit changes the operational context so completely that the shared language 
 
 The gap this creates is more significant than it sounds.
 
-For founders who have been in EO or YPO, these organizations were often the primary place where real peer conversation happened. The forum model, the annual events, the relationships built over years inside those structures. The community was not incidental. It was part of how the founder understood their own situation and kept perspective.
+For founders who have been in EO or YPO, these organizations were often the primary place where real peer conversation happened. The forum model. The annual events. The relationships built over years inside those structures. The community was not incidental. It was part of how the founder understood their own situation and kept perspective.
 
 When the membership condition fails, that community doesn't immediately disappear. Friendships persist. But the structural container for regular, organized peer exchange is gone. The relationships become one-off calls rather than the ongoing engagement that the forum structure was designed to produce.
 
@@ -29,9 +29,11 @@ Most founders don't fully register this loss at the time of exit. They're busy w
 
 <div class="section-break" markdown="1"></div>
 
-What exists in the gap is thin. Exit Club is European and small. The post-exit founder communities that exist online are large and general and organized around the fact of exit rather than around the specific experience of what comes after. There is nothing, in the US peer community space, that is built specifically for the founder in the $5M-$50M exit range who is dealing with the identity and purpose question that a financial exit tends to surface.
+What exists to fill the gap is thin.
 
-That is the gap Found Room is built for.
+Exit Club is European and small. The post-exit founder communities that exist online are large and general and organized around the fact of exit rather than around the specific experience of what comes after. There is nothing in the US peer community space that is built specifically for the founder in the $5M-$50M exit range who is dealing with the identity and purpose question that a financial exit tends to surface.
+
+The people you used to sit with every month are doing the thing. You used to do the thing. You're not sitting with them anymore. And there is no obvious place to sit instead.
 
 <p class="essay-byline">— Daniel Fox</p>
 

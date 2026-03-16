@@ -13,23 +13,25 @@ This is a recognizable pattern, and it's worth understanding why it doesn't work
 
 The optimization isn't wrong. The sleep, the relationship, the health, the project, all of that is genuinely good. But the motivation behind it is worth looking at.
 
-When a founder starts moving through domains like this, it's usually because there is an unnamed pressure in the background. Something that isn't right, but isn't specific enough to address directly. The domains become places to put that energy. Something is off, and this domain needs work, so maybe fixing this domain will address the something that is off.
+When a founder starts moving through domains like this, there is an unnamed pressure in the background. Something that isn't right, but isn't specific enough to address directly. The pressure has a texture. It's not quite anxiety. It's not restlessness exactly. It's more like standing in a room waiting for something to happen, knowing that nothing will happen, but standing there anyway. It has weight. It lives in the body in a specific way. You feel it in the morning. You feel it when a conversation is going well and you're laughing and someone makes a joke and you laugh and then halfway through the laugh you remember the pressure is still there. It doesn't go away. It just gets smaller for a moment.
+
+The domains become places to put that energy. Something is off, and this domain needs work, so maybe fixing this domain will address the something that is off.
 
 It doesn't, because the something that is off is not in any of the domains. The domains are just where the energy goes because the actual source of the pressure doesn't have an obvious project attached to it.
 
 <div class="section-break" markdown="1"></div>
 
-The actual source, for most founders who are in this pattern, is simpler and harder than any of the domains: they've been running on a certain kind of fuel for a long time, and that fuel has changed or run out, and they don't yet know what to replace it with.
+The actual source, for most founders who are in this pattern, is simpler and harder than any of the domains. They've been running on a certain kind of fuel for a long time, and that fuel has changed or run out, and they don't yet know what to replace it with.
 
-The fuel was the work. Not just the effort of working, but the particular returns that working produced: the daily sense of heading somewhere, the external validation that the direction was right, the identity that came from being the person building this specific thing. When that fuel stops producing the returns it used to, the pressure shows up. Not as a named problem. As a background condition that the domains can't touch.
+The fuel was the work. Not just the effort of working, but the particular returns that working produced. The daily sense of heading somewhere. The external validation that the direction was right. The identity that came from being the person building this specific thing. When that fuel stops producing the returns it used to, the pressure shows up. Not as a named problem. As the thing you feel standing in the kitchen on a Tuesday morning knowing there is nowhere you need to be.
 
 <div class="section-break" markdown="1"></div>
 
 The optimization pattern usually ends one of two ways. Some founders find their way to the actual question, sometimes through the domains themselves, sometimes through a conversation that cuts through, sometimes through sitting still long enough for it to surface. When they do, the domain work stops being about the background pressure and starts being about the domains themselves, which is the right relationship.
 
-The other version is that the sequence continues. Another domain, another metric, another improvement. The pressure stays roughly constant. The optimization becomes its own kind of busyness.
+The other version is that the sequence continues. Another domain, another metric, another improvement. The pressure stays roughly constant. Some days it feels a little less present. Most days it doesn't feel less present. The founder just gets better at the work of ignoring it. He files another domain. He tracks another metric. He has another conversation with a therapist or a coach or a friend and they talk about integrating or next chapters or trusting the process. But the process is just the optimization now. The pressure isn't being addressed. It's being managed around.
 
-The tell is whether the improving ever produces ease. If it hasn't yet, the issue is probably not which domain you're working on next.
+You notice this when you catch yourself checking your sleep data on a morning you slept well and you still feel it. When the marriage is better and the kids are good and the body is in better shape than it's been in five years and you're standing in your office at six in the morning because you can't sleep and you think about everything you've improved and none of it has touched the thing you came here to fix.
 
 <p class="essay-byline">— Daniel Fox</p>
 

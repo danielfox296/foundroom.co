@@ -11,9 +11,9 @@ Founders built their own pipeline. That's mostly what founding is: constructing 
 
 The pipeline problem shows up at exit.
 
-The company was the pipeline. Not just the income and the structure and the daily routine, but the developmental container. You were figuring things out as you built. The mistakes were expensive but they produced knowledge. The relationships were complex but they were real. The version of yourself you were building toward had a shape that the company helped define.
+The company was the pipeline. Not just the income and the structure and the daily routine, but the container in which you became something. You made a decision to hire that person and learned something about trust. You took on debt you couldn't see your way through and learned something about capital and risk. You delivered something on a timeline that felt impossible and learned something about what you could actually do when you had no choice. Each year was a problem you solved, and each problem solved was a version of yourself you built. You couldn't have planned those problems. The pipeline itself wrote them.
 
-When the company ends, so does the pipeline. Not just the daily work. The developmental structure. The thing that was telling you what the next stage looks like.
+When the company ends, the problems stop. So do you, for a moment, because you're used to the problems telling you what to do next.
 
 <div class="section-break" markdown="1"></div>
 
@@ -29,7 +29,7 @@ The results are predictable in their variety. Some run back to building as fast 
 
 The answer is that there isn't one. You built something. The building is done. The next stage is something you have to discover rather than recognize, and that's a different skill than the one that got you to the exit.
 
-Most founders are very good at recognizing the next stage in a pipeline. The pipeline is gone.
+What you're actually looking for when you're looking for the next stage is something that will tell you who you are supposed to be. The company did that every day. It told you in meetings, in problems, in what didn't work and had to be fixed, in the people who stayed because you kept going. The thing that's gone isn't the work. It's the mirror.
 
 <p class="essay-byline">— Daniel Fox</p>
 
