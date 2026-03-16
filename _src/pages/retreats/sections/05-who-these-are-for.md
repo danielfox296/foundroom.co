@@ -12,7 +12,7 @@ Everyone stays under one roof. That changes the dynamic from conference to somet
 
 Lodging and meals are included. One pre-retreat conversation with Daniel before you arrive.
 
----
+<div class="section-break" style="margin: 3rem 0; width: 40px; height: 2px; background: rgba(255,255,255,0.12);"></div>
 
 People who've built something real over years of genuine execution. Pre-exit, post-exit, or still operating. What they share isn't a stage. It's a specific point: the gap between external success and internal experience has become wide enough to take seriously.
 
