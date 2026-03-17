@@ -258,6 +258,15 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* ── Form Embed Placeholder ── */
+.form-embed-placeholder {
+  padding: 3rem 2rem;
+  border: 1px dashed rgba(255,255,255,0.15);
+  color: var(--ink-light);
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+}
+
 /* ── Responsive ── */
 @media (max-width: 960px) {
   .hero-title { font-size: clamp(3.5rem, 13vw, 5rem); }
