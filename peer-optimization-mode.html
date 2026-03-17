@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Peer Optimization Mode — Found Room</title>
+  <meta name="description" content="What founder peer forums do well, what they can't do by design, and the question they leave unanswered.">
+  <link rel="canonical" href="https://foundroom.co/peer-optimization-mode.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Found Room">
+  <meta property="og:title" content="Peer Optimization Mode — Found Room">
+  <meta property="og:description" content="What founder peer forums do well, what they can't do by design, and the question they leave unanswered.">
+  <meta property="og:url" content="https://foundroom.co/peer-optimization-mode.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Peer Optimization Mode — Found Room">
+  <meta name="twitter:description" content="What founder peer forums do well, what they can't do by design, and the question they leave unanswered.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1200&h=630&q=85&auto=format&fit=crop">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0W9D4LQ59"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K0W9D4LQ59');
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* essay — page-specific styles only */
+
+.essay-hero {
+  position: relative;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 40%;
+  overflow: hidden;
+}
+
+.essay-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.3) 0%, rgba(8,8,8,0.6) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.essay-hero > * { position: relative; z-index: 1; }
+
+.essay-hero .eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.1s;
+}
+
+.essay-hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.25s;
+  margin-bottom: 1.6rem;
+}
+
+.essay-hero .essay-date {
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  letter-spacing: 0.06em;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.4s;
+}
+
+.essay-body { padding: 5rem 6rem 8rem; }
+.essay-body .prose { max-width: 660px; }
+
+.essay-body p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  margin-bottom: 1.6rem;
+}
+
+.essay-body p em { font-style: italic; color: var(--ink); }
+
+.essay-body .section-break {
+  width: 40px;
+  height: 2px;
+  background: var(--rule);
+  margin: 4rem 0;
+}
+
+.essay-byline {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-light);
+  margin-top: 3rem;
+}
+
+.essay-footer-nav {
+  padding: 4rem 6rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.essay-cta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--accent);
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  transition: background 0.18s;
+}
+
+.essay-cta:hover { background: var(--accent-hover); }
+
+.footer-read-next { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.footer-read-next-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-read-next-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.footer-read-next-link:hover { color: var(--accent); }
+
+@media (max-width: 960px) {
+  .essay-hero { padding: 8rem 1.5rem 4rem; }
+  .essay-body { padding: 3rem 1.5rem 5rem; }
+  .essay-footer-nav { padding: 3rem 1.5rem; flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+}
+  </style>
+</head>
+<body class="">
+
+<!-- =============================================
+   FOUND ROOM — Header / Nav
+   Edit this file to change navigation site-wide.
+   ============================================= -->
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Right Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">The Found Journal</a>
+  </div>
+  <a href="https://calendly.com/danielchristopherfox/30-minute" class="nav-cta" target="_blank" rel="noopener">Book a Conversation</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="the-room.html">The Right Room</a>
+    <a href="retreats.html">Retreats</a>
+    <a href="identity-cost.html">The Identity Cost</a>
+    <a href="journal.html">The Found Journal</a>
+    <a href="https://calendly.com/danielchristopherfox/30-minute" class="mobile-nav-cta" target="_blank" rel="noopener">Book a Conversation</a>
+  </div>
+</div>
+
+<section class="essay-hero">
+<p class="eyebrow">Journal</p>
+<h1>Peer optimization mode</h1>
+<p class="essay-date">2026</p>
+</section>
+<div class="section-rule"></div>
+
+<section class="essay-body">
+<div class="prose reveal">
+<p>The format is good. Worth saying that plainly before anything else.</p>
+<p>Six to eight founders, monthly meetings, a rotating hot seat. You bring a real problem. The group asks clarifying questions — good ones, the kind your employees won't ask and your spouse doesn't want to. Someone in the room has been somewhere adjacent and shares what they learned. The collective intelligence surfaces things you couldn't see from inside your own situation. You leave with a clearer picture, a few tactics, probably an introduction or two. The outcome is concrete. The format delivers on what it promises.</p>
+<p>EO, YPO, and the peer forums modeled on them have helped a lot of founders run better companies. That's real. The mechanism works.</p>
+<div class="section-break"></div>
+<p>Here's how it works, specifically. You show up with a problem inside a structure you're trying to run well. The group helps you see the problem more clearly, then helps you address it. The output is insight about how to operate better inside the structure. Sometimes it's tactical. Sometimes it's strategic. Occasionally it's personal, when the problem is a leadership gap or a relationship that's affecting the business. But the frame is consistent: here is a thing you are running, here are its constraints, here is how to handle them better.</p>
+<p>Over months and years of this, the group develops real knowledge of your situation. They know the history. They know the cast of characters. They remember what you said you were going to do and what actually happened. That accumulated context makes the advice sharper. It makes the questions better. It makes the room valuable in proportion to how long you've been in it.</p>
+<div class="section-break"></div>
+<p>Building a company is, in a specific sense, building a prison.</p>
+<p>Not as a criticism. As a description of what happens structurally when you build something real. The decisions compound. The identity narrows. The company starts to define what a good day looks like, what a bad week means, what counts as progress and what counts as falling behind. The longer you build, the more the structure shapes the choices available to you — what you can say yes to, what you have to say no to, who you have to be at nine in the morning.</p>
+<p>The constraints are real, and most of them were chosen, and most of them made sense when they were chosen. But they accumulate. The more built-out the operation, the smaller the set of moves that are available without pulling something loose.</p>
+<p>This is not a complaint. It's how organizations work. A founder who didn't want constraints could have stayed a freelancer. The constraints are partly the point. They're how you coordinate fifty people toward the same output. The prison is productive.</p>
+<div class="section-break"></div>
+<p>What peer optimization mode does, then, is help you run the prison well.</p>
+<p>Better policies. Better people in the right cells. A more efficient use of everyone's time. When you bring your problem to the group, the group helps you see how to address it inside the structure you've built. And because the group has been doing this with you for years, they know the structure well. They can tell you which lever to pull and roughly what will happen when you pull it.</p>
+<p>This is genuinely useful. The room is not the problem.</p>
+<p>The problem is what the room cannot ask. The room is built on a shared premise: the thing you've built is worth running well. Nobody shows up to a forum meeting to ask whether you should tear down what you've spent a decade building. That's not the contract. The contract is that the structure exists, the structure has problems, and the group helps you address the problems.</p>
+<p>So the room gets better at helping you furnish the prison. Better lighting. Better layout. A more considered use of the space you've got. And when eight other founders who've built their own prisons are in the room with you, each of them helping the others run a tighter operation, the collective intelligence gets very good at one specific thing: making the structures you're all inside work better.</p>
+<div class="section-break"></div>
+<p>The cost of this is not obvious while it's happening.</p>
+<p>The more time and collective intelligence goes into a structure, the more the structure starts to feel like the answer. Not because anyone decided that. Just because so much has been invested in solving its problems that the problems and the structure become the same thing in your mind. The group knows your company the way old friends know your marriage. They've heard the stories. They've watched you work through the hard parts. Their knowledge of your situation is inseparable from their knowledge of you inside it.</p>
+<p>Getting out, under those conditions, means dismantling the very thing that gave the room its purpose. Not just the company. The shared context. The years of accumulated understanding. The particular kind of useful that the room has been for you.</p>
+<p>The more the group has helped you perfect the operation, the harder the question becomes to hold.</p>
+<div class="section-break"></div>
+<p>Peer optimization mode doesn't ask whether the prison is worth inhabiting. That's not a flaw in the design. The format is built around the assumption that the structure is a given and the work is to run it well. For most founders, in most years, that's the right assumption.</p>
+<p>The question it leaves unanswered is the one that tends to arrive anyway, usually somewhere in the third or fourth year after you thought you'd figured everything out. The operation is running. The group is helping. The advice is good. And somewhere in the background, getting harder to ignore, is a question the format was never designed to hold:</p>
+<p>Is the prison the right one?</p>
+<p class="essay-byline">— Daniel Fox</p>
+</div>
+</section>
+
+<div class="essay-footer-nav">
+<div class="footer-read-next">
+<span class="footer-read-next-label">Read next</span>
+<a href="networks-that-drop-you.html" class="footer-read-next-link">The networks that drop you &rarr;</a>
+</div>
+<a href="https://fox296.substack.com/subscribe" class="essay-cta" target="_blank" rel="noopener">Subscribe on Substack</a>
+</div>
+
+<!-- =============================================
+   FOUND ROOM — Footer
+   Edit this file to change the footer site-wide.
+   ============================================= -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="the-room.html">The Room</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">The Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer">Book a Call</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
+</footer>
+
+<script src="assets/js/global.js"></script>
+</body>
+</html>

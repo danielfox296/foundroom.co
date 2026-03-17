@@ -223,4 +223,17 @@
     <a href="what-should-i-do-after-selling.html" class="essay-read">Read →</a>
   </div>
 
+  <div class="essay-item reveal" markdown="1">
+    <a href="peer-optimization-mode.html" class="essay-thumb">
+      <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=400&h=400&q=80&auto=format&fit=crop" alt="" loading="lazy">
+    </a>
+    <div class="essay-meta" markdown="1">
+      <span class="essay-number">18</span>
+      <p class="essay-title">Peer optimization mode</p>
+      <p class="essay-desc">What founder peer forums do well, what they can't do by design, and the question they leave unanswered.</p>
+      <p class="essay-date">2026</p>
+    </div>
+    <a href="peer-optimization-mode.html" class="essay-read">Read →</a>
+  </div>
+
 </section>
