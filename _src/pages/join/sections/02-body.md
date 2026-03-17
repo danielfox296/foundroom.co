@@ -11,8 +11,8 @@ Free membership means you're in the room. Daniel reads every submission. If it f
 
 </div>
 
-<div class="form-embed-placeholder">
-  <p class="form-placeholder-note">[Google Form embed goes here]</p>
+<div class="form-embed-wrapper">
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfsur67Mf0Ge2j3pm4DEpNcXrurXFPrCJzVEaZdq-hNK8AJnw/viewform?embedded=true" width="100%" height="680" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
 
 </section>

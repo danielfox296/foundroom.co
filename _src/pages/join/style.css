@@ -64,12 +64,15 @@
   margin-bottom: 1.6rem;
 }
 
-.form-embed-placeholder {
-  margin-top: 4rem;
-  padding: 3rem;
-  border: 1px dashed rgba(255,255,255,0.15);
-  color: var(--ink-light);
-  font-size: 0.9rem;
+.form-embed-wrapper {
+  margin-top: 3rem;
+}
+
+.form-embed-wrapper iframe {
+  display: block;
+  border: none;
+  background: transparent;
+  color-scheme: dark;
 }
 
 /* Essay footer nav */

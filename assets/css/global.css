@@ -270,6 +270,17 @@ footer {
   padding: 1.2rem 0;
 }
 
+.form-embed-wrapper {
+  width: 100%;
+}
+
+.form-embed-wrapper iframe {
+  display: block;
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+
 /* ── Animations ───────────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(16px); }
