@@ -116,16 +116,176 @@
   margin-bottom: 1.6rem;
 }
 
-.form-embed-wrapper {
+/* ---- Custom membership form ---- */
+
+.fr-form {
   margin-top: 3rem;
+  max-width: 560px;
 }
 
-.form-embed-wrapper iframe {
-  display: block;
-  border: none;
-  background: transparent;
-  color-scheme: dark;
+.fr-field {
+  margin-bottom: 1.8rem;
 }
+
+.fr-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+.fr-required {
+  color: var(--accent);
+}
+
+.fr-input,
+.fr-select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.18s, background 0.18s;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+.fr-input::placeholder {
+  color: var(--ink-mid);
+  opacity: 0.6;
+}
+
+.fr-input:focus,
+.fr-select:focus {
+  border-color: var(--accent);
+  background: rgba(200,241,53,0.04);
+}
+
+.fr-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a09890' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.fr-select option {
+  background: #1a1a1a;
+  color: var(--ink);
+}
+
+.fr-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fr-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.65rem 1rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.fr-radio:hover {
+  border-color: rgba(200,241,53,0.3);
+  background: rgba(200,241,53,0.04);
+}
+
+.fr-radio:has(input:checked) {
+  border-color: rgba(200,241,53,0.45);
+  background: rgba(200,241,53,0.07);
+}
+
+.fr-radio input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 50%;
+  transition: border-color 0.15s, background 0.15s;
+  position: relative;
+}
+
+.fr-radio input[type="radio"]:checked {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.fr-radio input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #080808;
+}
+
+.fr-radio span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ink-mid);
+  transition: color 0.15s;
+}
+
+.fr-radio:has(input:checked) span {
+  color: var(--ink);
+}
+
+.fr-submit {
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  background: var(--accent);
+  color: #0a0905;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.18s, opacity 0.18s;
+  border-radius: 0;
+}
+
+.fr-submit:hover {
+  background: var(--accent-hover);
+}
+
+.fr-submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.fr-success,
+.fr-error {
+  display: none;
+  margin-top: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.fr-success { color: var(--accent); }
+.fr-error   { color: #ff7070; }
 
 /* Essay footer nav */
 .essay-footer-nav {
@@ -233,13 +393,111 @@
 
 <section class="join-body">
 <div class="join-prose">
+
 <p>Timothy Leary said "find the others." That's the whole idea.</p>
+
 <p>There are founders who've been through an exit and found the aftermath disorienting. There are founders still running something who've lost the thread. Neither group fits the existing rooms — the optimization masterminds, the wealth management networks, the accountability groups. This is not that.</p>
-<p>Free membership means you're in the room. Daniel reads every submission. If it feels like a fit, he'll reach out directly. No funnel. No pitch sequence. The room itself is conversations, not content — a space where the peers are actually your peers.</p>
+
+<p>Free membership means you're in the room. Daniel reads every submission. If it feels like a fit, he'll reach out directly. No funnel. No pitch sequence.</p>
+
 </div>
-<div class="form-embed-wrapper">
-<iframe frameborder="0" height="680" marginheight="0" marginwidth="0" src="https://docs.google.com/forms/d/e/1FAIpQLSfsur67Mf0Ge2j3pm4DEpNcXrurXFPrCJzVEaZdq-hNK8AJnw/viewform?embedded=true" width="100%">Loading…</iframe>
+
+<form class="fr-form" id="frForm">
+
+<div class="fr-field">
+<label class="fr-label" for="frName">Your name</label>
+<input class="fr-input" type="text" id="frName" name="name" placeholder="First and last" autocomplete="name">
 </div>
+
+<div class="fr-field">
+<label class="fr-label" for="frEmail">Email <span class="fr-required">*</span></label>
+<input class="fr-input" type="email" id="frEmail" name="email" placeholder="you@example.com" required autocomplete="email">
+</div>
+
+<div class="fr-field">
+<label class="fr-label">Your situation</label>
+<div class="fr-radio-group">
+<label class="fr-radio"><input type="radio" name="situation" value="Post-exit"><span>Post-exit</span></label>
+<label class="fr-radio"><input type="radio" name="situation" value="Still operating, lost the thread"><span>Still operating, lost the thread</span></label>
+<label class="fr-radio"><input type="radio" name="situation" value="In a transition"><span>In a transition</span></label>
+</div>
+</div>
+
+<div class="fr-field">
+<label class="fr-label">How you built it</label>
+<div class="fr-radio-group">
+<label class="fr-radio"><input type="radio" name="howBuilt" value="Bootstrapped / independent"><span>Bootstrapped / independent</span></label>
+<label class="fr-radio"><input type="radio" name="howBuilt" value="Took some funding"><span>Took some funding</span></label>
+<label class="fr-radio"><input type="radio" name="howBuilt" value="Other"><span>Other</span></label>
+</div>
+</div>
+
+<div class="fr-field">
+<label class="fr-label" for="frExit">Exit size</label>
+<select class="fr-select" id="frExit" name="exitSize">
+<option value="" disabled selected>Select a range</option>
+<option value="Under $500K">Under $500K</option>
+<option value="$500K – $5M">$500K – $5M</option>
+<option value="$5M – $50M">$5M – $50M</option>
+<option value="Over $50M">Over $50M</option>
+<option value="Still operating">Still operating</option>
+</select>
+</div>
+
+<div class="fr-field">
+<label class="fr-label">What are you looking for right now?</label>
+<div class="fr-radio-group">
+<label class="fr-radio"><input type="radio" name="lookingFor" value="Peers who've actually been through it"><span>Peers who've actually been through it</span></label>
+<label class="fr-radio"><input type="radio" name="lookingFor" value="A room where I don't have to perform"><span>A room where I don't have to perform</span></label>
+<label class="fr-radio"><input type="radio" name="lookingFor" value="Clarity on what comes next"><span>Clarity on what comes next</span></label>
+<label class="fr-radio"><input type="radio" name="lookingFor" value="To not feel like the only one"><span>To not feel like the only one</span></label>
+<label class="fr-radio"><input type="radio" name="lookingFor" value="I'm not sure yet — the usual rooms just don't fit"><span>I'm not sure yet — the usual rooms just don't fit</span></label>
+</div>
+</div>
+
+<button class="fr-submit" type="submit" id="frSubmit">Join Found Room</button>
+<p class="fr-success" id="frSuccess">You're in. Daniel will be in touch.</p>
+<p class="fr-error" id="frError">Something went wrong. Email daniel@foundroom.co directly.</p>
+
+</form>
+
+<script>
+(function() {
+  var ENDPOINT = 'APPS_SCRIPT_URL_HERE';
+
+  document.getElementById('frForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('frSubmit');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    var data = {
+      name: document.getElementById('frName').value,
+      email: document.getElementById('frEmail').value,
+      situation: document.querySelector('input[name="situation"]:checked') ? document.querySelector('input[name="situation"]:checked').value : '',
+      howBuilt: document.querySelector('input[name="howBuilt"]:checked') ? document.querySelector('input[name="howBuilt"]:checked').value : '',
+      exitSize: document.getElementById('frExit').value,
+      lookingFor: document.querySelector('input[name="lookingFor"]:checked') ? document.querySelector('input[name="lookingFor"]:checked').value : ''
+    };
+
+    fetch(ENDPOINT, {
+      method: 'POST',
+      body: JSON.stringify(data)
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(res) {
+      document.getElementById('frForm').style.display = 'none';
+      document.getElementById('frSuccess').style.display = 'block';
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btn.textContent = 'Join Found Room';
+      document.getElementById('frError').style.display = 'block';
+    });
+  });
+})();
+</script>
+
 </section>
 
 <div class="essay-footer-nav">

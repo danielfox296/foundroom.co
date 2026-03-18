@@ -64,16 +64,176 @@
   margin-bottom: 1.6rem;
 }
 
-.form-embed-wrapper {
+/* ---- Custom membership form ---- */
+
+.fr-form {
   margin-top: 3rem;
+  max-width: 560px;
 }
 
-.form-embed-wrapper iframe {
-  display: block;
-  border: none;
-  background: transparent;
-  color-scheme: dark;
+.fr-field {
+  margin-bottom: 1.8rem;
 }
+
+.fr-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+.fr-required {
+  color: var(--accent);
+}
+
+.fr-input,
+.fr-select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.18s, background 0.18s;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+.fr-input::placeholder {
+  color: var(--ink-mid);
+  opacity: 0.6;
+}
+
+.fr-input:focus,
+.fr-select:focus {
+  border-color: var(--accent);
+  background: rgba(200,241,53,0.04);
+}
+
+.fr-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a09890' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.fr-select option {
+  background: #1a1a1a;
+  color: var(--ink);
+}
+
+.fr-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fr-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.65rem 1rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.fr-radio:hover {
+  border-color: rgba(200,241,53,0.3);
+  background: rgba(200,241,53,0.04);
+}
+
+.fr-radio:has(input:checked) {
+  border-color: rgba(200,241,53,0.45);
+  background: rgba(200,241,53,0.07);
+}
+
+.fr-radio input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 50%;
+  transition: border-color 0.15s, background 0.15s;
+  position: relative;
+}
+
+.fr-radio input[type="radio"]:checked {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.fr-radio input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #080808;
+}
+
+.fr-radio span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ink-mid);
+  transition: color 0.15s;
+}
+
+.fr-radio:has(input:checked) span {
+  color: var(--ink);
+}
+
+.fr-submit {
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  background: var(--accent);
+  color: #0a0905;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.18s, opacity 0.18s;
+  border-radius: 0;
+}
+
+.fr-submit:hover {
+  background: var(--accent-hover);
+}
+
+.fr-submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.fr-success,
+.fr-error {
+  display: none;
+  margin-top: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.fr-success { color: var(--accent); }
+.fr-error   { color: #ff7070; }
 
 /* Essay footer nav */
 .essay-footer-nav {
