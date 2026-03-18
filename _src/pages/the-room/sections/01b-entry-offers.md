@@ -14,7 +14,7 @@ Most founders who join The Right Room have had one conversation with Daniel firs
       <span class="offer-price-main">$200 <span class="offer-price-unit">per seat</span></span>
       <span class="offer-price-founding">Founding member: $180</span>
     </div>
-    <a href="https://calendly.com/danielchristopherfox/30-minute" class="btn-secondary" target="_blank" rel="noopener">Book a seat</a>
+    <a href="join.html" class="btn-secondary">Express interest</a>
   </div>
   <div class="offer-card">
     <h3>Private Conversation</h3>
@@ -23,7 +23,7 @@ Most founders who join The Right Room have had one conversation with Daniel firs
       <span class="offer-price-main">$1,125</span>
       <span class="offer-price-founding">Founding member: $1,000</span>
     </div>
-    <a href="https://calendly.com/danielchristopherfox/30-minute" class="btn-secondary" target="_blank" rel="noopener">Schedule a session</a>
+    <a href="join.html" class="btn-secondary">Express interest</a>
   </div>
 </div>
 

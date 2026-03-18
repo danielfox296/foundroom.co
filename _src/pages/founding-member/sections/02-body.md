@@ -49,7 +49,7 @@
 <div class="founding-cta" markdown="1">
   <h2>Express interest</h2>
   <p>If you want to be considered for the founding cohort, reach out directly. What brought you here is probably what you want to say. No pitch needed.</p>
-  <a href="https://calendly.com/danielchristopherfox/30-minute" class="cta-btn" target="_blank" rel="noopener">Book a 30-minute call</a>
+  <a href="join.html" class="cta-btn">Join Free</a>
 </div>
 
 </section>

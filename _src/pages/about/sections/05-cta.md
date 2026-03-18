@@ -3,13 +3,13 @@
 <section class="cta-section" markdown="1">
   <div class="cta-block reveal" markdown="1">
 
-<p class="cta-block-label">Talk to Daniel</p>
+<p class="cta-block-label">Find the others</p>
 
-### Book a conversation.
+### Join the room.
 
-I do a short introductory conversation with founders who are curious about The Right Room or who want to think out loud with someone who has been paying attention. Thirty minutes. No pitch from my side.
+Free membership for bootstrapped founders who have exited, stepped back, or lost the thread. Daniel reads every submission.
 
-<a href="https://calendly.com/danielchristopherfox/30-minute" target="_blank" rel="noopener noreferrer" class="btn-primary">Book a Conversation</a>
+<a href="join.html" class="btn-primary">Join Free</a>
 
   </div>
   <div class="cta-block reveal" markdown="1">
