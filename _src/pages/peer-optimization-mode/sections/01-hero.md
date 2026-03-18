@@ -2,7 +2,7 @@
 ---
 <section class="essay-hero" markdown="1">
   <p class="eyebrow">Journal</p>
-  <h1>Peer optimization mode</h1>
+  <h1>What is peer optimization mode, and why does it trap founders?</h1>
   <p class="essay-date">2026</p>
 </section>
 

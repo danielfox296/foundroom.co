@@ -4,7 +4,7 @@
   <p class="section-label reveal">What it looks like</p>
   <div class="sidebar-section-content reveal" markdown="1">
 
-## A structural problem, not a personal failing.
+## Is founder identity loss a structural problem or a personal failing?
 
 The business starts doing need-meeting work it was never designed for. Resources get held defensively. Decisions get made from identity rather than strategy. Optimization cycles repeat without resolving the underlying pressure. Delegation feels like loss. Stepping back feels like disappearing.
 

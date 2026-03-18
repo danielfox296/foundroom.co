@@ -4,7 +4,7 @@
   <p class="section-label reveal">What changes</p>
   <div class="sidebar-section-content reveal" markdown="1">
 
-## Not detachment. Authorship.
+## What's the difference between founder detachment and authorship?
 
 The work is not to stop caring about the business. It's not to become detached or dispassionate or strategic in some clinical sense.
 

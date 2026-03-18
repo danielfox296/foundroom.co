@@ -2,7 +2,7 @@
 ---
 <section class="essay-hero" markdown="1">
   <p class="eyebrow">Journal</p>
-  <h1>Why successful founders feel worse than they should</h1>
+  <h1>Why do successful founders feel worse than they should?</h1>
   <p class="essay-date">2026</p>
 </section>
 

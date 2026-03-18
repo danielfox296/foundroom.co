@@ -9,7 +9,7 @@ Found Room is the place to explore these ideas in community with founders who ar
 
   </div>
   <div class="cta-right reveal" markdown="1">
-    <a href="the-room.html" class="btn-primary">Join Found Room</a>
+    <a href="join.html" class="btn-primary">Join Found Room</a>
     <a href="about.html" class="btn-secondary">Read Daniel's story</a>
   </div>
 </section>

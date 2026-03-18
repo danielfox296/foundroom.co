@@ -5,5 +5,5 @@
     <span class="footer-read-next-label">Explore</span>
     <a href="journal.html" class="footer-read-next-link">The Found Journal →</a>
   </div>
-  <a href="the-room.html" class="essay-cta">The Right Room →</a>
+  <a href="journal.html" class="essay-cta">Read the Journal →</a>
 </div>

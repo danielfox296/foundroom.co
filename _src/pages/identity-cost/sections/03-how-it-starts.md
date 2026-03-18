@@ -4,7 +4,7 @@
   <p class="section-label reveal">How it starts</p>
   <div class="sidebar-section-content reveal" markdown="1">
 
-## It starts normally.
+## How does the identity cost start?
 
 You build something. The feedback is immediate and legible — revenue, recognition, growth, the satisfaction of a problem solved. That feedback feels good. It should. You're doing something real.
 

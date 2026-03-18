@@ -24,28 +24,26 @@ The structure includes in-person retreats, peer cohorts, and an ongoing private 
 
 - [Home](https://foundroom.co/): What Found Room is, who it is for, and how to express interest in founding membership.
 - [About](https://foundroom.co/about.html): The origin of Found Room and the observation it was built around.
-- [The Room](https://foundroom.co/the-room.html): What membership looks like — the ongoing community, peer cohorts, and structure.
 - [Retreats](https://foundroom.co/retreats.html): Found Room's in-person retreat experiences for founders.
 - [Journal](https://foundroom.co/journal.html): Essays on the specific internal experiences founders in this situation carry — written to name what is already true, not to explain or diagnose.
 
 ## Membership
 
 - [Free Membership](https://foundroom.co/join.html): Free access to the Found Room community. Submit to be considered. Daniel reads every application and reaches out directly if it feels like a fit.
-- [Founding Membership](https://foundroom.co/founding-member.html): Found Room's first cohort. Annual membership at the founding rate ($5,400/yr). For founders who have built something real and are ready for honest conversation about what comes next.
 
 ## Writing
 
 - [The Identity Cost](https://foundroom.co/identity-cost.html): An examination of how founders route personal needs through business systems — how it happens, what it costs in decision quality and capacity, and what becomes possible when it stops.
 - [What the Business Was Doing](https://foundroom.co/essay-what-the-business-was-doing.html): On the unconscious functions a company serves for its founder, and what those functions reveal about what the founder is actually looking for.
 - [Is This Founder Burnout, or Something Else?](https://foundroom.co/is-this-founder-burnout.html): Most founders apply the burnout model to something it can't fix. If rest isn't working, the problem probably isn't the workload.
-- [The Exit-to-Depression Pipeline](https://foundroom.co/exit-to-depression-pipeline.html): The predictable trajectory nobody names at the closing dinner.
+- [Why Do Founders Experience Depression After a Successful Exit?](https://foundroom.co/exit-to-depression-pipeline.html): The predictable trajectory nobody names at the closing dinner.
 - [Why Doesn't Selling Feel the Way You Thought It Would?](https://foundroom.co/why-doesnt-selling-feel.html): Most founders expect the exit to arrive with clarity. What actually shows up tends to be something else.
-- [Why Successful Founders Feel Worse Than They Should](https://foundroom.co/why-successful-founders-feel-worse.html): The pattern of achievement that arrives at its destination and finds it hollower than expected.
-- [What the Money Doesn't Fix](https://foundroom.co/what-the-money-doesnt-fix.html): On financial freedom and the specific things it doesn't resolve.
-- [The Run Back](https://foundroom.co/the-run-back.html): Why starting something new immediately after an exit tends not to work, and what it's usually trying to solve.
-- [I Keep Improving Everything and Nothing Relieves the Pressure](https://foundroom.co/i-keep-improving-everything.html): On optimizing every domain of your life and finding that none of it touches the thing that's actually off.
-- [The Founder Pipeline Problem](https://foundroom.co/founder-pipeline-problem.html): Every profession has a pipeline for what comes next. Founders build their own and then leave it behind.
-- [The Networks That Drop You](https://foundroom.co/networks-that-drop-you.html): EO, YPO, Tiger 21. Every major founder network has a membership requirement that post-exit founders fail by definition.
+- [Why Do Successful Founders Feel Worse Than They Should?](https://foundroom.co/why-successful-founders-feel-worse.html): The pattern of achievement that arrives at its destination and finds it hollower than expected.
+- [What Doesn't Money Fix After a Successful Exit?](https://foundroom.co/what-the-money-doesnt-fix.html): On financial freedom and the specific things it doesn't resolve.
+- [Why Do Founders Run Back to Building After Selling?](https://foundroom.co/the-run-back.html): Why starting something new immediately after an exit tends not to work, and what it's usually trying to solve.
+- [I Keep Improving Everything and Nothing Relieves the Pressure — Why?](https://foundroom.co/i-keep-improving-everything.html): On optimizing every domain of your life and finding that none of it touches the thing that's actually off.
+- [What Is the Founder Pipeline Problem?](https://foundroom.co/founder-pipeline-problem.html): Every profession has a pipeline for what comes next. Founders build their own and then leave it behind.
+- [Why Do Your Networks Drop You After You Stop Being a Founder?](https://foundroom.co/networks-that-drop-you.html): EO, YPO, Tiger 21. Every major founder network has a membership requirement that post-exit founders fail by definition.
 - [Always](https://foundroom.co/always-case-study.html): On building a company around a version of yourself that the building eventually changes.
 - [What Should I Do After Selling My Business?](https://foundroom.co/what-should-i-do-after-selling.html): The questions founders actually ask after an exit, and honest answers to each one.
 

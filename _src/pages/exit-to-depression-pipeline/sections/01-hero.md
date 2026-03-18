@@ -2,7 +2,7 @@
 ---
 <section class="essay-hero" markdown="1">
   <p class="eyebrow">Journal</p>
-  <h1>The exit-to-depression pipeline</h1>
+  <h1>Why do founders experience depression after a successful exit?</h1>
   <p class="essay-date">2026</p>
 </section>
 

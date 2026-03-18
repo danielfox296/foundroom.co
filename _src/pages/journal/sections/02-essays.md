@@ -9,7 +9,7 @@
     <div class="essay-meta" markdown="1">
       <span class="essay-number">March 16</span>
       <span class="essay-strata essay-strata--pattern">Pattern</span>
-      <p class="essay-title">Peer optimization mode</p>
+      <p class="essay-title">What is peer optimization mode, and why does it trap founders?</p>
       <p class="essay-desc">What founder peer forums do well, what they structurally cannot do, and the question they leave unanswered regardless of how good the room is.</p>
       <a href="peer-optimization-mode.html" class="essay-read">Read →</a>
     </div>
@@ -48,7 +48,7 @@
     <div class="essay-meta" markdown="1">
       <span class="essay-number">Feb 23</span>
       <span class="essay-strata essay-strata--pattern">Pattern</span>
-      <p class="essay-title">The networks that drop you</p>
+      <p class="essay-title">Why do your networks drop you after you stop being a founder?</p>
       <p class="essay-desc">EO, YPO, TIGER 21 — every major founder network has an active membership requirement that post-exit founders fail by definition. This essay is about the gap they leave.</p>
       <a href="networks-that-drop-you.html" class="essay-read">Read →</a>
     </div>
@@ -61,7 +61,7 @@
     <div class="essay-meta" markdown="1">
       <span class="essay-number">Feb 16</span>
       <span class="essay-strata essay-strata--pattern">Pattern</span>
-      <p class="essay-title">The founder pipeline problem</p>
+      <p class="essay-title">What is the founder pipeline problem?</p>
       <p class="essay-desc">Every profession has a path for what comes after. Founders build their own path and then step off it. This essay is about what that absence actually costs.</p>
       <a href="founder-pipeline-problem.html" class="essay-read">Read →</a>
     </div>
@@ -74,7 +74,7 @@
     <div class="essay-meta" markdown="1">
       <span class="essay-number">Feb 9</span>
       <span class="essay-strata essay-strata--pattern">Pattern</span>
-      <p class="essay-title">I keep improving everything and nothing relieves the pressure</p>
+      <p class="essay-title">I keep improving everything and nothing relieves the pressure — why?</p>
       <p class="essay-desc">You've optimized your health, your schedule, your environment. Nothing relieves the pressure. This essay is about why that is.</p>
       <a href="i-keep-improving-everything.html" class="essay-read">Read →</a>
     </div>
@@ -87,7 +87,7 @@
     <div class="essay-meta" markdown="1">
       <span class="essay-number">Feb 2</span>
       <span class="essay-strata essay-strata--pattern">Pattern</span>
-      <p class="essay-title">The run back</p>
+      <p class="essay-title">Why do founders run back to building after selling?</p>
       <p class="essay-desc">Starting something new immediately after an exit is one of the most common post-exit moves. This essay explains why it tends not to work.</p>
       <a href="the-run-back.html" class="essay-read">Read →</a>
     </div>
@@ -100,7 +100,7 @@
     <div class="essay-meta" markdown="1">
       <span class="essay-number">Jan 26</span>
       <span class="essay-strata essay-strata--signal">Signal</span>
-      <p class="essay-title">What the money doesn't fix</p>
+      <p class="essay-title">What doesn't money fix after a successful exit?</p>
       <p class="essay-desc">Financial freedom removes a specific set of problems. This essay is about the ones it doesn't touch.</p>
       <a href="what-the-money-doesnt-fix.html" class="essay-read">Read →</a>
     </div>
@@ -113,7 +113,7 @@
     <div class="essay-meta" markdown="1">
       <span class="essay-number">Jan 19</span>
       <span class="essay-strata essay-strata--pattern">Pattern</span>
-      <p class="essay-title">Why successful founders feel worse than they should</p>
+      <p class="essay-title">Why do successful founders feel worse than they should?</p>
       <p class="essay-desc">The achievement lands exactly as planned and the feeling is hollow. This essay explains why that happens and why it's not a character flaw.</p>
       <a href="why-successful-founders-feel-worse.html" class="essay-read">Read →</a>
     </div>
@@ -139,7 +139,7 @@
     <div class="essay-meta" markdown="1">
       <span class="essay-number">Jan 5</span>
       <span class="essay-strata essay-strata--signal">Signal</span>
-      <p class="essay-title">The exit-to-depression pipeline</p>
+      <p class="essay-title">Why do founders experience depression after a successful exit?</p>
       <p class="essay-desc">The pattern that moves from successful exit to low-grade depression is predictable and almost never named. This essay names it.</p>
       <a href="exit-to-depression-pipeline.html" class="essay-read">Read →</a>
     </div>
@@ -152,7 +152,7 @@
     <div class="essay-meta" markdown="1">
       <span class="essay-number">Dec 29, 2025</span>
       <span class="essay-strata essay-strata--pattern">Pattern</span>
-      <p class="essay-title">The founder who stays</p>
+      <p class="essay-title">What happens to the founder who stays?</p>
       <p class="essay-desc">Staying isn't the neutral option. This essay is about what continuing to operate past a certain point actually requires — and who it's actually for.</p>
       <a href="the-founder-who-stays.html" class="essay-read">Read →</a>
     </div>
@@ -165,7 +165,7 @@
     <div class="essay-meta" markdown="1">
       <span class="essay-number">Dec 22, 2025</span>
       <span class="essay-strata essay-strata--signal">Signal</span>
-      <p class="essay-title">Should I sell my company</p>
+      <p class="essay-title">Should I sell my company?</p>
       <p class="essay-desc">There are two questions inside the decision to sell. Most founders only answer one of them. This essay separates them.</p>
       <a href="should-i-sell-my-company.html" class="essay-read">Read →</a>
     </div>
@@ -178,7 +178,7 @@
     <div class="essay-meta" markdown="1">
       <span class="essay-number">Dec 15, 2025</span>
       <span class="essay-strata essay-strata--signal">Signal</span>
-      <p class="essay-title">What to do after you exit your company</p>
+      <p class="essay-title">What should you do after you exit your company?</p>
       <p class="essay-desc">The practical and not-so-practical questions founders ask in the months after an exit — and honest answers to each one.</p>
       <a href="after-the-exit.html" class="essay-read">Read →</a>
     </div>
@@ -191,7 +191,7 @@
     <div class="essay-meta" markdown="1">
       <span class="essay-number">Dec 8, 2025</span>
       <span class="essay-strata essay-strata--signal">Signal</span>
-      <p class="essay-title">Why am I bored after my startup succeeded</p>
+      <p class="essay-title">Why am I bored after my startup succeeded?</p>
       <p class="essay-desc">The boredom that arrives when everything is working is not a scheduling problem. This essay explains what it actually signals.</p>
       <a href="bored-after-startup-success.html" class="essay-read">Read →</a>
     </div>
@@ -204,7 +204,7 @@
     <div class="essay-meta" markdown="1">
       <span class="essay-number">Dec 1, 2025</span>
       <span class="essay-strata essay-strata--signal">Signal</span>
-      <p class="essay-title">What I got wrong about stepping back as CEO</p>
+      <p class="essay-title">What did I get wrong about stepping back as CEO?</p>
       <p class="essay-desc">What founders expect the transition to feel like, versus the year most of them actually have. The gap between the two is the thing nobody prepares you for.</p>
       <a href="stepping-back-as-ceo.html" class="essay-read">Read →</a>
     </div>
@@ -230,7 +230,7 @@
     <div class="essay-meta" markdown="1">
       <span class="essay-number">Nov 17, 2025</span>
       <span class="essay-strata essay-strata--signal">Signal</span>
-      <p class="essay-title">What the business was doing for you that you never asked it to do</p>
+      <p class="essay-title">What has your business been doing for you that you never asked it to do?</p>
       <p class="essay-desc">The business gave you structure, identity, purpose, and a reason to keep moving. This essay names what it was actually doing — so you understand what's missing now that it's gone.</p>
       <a href="essay-what-the-business-was-doing.html" class="essay-read">Read →</a>
     </div>
