@@ -32,39 +32,8 @@
     </div>
   </div>
 
-  <div class="fr-field">
-    <label class="fr-label">How you built it</label>
-    <div class="fr-radio-group">
-      <label class="fr-radio"><input type="radio" name="howBuilt" value="Bootstrapped / independent"><span>Bootstrapped / independent</span></label>
-      <label class="fr-radio"><input type="radio" name="howBuilt" value="Took some funding"><span>Took some funding</span></label>
-      <label class="fr-radio"><input type="radio" name="howBuilt" value="Other"><span>Other</span></label>
-    </div>
-  </div>
 
-  <div class="fr-field">
-    <label class="fr-label" for="frExit">Exit size</label>
-    <select class="fr-select" id="frExit" name="exitSize">
-      <option value="" disabled selected>Select a range</option>
-      <option value="Under $500K">Under $500K</option>
-      <option value="$500K – $5M">$500K – $5M</option>
-      <option value="$5M – $50M">$5M – $50M</option>
-      <option value="Over $50M">Over $50M</option>
-      <option value="Still operating">Still operating</option>
-    </select>
-  </div>
-
-  <div class="fr-field">
-    <label class="fr-label">What are you looking for right now?</label>
-    <div class="fr-radio-group">
-      <label class="fr-radio"><input type="radio" name="lookingFor" value="Peers who've actually been through it"><span>Peers who've actually been through it</span></label>
-      <label class="fr-radio"><input type="radio" name="lookingFor" value="A room where I don't have to perform"><span>A room where I don't have to perform</span></label>
-      <label class="fr-radio"><input type="radio" name="lookingFor" value="Clarity on what comes next"><span>Clarity on what comes next</span></label>
-      <label class="fr-radio"><input type="radio" name="lookingFor" value="To not feel like the only one"><span>To not feel like the only one</span></label>
-      <label class="fr-radio"><input type="radio" name="lookingFor" value="I'm not sure yet — the usual rooms just don't fit"><span>I'm not sure yet — the usual rooms just don't fit</span></label>
-    </div>
-  </div>
-
-  <button class="fr-submit" type="submit" id="frSubmit">Join Found Room</button>
+<button class="fr-submit" type="submit" id="frSubmit">Join Found Room</button>
   <p class="fr-success" id="frSuccess">You're in. Daniel will be in touch.</p>
   <p class="fr-error" id="frError">Something went wrong. Email daniel@foundroom.co directly.</p>
 
@@ -83,10 +52,7 @@
     var data = {
       name: document.getElementById('frName').value,
       email: document.getElementById('frEmail').value,
-      situation: document.querySelector('input[name="situation"]:checked') ? document.querySelector('input[name="situation"]:checked').value : '',
-      howBuilt: document.querySelector('input[name="howBuilt"]:checked') ? document.querySelector('input[name="howBuilt"]:checked').value : '',
-      exitSize: document.getElementById('frExit').value,
-      lookingFor: document.querySelector('input[name="lookingFor"]:checked') ? document.querySelector('input[name="lookingFor"]:checked').value : ''
+      situation: document.querySelector('input[name="situation"]:checked') ? document.querySelector('input[name="situation"]:checked').value : ''
     };
 
     fetch(ENDPOINT, {
