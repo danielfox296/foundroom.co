@@ -72,7 +72,7 @@
 
 <script>
 (function() {
-  var ENDPOINT = 'APPS_SCRIPT_URL_HERE';
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxwUvLTTE2GwmLNvx33Bgl1m1dbcXTLWcJqeyPbHjQEq9jfEWOIPcLEcipfSYV2sQk9/exec';
 
   document.getElementById('frForm').addEventListener('submit', function(e) {
     e.preventDefault();
