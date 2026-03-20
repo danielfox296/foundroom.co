@@ -1,0 +1,14 @@
+.container {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--danger);
+  padding: 0.5rem;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
+}
