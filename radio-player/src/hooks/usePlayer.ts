@@ -27,13 +27,7 @@ export function usePlayer() {
     const onDurationChange = () => setDuration(audio.duration || 0);
     const onEnded = () => advanceQueue();
     const onError = () => {
-      const e = audio.error;
-      console.error('Audio playback error:', {
-        code: e?.code,
-        message: e?.message,
-        src: audio.src?.substring(0, 120),
-        networkState: audio.networkState,
-      });
+      console.error('Audio playback error');
       setStatus('error');
       // Try to advance on error
       advanceQueue();
@@ -59,18 +53,6 @@ export function usePlayer() {
     setStatus('loading');
     try {
       const { url } = await getTrackUrl(track.id);
-      console.log('[radio] signed URL:', url.substring(0, 150));
-
-      // Probe the signed URL to surface R2 errors (CORS, 403, etc.)
-      try {
-        const probe = await fetch(url, { method: 'HEAD' });
-        if (!probe.ok) {
-          console.error('[radio] R2 probe failed:', probe.status, probe.statusText);
-        }
-      } catch (probeErr) {
-        console.error('[radio] R2 probe error (likely CORS):', probeErr);
-      }
-
       const audio = audioRef.current!;
       audio.src = url;
       await audio.play();

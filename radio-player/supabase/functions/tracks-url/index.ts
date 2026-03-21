@@ -62,15 +62,7 @@ serve(async (req) => {
 
   if (!accessKeyId || !secretAccessKey || !bucket || !endpoint) {
     return new Response(
-      JSON.stringify({
-        error: "R2 config error",
-        missing: {
-          R2_ACCESS_KEY_ID: !accessKeyId,
-          R2_SECRET_ACCESS_KEY: !secretAccessKey,
-          R2_BUCKET_NAME: !bucket,
-          R2_PUBLIC_ENDPOINT: !endpoint,
-        },
-      }),
+      JSON.stringify({ error: "R2 configuration error" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
   }
@@ -105,19 +97,9 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
       },
     );
-  } catch (err) {
+  } catch (_err) {
     return new Response(
-      JSON.stringify({
-        error: "R2 signing failed",
-        message: err instanceof Error ? err.message : String(err),
-        debug: {
-          accessKeyIdLength: accessKeyId.length,
-          secretKeyLength: secretAccessKey.length,
-          endpoint,
-          bucket,
-          filename: track.filename,
-        },
-      }),
+      JSON.stringify({ error: "R2 signing failed" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
   }

@@ -47,12 +47,6 @@ export function Player({ username, onLogout }: PlayerProps) {
       />
 
       <ReportConfirm visible={showReportConfirm} />
-
-      {status === 'error' && (
-        <p style={{ color: '#ff6b6b', fontSize: '0.85rem', textAlign: 'center', marginTop: '0.5rem' }}>
-          Playback error — check browser console (F12) for details
-        </p>
-      )}
     </div>
   );
 }

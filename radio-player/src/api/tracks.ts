@@ -8,10 +8,8 @@ export interface Track {
 
 export async function getTrackList(): Promise<Track[]> {
   const res = await apiFetch('/tracks-list');
-  const text = await res.text();
-  console.log('[radio] tracks-list response:', res.status, text.substring(0, 200));
-  if (!res.ok) throw new Error(`Failed to fetch tracks: ${res.status} ${text}`);
-  const data = JSON.parse(text);
+  if (!res.ok) throw new Error('Failed to fetch tracks');
+  const data = await res.json();
   return data.tracks;
 }
 
@@ -22,11 +20,7 @@ export async function getTrackUrl(
   if (res.status === 409) {
     throw new Error('TRACK_UNAVAILABLE');
   }
-  if (!res.ok) {
-    const body = await res.text();
-    console.error('[radio] tracks-url error:', res.status, body);
-    throw new Error(`Failed to fetch track URL: ${res.status}`);
-  }
+  if (!res.ok) throw new Error('Failed to fetch track URL');
   return res.json();
 }
 
