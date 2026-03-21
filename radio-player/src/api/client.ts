@@ -1,4 +1,5 @@
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 export async function apiFetch(
   path: string,
@@ -9,7 +10,8 @@ export async function apiFetch(
     ...options,
     headers: {
       'Content-Type': 'application/json',
-      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      apikey: ANON_KEY,
+      Authorization: `Bearer ${token || ANON_KEY}`,
       ...options.headers,
     },
   });
