@@ -58,6 +58,8 @@ serve(async (req) => {
   const r2 = new AwsClient({
     accessKeyId: Deno.env.get("R2_ACCESS_KEY_ID")!,
     secretAccessKey: Deno.env.get("R2_SECRET_ACCESS_KEY")!,
+    region: "auto",
+    service: "s3",
   });
 
   const bucket = Deno.env.get("R2_BUCKET_NAME")!;
