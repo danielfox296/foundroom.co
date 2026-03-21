@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { usePlayer } from '../hooks/usePlayer';
 import { TrackInfo } from './TrackInfo';
 import { Controls } from './Controls';
@@ -24,11 +23,8 @@ export function Player({ username, onLogout }: PlayerProps) {
     report,
   } = usePlayer();
 
-  // Auto-start on mount
-  useEffect(() => {
-    start();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // Don't auto-start — browsers block audio.play() without a user gesture.
+  // User clicks the play button → togglePlay → start() runs from a click handler.
 
   return (
     <div className={styles.card}>
@@ -55,6 +51,12 @@ export function Player({ username, onLogout }: PlayerProps) {
       />
 
       <ReportConfirm visible={showReportConfirm} />
+
+      {status === 'error' && (
+        <p style={{ color: '#ff6b6b', fontSize: '0.85rem', textAlign: 'center', marginTop: '0.5rem' }}>
+          Playback error — check browser console (F12) for details
+        </p>
+      )}
     </div>
   );
 }

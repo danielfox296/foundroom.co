@@ -20,7 +20,11 @@ export async function getTrackUrl(
   if (res.status === 409) {
     throw new Error('TRACK_UNAVAILABLE');
   }
-  if (!res.ok) throw new Error('Failed to fetch track URL');
+  if (!res.ok) {
+    const body = await res.text();
+    console.error('[radio] tracks-url error:', res.status, body);
+    throw new Error(`Failed to fetch track URL: ${res.status}`);
+  }
   return res.json();
 }
 
