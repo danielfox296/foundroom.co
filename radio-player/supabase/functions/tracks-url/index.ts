@@ -54,37 +54,71 @@ serve(async (req) => {
     });
   }
 
-  // Generate signed R2 URL
-  const r2 = new AwsClient({
-    accessKeyId: Deno.env.get("R2_ACCESS_KEY_ID")!,
-    secretAccessKey: Deno.env.get("R2_SECRET_ACCESS_KEY")!,
-    region: "auto",
-    service: "s3",
-  });
+  // Validate R2 env vars
+  const accessKeyId = Deno.env.get("R2_ACCESS_KEY_ID");
+  const secretAccessKey = Deno.env.get("R2_SECRET_ACCESS_KEY");
+  const bucket = Deno.env.get("R2_BUCKET_NAME");
+  const endpoint = Deno.env.get("R2_PUBLIC_ENDPOINT");
 
-  const bucket = Deno.env.get("R2_BUCKET_NAME")!;
-  const endpoint = Deno.env.get("R2_PUBLIC_ENDPOINT")!;
-  const encodedFilename = encodeURIComponent(track.filename);
-  const objectUrl = `${endpoint}/${bucket}/${encodedFilename}?X-Amz-Expires=3600`;
+  if (!accessKeyId || !secretAccessKey || !bucket || !endpoint) {
+    return new Response(
+      JSON.stringify({
+        error: "R2 config error",
+        missing: {
+          R2_ACCESS_KEY_ID: !accessKeyId,
+          R2_SECRET_ACCESS_KEY: !secretAccessKey,
+          R2_BUCKET_NAME: !bucket,
+          R2_PUBLIC_ENDPOINT: !endpoint,
+        },
+      }),
+      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+    );
+  }
 
-  const signed = await r2.sign(
-    new Request(objectUrl, { method: "GET" }),
-    {
-      aws: { signQuery: true },
-    },
-  );
+  try {
+    const r2 = new AwsClient({
+      accessKeyId,
+      secretAccessKey,
+      region: "auto",
+      service: "s3",
+    });
 
-  // Log play event (fire-and-forget)
-  supabase
-    .from("play_events")
-    .insert({ track_id: trackId, user_id: auth.userId })
-    .then(() => {});
+    const cleanEndpoint = endpoint.replace(/\/+$/, "");
+    const encodedFilename = encodeURIComponent(track.filename);
+    const objectUrl = `${cleanEndpoint}/${bucket}/${encodedFilename}?X-Amz-Expires=3600`;
 
-  return new Response(
-    JSON.stringify({ url: signed.url.toString() }),
-    {
-      status: 200,
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    },
-  );
+    const signed = await r2.sign(
+      new Request(objectUrl, { method: "GET" }),
+      { aws: { signQuery: true } },
+    );
+
+    // Log play event (fire-and-forget)
+    supabase
+      .from("play_events")
+      .insert({ track_id: trackId, user_id: auth.userId })
+      .then(() => {});
+
+    return new Response(
+      JSON.stringify({ url: signed.url.toString() }),
+      {
+        status: 200,
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+      },
+    );
+  } catch (err) {
+    return new Response(
+      JSON.stringify({
+        error: "R2 signing failed",
+        message: err instanceof Error ? err.message : String(err),
+        debug: {
+          accessKeyIdLength: accessKeyId.length,
+          secretKeyLength: secretAccessKey.length,
+          endpoint,
+          bucket,
+          filename: track.filename,
+        },
+      }),
+      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+    );
+  }
 });
