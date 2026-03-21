@@ -17,14 +17,10 @@ export function Player({ username, onLogout }: PlayerProps) {
     progress,
     duration,
     showReportConfirm,
-    start,
     togglePlay,
     skip,
     report,
   } = usePlayer();
-
-  // Don't auto-start — browsers block audio.play() without a user gesture.
-  // User clicks the play button → togglePlay → start() runs from a click handler.
 
   return (
     <div className={styles.card}>
