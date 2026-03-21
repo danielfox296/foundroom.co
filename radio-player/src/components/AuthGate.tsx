@@ -26,7 +26,7 @@ export function AuthGate({ onLogin }: AuthGateProps) {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Radio</h1>
+      <h1 className={styles.title}>Radio v2</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
           className={styles.input}
