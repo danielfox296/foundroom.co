@@ -8,8 +8,10 @@ export interface Track {
 
 export async function getTrackList(): Promise<Track[]> {
   const res = await apiFetch('/tracks-list');
-  if (!res.ok) throw new Error('Failed to fetch tracks');
-  const data = await res.json();
+  const text = await res.text();
+  console.log('[radio] tracks-list response:', res.status, text.substring(0, 200));
+  if (!res.ok) throw new Error(`Failed to fetch tracks: ${res.status} ${text}`);
+  const data = JSON.parse(text);
   return data.tracks;
 }
 
