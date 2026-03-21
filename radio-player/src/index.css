@@ -38,6 +38,11 @@ body {
   padding: 1rem;
 }
 
+#root:has(.admin-container) {
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
 button {
   font-family: inherit;
   cursor: pointer;

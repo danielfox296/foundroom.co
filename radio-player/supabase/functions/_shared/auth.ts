@@ -3,6 +3,7 @@ import { verify } from "https://deno.land/x/djwt@v3.0.2/mod.ts";
 export interface AuthPayload {
   userId: string;
   username: string;
+  isAdmin?: boolean;
 }
 
 export async function getJwtKey(): Promise<CryptoKey> {
@@ -27,6 +28,7 @@ export async function verifyToken(
     return {
       userId: payload.userId as string,
       username: payload.username as string,
+      isAdmin: payload.isAdmin === true,
     };
   } catch {
     return null;

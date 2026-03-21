@@ -31,7 +31,7 @@ serve(async (req) => {
 
     const { data: user, error } = await supabase
       .from("users")
-      .select("id, username, active")
+      .select("id, username, active, is_admin")
       .eq("access_code", code)
       .limit(1)
       .single();
@@ -57,6 +57,7 @@ serve(async (req) => {
       {
         userId: user.id,
         username: user.username,
+        isAdmin: user.is_admin === true,
         iat: getNumericDate(0),
         exp: getNumericDate(315360000), // 10 years
       },
