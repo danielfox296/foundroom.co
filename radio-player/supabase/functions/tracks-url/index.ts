@@ -62,14 +62,13 @@ serve(async (req) => {
 
   const bucket = Deno.env.get("R2_BUCKET_NAME")!;
   const endpoint = Deno.env.get("R2_PUBLIC_ENDPOINT")!;
-  const encodedFilename = encodeURIComponent(track.filename).replace(/%20/g, "+");
-  const objectUrl = `${endpoint}/${bucket}/${encodedFilename}`;
+  const encodedFilename = encodeURIComponent(track.filename);
+  const objectUrl = `${endpoint}/${bucket}/${encodedFilename}?X-Amz-Expires=3600`;
 
   const signed = await r2.sign(
     new Request(objectUrl, { method: "GET" }),
     {
       aws: { signQuery: true },
-      headers: { "X-Amz-Expires": "3600" },
     },
   );
 
