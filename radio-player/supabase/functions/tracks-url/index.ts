@@ -62,7 +62,8 @@ serve(async (req) => {
 
   const bucket = Deno.env.get("R2_BUCKET_NAME")!;
   const endpoint = Deno.env.get("R2_PUBLIC_ENDPOINT")!;
-  const objectUrl = `${endpoint}/${bucket}/${track.filename}`;
+  const encodedFilename = encodeURIComponent(track.filename).replace(/%20/g, "+");
+  const objectUrl = `${endpoint}/${bucket}/${encodedFilename}`;
 
   const signed = await r2.sign(
     new Request(objectUrl, { method: "GET" }),
