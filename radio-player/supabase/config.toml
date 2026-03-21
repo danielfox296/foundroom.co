@@ -1,2 +1,14 @@
 [api]
 port = 54321
+
+[functions.auth-login]
+verify_jwt = false
+
+[functions.tracks-list]
+verify_jwt = false
+
+[functions.tracks-url]
+verify_jwt = false
+
+[functions.tracks-report]
+verify_jwt = false
