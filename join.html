@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Find the Others — Found Room</title>
+  <meta name="description" content="Free membership for post-exit and mid-operation founders who are done navigating this alone. Found Room is how we find each other.">
+  <link rel="canonical" href="https://foundroom.co/join.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Found Room">
+  <meta property="og:title" content="Find the Others — Found Room">
+  <meta property="og:description" content="Free membership for post-exit and mid-operation founders who are done navigating this alone. Found Room is how we find each other.">
+  <meta property="og:url" content="https://foundroom.co/join.html">
+  <meta property="og:image" content="https://foundroom.co/assets/og-default.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Find the Others — Found Room">
+  <meta name="twitter:description" content="Free membership for post-exit and mid-operation founders who are done navigating this alone. Found Room is how we find each other.">
+  <meta name="twitter:image" content="https://foundroom.co/assets/og-default.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0W9D4LQ59"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K0W9D4LQ59');
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* join page — page-specific styles */
+
+/* Hero — full-bleed image */
+.join-hero {
+  position: relative;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 40%;
+  overflow: hidden;
+}
+
+.join-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.3) 0%, rgba(8,8,8,0.6) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.join-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.join-hero .eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.1s;
+}
+
+.join-hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.25s;
+  margin-bottom: 1.6rem;
+}
+
+.join-hero .hero-sub {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-light);
+  max-width: 560px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.4s;
+}
+
+/* Join body */
+.join-body { padding: 5rem 6rem 8rem; }
+
+.join-prose { max-width: 660px; }
+
+.join-prose p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  margin-bottom: 1.6rem;
+}
+
+/* ---- Custom membership form ---- */
+
+.fr-form {
+  margin-top: 3rem;
+  max-width: 560px;
+}
+
+.fr-field {
+  margin-bottom: 1.8rem;
+}
+
+.fr-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+.fr-required {
+  color: var(--accent);
+}
+
+.fr-input,
+.fr-select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.18s, background 0.18s;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+.fr-input::placeholder {
+  color: var(--ink-mid);
+  opacity: 0.6;
+}
+
+.fr-input:focus,
+.fr-select:focus {
+  border-color: var(--accent);
+  background: rgba(200,241,53,0.04);
+}
+
+.fr-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a09890' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.fr-select option {
+  background: #1a1a1a;
+  color: var(--ink);
+}
+
+.fr-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fr-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.65rem 1rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.fr-radio:hover {
+  border-color: rgba(200,241,53,0.3);
+  background: rgba(200,241,53,0.04);
+}
+
+.fr-radio:has(input:checked) {
+  border-color: rgba(200,241,53,0.45);
+  background: rgba(200,241,53,0.07);
+}
+
+.fr-radio input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 50%;
+  transition: border-color 0.15s, background 0.15s;
+  position: relative;
+}
+
+.fr-radio input[type="radio"]:checked {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.fr-radio input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #080808;
+}
+
+.fr-radio span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ink-mid);
+  transition: color 0.15s;
+}
+
+.fr-radio:has(input:checked) span {
+  color: var(--ink);
+}
+
+.fr-submit {
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  background: var(--accent);
+  color: #0a0905;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.18s, opacity 0.18s;
+  border-radius: 0;
+}
+
+.fr-submit:hover {
+  background: var(--accent-hover);
+}
+
+.fr-submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.fr-success,
+.fr-error {
+  display: none;
+  margin-top: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.fr-success { color: var(--accent); }
+.fr-error   { color: #ff7070; }
+
+/* Essay footer nav */
+.essay-footer-nav {
+  padding: 4rem 6rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.back-link:hover { color: var(--ink); }
+
+.essay-cta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #0a0905;
+  background: var(--accent);
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  transition: background 0.18s;
+}
+
+.essay-cta:hover { background: var(--accent-hover); }
+
+/* Footer read-next block */
+.footer-read-next {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-read-next-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-read-next-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.footer-read-next-link:hover { color: var(--accent); }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .join-hero { padding: 8rem 1.5rem 4rem; }
+  .join-body { padding: 3rem 1.5rem 5rem; }
+  .essay-footer-nav { padding: 3rem 1.5rem; flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+}
+  </style>
+</head>
+<body class="join-page">
+
+<!-- =============================================
+   FOUND ROOM — Header / Nav
+   Edit this file to change navigation site-wide.
+   ============================================= -->
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="identity-cost.html">Identity Cost</a>
+    <a href="journal.html">Journal</a>
+  </div>
+  <a href="join.html" class="nav-cta">Join</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="identity-cost.html">Identity Cost</a>
+    <a href="journal.html">Journal</a>
+    <a href="join.html" class="mobile-nav-cta">Join</a>
+  </div>
+</div>
+
+<section class="join-hero">
+<p class="eyebrow">Free Membership</p>
+<h1>Find the others.</h1>
+<p class="hero-sub">This is where founders who have been through it — or are in it — find each other. Not a network for deal flow. Not an accountability group. Just people who understand the specific kind of disorientation that comes with building something real.</p>
+</section>
+<div class="section-rule"></div>
+
+<section class="join-body">
+<div class="join-prose">
+
+<p>Timothy Leary said "find the others." That's the whole idea.</p>
+
+<p>There are founders who've been through an exit and found the aftermath disorienting. There are founders still running something who've lost the thread. Neither group fits the existing rooms — the optimization masterminds, the wealth management networks, the accountability groups. This is not that.</p>
+
+<p>Free membership means you're in the room. Daniel reads every submission. If it feels like a fit, he'll reach out directly. No funnel. No pitch sequence.</p>
+
+</div>
+
+<form class="fr-form" id="frForm">
+
+<div class="fr-field">
+<label class="fr-label" for="frName">Your name</label>
+<input class="fr-input" type="text" id="frName" name="name" placeholder="First and last" autocomplete="name">
+</div>
+
+<div class="fr-field">
+<label class="fr-label" for="frEmail">Email <span class="fr-required">*</span></label>
+<input class="fr-input" type="email" id="frEmail" name="email" placeholder="you@example.com" required autocomplete="email">
+</div>
+
+<div class="fr-field">
+<label class="fr-label">Your situation</label>
+<div class="fr-radio-group">
+<label class="fr-radio"><input type="radio" name="situation" value="Post-exit"><span>Post-exit</span></label>
+<label class="fr-radio"><input type="radio" name="situation" value="Still operating, lost the thread"><span>Still operating, lost the thread</span></label>
+<label class="fr-radio"><input type="radio" name="situation" value="In a transition"><span>In a transition</span></label>
+</div>
+</div>
+
+
+<button class="fr-submit" type="submit" id="frSubmit">Join Found Room</button>
+<p class="fr-success" id="frSuccess">You're in. Daniel will be in touch.</p>
+<p class="fr-error" id="frError">Something went wrong. Email daniel@foundroom.co directly.</p>
+
+</form>
+
+<script>
+(function() {
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxwUvLTTE2GwmLNvx33Bgl1m1dbcXTLWcJqeyPbHjQEq9jfEWOIPcLEcipfSYV2sQk9/exec';
+
+  document.getElementById('frForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = document.getElementById('frSubmit');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    var data = {
+      name: document.getElementById('frName').value,
+      email: document.getElementById('frEmail').value,
+      situation: document.querySelector('input[name="situation"]:checked') ? document.querySelector('input[name="situation"]:checked').value : ''
+    };
+
+    fetch(ENDPOINT, {
+      method: 'POST',
+      body: JSON.stringify(data)
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(res) {
+      document.getElementById('frForm').style.display = 'none';
+      document.getElementById('frSuccess').style.display = 'block';
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btn.textContent = 'Join Found Room';
+      document.getElementById('frError').style.display = 'block';
+    });
+  });
+})();
+</script>
+
+</section>
+
+<div class="essay-footer-nav">
+<div class="footer-read-next">
+<span class="footer-read-next-label">Explore</span>
+<a href="journal.html" class="footer-read-next-link">The Found Journal →</a>
+</div>
+<a href="journal.html" class="essay-cta">Read the Journal →</a>
+</div>
+
+<!-- =============================================
+   FOUND ROOM — Footer
+   Edit this file to change the footer site-wide.
+   ============================================= -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="join.html">Join Free</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
+</footer>
+
+<script src="assets/js/global.js"></script>
+</body>
+</html>

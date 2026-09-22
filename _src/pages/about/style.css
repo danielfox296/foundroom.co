@@ -1,0 +1,187 @@
+/* about — page-specific styles only */
+
+/* Hero */
+/* Hero — full-bleed image */
+.about-hero {
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 40%;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.3) 0%, rgba(8,8,8,0.55) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.about-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero .eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.1s;
+}
+
+.about-hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.25s;
+}
+
+/* Editorial story modules */
+.story-module {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 680px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.story-module--reverse .story-module-image { order: 2; }
+.story-module--reverse .story-module-text  { order: 1; }
+
+.story-module-image {
+  background-size: cover;
+  background-position: center;
+  min-height: 480px;
+}
+
+.story-module-text {
+  padding: 6rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--dark-surface);
+}
+
+.story-module--reverse .story-module-text {
+  background: var(--dark);
+}
+
+.story-prose p {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  margin-bottom: 1.3rem;
+  max-width: 520px;
+}
+
+.story-prose p:last-child { margin-bottom: 0; }
+
+/* Pull quote */
+.pull-quote {
+  padding: 8rem 6rem;
+  background: var(--dark-surface);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.pull-quote blockquote {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.6rem, 2.8vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Closing */
+.closing {
+  padding: 8rem 6rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.closing-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-top: 0.5rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.closing-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  max-width: 600px;
+  margin-bottom: 1.4rem;
+}
+
+.closing-content .byline {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-light);
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+}
+
+/* CTA block layout (about uses two link cards, not email form) */
+.cta-section {
+  background: var(--dark);
+  gap: 4rem;
+}
+
+.cta-block {
+  padding: 3rem;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.cta-block-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 1.2rem;
+}
+
+.cta-block h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.cta-block p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .about-hero { padding: 8rem 1.5rem 4rem; }
+  .story-module { grid-template-columns: 1fr; min-height: unset; }
+  .story-module-image { min-height: 320px; order: 0 !important; }
+  .story-module-text { order: 1 !important; padding: 4rem 1.5rem; }
+  .pull-quote { padding: 5rem 1.5rem; }
+  .closing { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 2rem; }
+  .closing-label { position: static; }
+}

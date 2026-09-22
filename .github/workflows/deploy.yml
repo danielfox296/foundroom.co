@@ -1,0 +1,72 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install Markdown
+
+      - name: Build site
+        run: python3 build.py
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      # Stage before upload. This job used to upload `path: .` — the whole
+      # repository root — so the site served its own source: build.py, the
+      # entire _src/ tree, ARCHITECTURE.md, README.md, and a tracked
+      # Strategy/ directory holding an internal funnel plan, all downloadable
+      # from foundroom.co. rsync rather than a hand-picked cp list, so a new
+      # output file ships automatically and a new source file does not.
+      - name: Stage site
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='.claude' \
+            --exclude='_src' \
+            --exclude='_site' \
+            --exclude='Strategy' \
+            --exclude='__pycache__' \
+            --exclude='build.py' \
+            --exclude='*.md' \
+            --exclude='.DS_Store' \
+            --exclude='.gitignore' \
+            --exclude='requirements.txt' \
+            ./ _site/
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
