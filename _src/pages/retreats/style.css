@@ -1,0 +1,102 @@
+/* retreats — page-specific styles only */
+
+/* Hero — full-bleed image */
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 55%;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.25) 0%, rgba(8,8,8,0.5) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.1s;
+}
+
+.hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.25s;
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  color: var(--ink-mid);
+  max-width: 580px;
+  line-height: 1.6;
+  margin-top: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.4s;
+}
+
+/* What we're building section */
+.building-section {
+  background: var(--dark-surface);
+  padding: 8rem 6rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.building-section h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 4rem;
+}
+
+.building-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.building-item {
+  border-top: 2px solid var(--ink);
+  padding-top: 2rem;
+}
+
+.building-item h3 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin-bottom: 0.8rem;
+}
+
+.building-item p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .hero { padding: 8rem 1.5rem 4rem; }
+  .building-section { padding: 5rem 1.5rem; }
+  .building-grid { grid-template-columns: 1fr; }
+}

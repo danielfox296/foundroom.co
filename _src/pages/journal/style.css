@@ -1,0 +1,182 @@
+/* journal — page-specific styles only */
+
+/* Hero — full-bleed image */
+.journal-hero {
+  position: relative;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1456324463128-7ff6903988d8?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 60%;
+  overflow: hidden;
+}
+
+.journal-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.35) 0%, rgba(8,8,8,0.55) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.journal-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.journal-hero .eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.1s;
+}
+
+.journal-hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.25s;
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  color: var(--ink-mid);
+  max-width: 560px;
+  line-height: 1.6;
+  margin-top: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.4s;
+}
+
+/* Essay List */
+.essay-list { padding: 0 6rem 8rem; }
+
+.essay-item {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Square thumbnail */
+.essay-thumb {
+  display: block;
+  width: 240px;
+  height: 240px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.essay-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%) brightness(0.85);
+  transition: filter 0.3s ease, transform 0.4s ease;
+}
+
+.essay-thumb:hover img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.04);
+}
+
+.essay-thumb--soon img {
+  filter: grayscale(60%) brightness(0.55);
+}
+
+.essay-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.07); }
+
+.essay-meta { display: flex; flex-direction: column; gap: 0.6rem; }
+
+.essay-number {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+
+.essay-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.essay-desc {
+  font-size: 0.95rem;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  max-width: 580px;
+}
+
+.essay-date {
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  margin-top: 0.4rem;
+}
+
+.essay-strata {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+  margin-bottom: 0.1rem;
+}
+
+.essay-strata--signal {
+  color: var(--ink-light);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.essay-strata--pattern {
+  color: var(--accent);
+  border: 1px solid rgba(200,241,53,0.25);
+}
+
+.essay-strata--framework {
+  color: var(--ink);
+  border: 1px solid rgba(240,237,232,0.25);
+}
+
+.essay-read {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.83rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  align-self: flex-start;
+  transition: color 0.18s;
+}
+
+.essay-read:hover { color: var(--accent-hover); }
+
+.essay-read.coming-soon { color: var(--ink-light); cursor: default; }
+.essay-read.coming-soon:hover { color: var(--ink-light); }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .journal-hero { padding: 8rem 1.5rem 4rem; }
+  .essay-list { padding: 0 1.5rem 5rem; }
+  .essay-item { grid-template-columns: 120px 1fr; gap: 1.2rem; flex-wrap: wrap; }
+  .essay-thumb { width: 120px; height: 120px; }
+}
+
+@media (max-width: 480px) {
+  .essay-item { grid-template-columns: 1fr; }
+  .essay-thumb { width: 100%; height: 180px; }
+}

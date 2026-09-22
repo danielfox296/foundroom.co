@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>The Found Journal — Found Room</title>
+  <meta name="description" content="Essays on founders, identity, and what actually happens after you build something real.">
+  <link rel="canonical" href="https://foundroom.co/journal.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Found Room">
+  <meta property="og:title" content="The Found Journal — Found Room">
+  <meta property="og:description" content="Essays on founders, identity, and what actually happens after you build something real.">
+  <meta property="og:url" content="https://foundroom.co/journal.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1456324463128-7ff6903988d8?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Found Journal — Found Room">
+  <meta name="twitter:description" content="Essays on founders, identity, and what actually happens after you build something real.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1456324463128-7ff6903988d8?w=1200&h=630&q=85&auto=format&fit=crop">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0W9D4LQ59"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K0W9D4LQ59');
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* journal — page-specific styles only */
+
+/* Hero — full-bleed image */
+.journal-hero {
+  position: relative;
+  min-height: 68vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1456324463128-7ff6903988d8?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 60%;
+  overflow: hidden;
+}
+
+.journal-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.35) 0%, rgba(8,8,8,0.55) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.journal-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.journal-hero .eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.1s;
+}
+
+.journal-hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.25s;
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  color: var(--ink-mid);
+  max-width: 560px;
+  line-height: 1.6;
+  margin-top: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.4s;
+}
+
+/* Essay List */
+.essay-list { padding: 0 6rem 8rem; }
+
+.essay-item {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* Square thumbnail */
+.essay-thumb {
+  display: block;
+  width: 240px;
+  height: 240px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.essay-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%) brightness(0.85);
+  transition: filter 0.3s ease, transform 0.4s ease;
+}
+
+.essay-thumb:hover img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.04);
+}
+
+.essay-thumb--soon img {
+  filter: grayscale(60%) brightness(0.55);
+}
+
+.essay-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.07); }
+
+.essay-meta { display: flex; flex-direction: column; gap: 0.6rem; }
+
+.essay-number {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+
+.essay-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.essay-desc {
+  font-size: 0.95rem;
+  color: var(--ink-mid);
+  line-height: 1.7;
+  max-width: 580px;
+}
+
+.essay-date {
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  margin-top: 0.4rem;
+}
+
+.essay-strata {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+  margin-bottom: 0.1rem;
+}
+
+.essay-strata--signal {
+  color: var(--ink-light);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.essay-strata--pattern {
+  color: var(--accent);
+  border: 1px solid rgba(200,241,53,0.25);
+}
+
+.essay-strata--framework {
+  color: var(--ink);
+  border: 1px solid rgba(240,237,232,0.25);
+}
+
+.essay-read {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.83rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  align-self: flex-start;
+  transition: color 0.18s;
+}
+
+.essay-read:hover { color: var(--accent-hover); }
+
+.essay-read.coming-soon { color: var(--ink-light); cursor: default; }
+.essay-read.coming-soon:hover { color: var(--ink-light); }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .journal-hero { padding: 8rem 1.5rem 4rem; }
+  .essay-list { padding: 0 1.5rem 5rem; }
+  .essay-item { grid-template-columns: 120px 1fr; gap: 1.2rem; flex-wrap: wrap; }
+  .essay-thumb { width: 120px; height: 120px; }
+}
+
+@media (max-width: 480px) {
+  .essay-item { grid-template-columns: 1fr; }
+  .essay-thumb { width: 100%; height: 180px; }
+}
+  </style>
+</head>
+<body class="">
+
+<!-- =============================================
+   FOUND ROOM — Header / Nav
+   Edit this file to change navigation site-wide.
+   ============================================= -->
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="identity-cost.html">Identity Cost</a>
+    <a href="journal.html">Journal</a>
+  </div>
+  <a href="join.html" class="nav-cta">Join</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="identity-cost.html">Identity Cost</a>
+    <a href="journal.html">Journal</a>
+    <a href="join.html" class="mobile-nav-cta">Join</a>
+  </div>
+</div>
+
+<section class="journal-hero">
+<p class="eyebrow">The Found Journal</p>
+<h1>Writing from inside the work.</h1>
+<p class="hero-sub">Essays on founders, identity, and what actually happens after you build something real.</p>
+</section>
+<div class="section-rule"></div>
+
+<section class="essay-list">
+<div class="essay-item reveal">
+<p><a href="peer-optimization-mode.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">March 16</span>
+<span class="essay-strata essay-strata--pattern">Pattern</span></p>
+<p class="essay-title">What is peer optimization mode, and why does it trap founders?</p>
+<p class="essay-desc">What founder peer forums do well, what they structurally cannot do, and the question they leave unanswered regardless of how good the room is.</p>
+<p><a href="peer-optimization-mode.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="what-should-i-do-after-selling.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">March 9</span>
+<span class="essay-strata essay-strata--signal">Signal</span></p>
+<p class="essay-title">What should I do after selling my business?</p>
+<p class="essay-desc">The most common post-exit questions, answered plainly. What to do with the time, the money, the identity, and the next chapter.</p>
+<p><a href="what-should-i-do-after-selling.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="always-case-study.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">March 2</span>
+<span class="essay-strata essay-strata--framework">Framework</span></p>
+<p class="essay-title">Always</p>
+<p class="essay-desc">A case study in building a company around a version of yourself that the building eventually changes — and what happens when you finally notice.</p>
+<p><a href="always-case-study.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="networks-that-drop-you.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Feb 23</span>
+<span class="essay-strata essay-strata--pattern">Pattern</span></p>
+<p class="essay-title">Why do your networks drop you after you stop being a founder?</p>
+<p class="essay-desc">EO, YPO, TIGER 21 — every major founder network has an active membership requirement that post-exit founders fail by definition. This essay is about the gap they leave.</p>
+<p><a href="networks-that-drop-you.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="founder-pipeline-problem.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Feb 16</span>
+<span class="essay-strata essay-strata--pattern">Pattern</span></p>
+<p class="essay-title">What is the founder pipeline problem?</p>
+<p class="essay-desc">Every profession has a path for what comes after. Founders build their own path and then step off it. This essay is about what that absence actually costs.</p>
+<p><a href="founder-pipeline-problem.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="i-keep-improving-everything.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Feb 9</span>
+<span class="essay-strata essay-strata--pattern">Pattern</span></p>
+<p class="essay-title">I keep improving everything and nothing relieves the pressure — why?</p>
+<p class="essay-desc">You've optimized your health, your schedule, your environment. Nothing relieves the pressure. This essay is about why that is.</p>
+<p><a href="i-keep-improving-everything.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="the-run-back.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Feb 2</span>
+<span class="essay-strata essay-strata--pattern">Pattern</span></p>
+<p class="essay-title">Why do founders run back to building after selling?</p>
+<p class="essay-desc">Starting something new immediately after an exit is one of the most common post-exit moves. This essay explains why it tends not to work.</p>
+<p><a href="the-run-back.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="what-the-money-doesnt-fix.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Jan 26</span>
+<span class="essay-strata essay-strata--signal">Signal</span></p>
+<p class="essay-title">What doesn't money fix after a successful exit?</p>
+<p class="essay-desc">Financial freedom removes a specific set of problems. This essay is about the ones it doesn't touch.</p>
+<p><a href="what-the-money-doesnt-fix.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="why-successful-founders-feel-worse.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Jan 19</span>
+<span class="essay-strata essay-strata--pattern">Pattern</span></p>
+<p class="essay-title">Why do successful founders feel worse than they should?</p>
+<p class="essay-desc">The achievement lands exactly as planned and the feeling is hollow. This essay explains why that happens and why it's not a character flaw.</p>
+<p><a href="why-successful-founders-feel-worse.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="why-doesnt-selling-feel.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Jan 12</span>
+<span class="essay-strata essay-strata--signal">Signal</span></p>
+<p class="essay-title">Why doesn't selling feel the way you thought it would?</p>
+<p class="essay-desc">Most founders expect the exit to arrive with clarity, relief, or some version of arrival. This essay is about what actually shows up instead.</p>
+<p><a href="why-doesnt-selling-feel.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="exit-to-depression-pipeline.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1445294211564-3ca59d999abd?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Jan 5</span>
+<span class="essay-strata essay-strata--signal">Signal</span></p>
+<p class="essay-title">Why do founders experience depression after a successful exit?</p>
+<p class="essay-desc">The pattern that moves from successful exit to low-grade depression is predictable and almost never named. This essay names it.</p>
+<p><a href="exit-to-depression-pipeline.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="the-founder-who-stays.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Dec 29, 2025</span>
+<span class="essay-strata essay-strata--pattern">Pattern</span></p>
+<p class="essay-title">What happens to the founder who stays?</p>
+<p class="essay-desc">Staying isn't the neutral option. This essay is about what continuing to operate past a certain point actually requires — and who it's actually for.</p>
+<p><a href="the-founder-who-stays.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="should-i-sell-my-company.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Dec 22, 2025</span>
+<span class="essay-strata essay-strata--signal">Signal</span></p>
+<p class="essay-title">Should I sell my company?</p>
+<p class="essay-desc">There are two questions inside the decision to sell. Most founders only answer one of them. This essay separates them.</p>
+<p><a href="should-i-sell-my-company.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="after-the-exit.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Dec 15, 2025</span>
+<span class="essay-strata essay-strata--signal">Signal</span></p>
+<p class="essay-title">What should you do after you exit your company?</p>
+<p class="essay-desc">The practical and not-so-practical questions founders ask in the months after an exit — and honest answers to each one.</p>
+<p><a href="after-the-exit.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="bored-after-startup-success.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Dec 8, 2025</span>
+<span class="essay-strata essay-strata--signal">Signal</span></p>
+<p class="essay-title">Why am I bored after my startup succeeded?</p>
+<p class="essay-desc">The boredom that arrives when everything is working is not a scheduling problem. This essay explains what it actually signals.</p>
+<p><a href="bored-after-startup-success.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="stepping-back-as-ceo.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Dec 1, 2025</span>
+<span class="essay-strata essay-strata--signal">Signal</span></p>
+<p class="essay-title">What did I get wrong about stepping back as CEO?</p>
+<p class="essay-desc">What founders expect the transition to feel like, versus the year most of them actually have. The gap between the two is the thing nobody prepares you for.</p>
+<p><a href="stepping-back-as-ceo.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="is-this-founder-burnout.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Nov 24, 2025</span>
+<span class="essay-strata essay-strata--signal">Signal</span></p>
+<p class="essay-title">Is this founder burnout, or something else?</p>
+<p class="essay-desc">Rest isn't working because the problem isn't the workload. This essay draws the line between burnout and something that requires a different diagnosis entirely.</p>
+<p><a href="is-this-founder-burnout.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+<div class="essay-item reveal">
+<p><a href="essay-what-the-business-was-doing.html" class="essay-thumb">
+<img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=480&h=480&q=80&auto=format&fit=crop" alt="" loading="lazy">
+</a></p>
+<div class="essay-meta">
+<p><span class="essay-number">Nov 17, 2025</span>
+<span class="essay-strata essay-strata--signal">Signal</span></p>
+<p class="essay-title">What has your business been doing for you that you never asked it to do?</p>
+<p class="essay-desc">The business gave you structure, identity, purpose, and a reason to keep moving. This essay names what it was actually doing — so you understand what's missing now that it's gone.</p>
+<p><a href="essay-what-the-business-was-doing.html" class="essay-read">Read →</a></p>
+</div>
+</div>
+</section>
+
+<!-- =============================================
+   FOUND ROOM — Footer
+   Edit this file to change the footer site-wide.
+   ============================================= -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="join.html">Join Free</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
+</footer>
+
+<script src="assets/js/global.js"></script>
+</body>
+</html>

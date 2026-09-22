@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Found Room</title>
+  <meta name="description" content="A private community for founders who are ready to invest in the full picture — the company and the life.">
+  <link rel="canonical" href="https://foundroom.co/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Found Room">
+  <meta property="og:title" content="Found Room">
+  <meta property="og:description" content="A private community for founders who are ready to invest in the full picture — the company and the life.">
+  <meta property="og:url" content="https://foundroom.co/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1584392480816-eaad92a75e60?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Found Room">
+  <meta name="twitter:description" content="A private community for founders who are ready to invest in the full picture — the company and the life.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1584392480816-eaad92a75e60?w=1200&h=630&q=85&auto=format&fit=crop">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0W9D4LQ59"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K0W9D4LQ59');
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* ============================================
+   Index page — page-specific styles only.
+   Nav, body, :root, html resets → global.css
+   Transparent nav behaviour → global.css via body.page-home
+   ============================================ */
+
+/* ── Hero — Full-bleed, centered ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('https://images.unsplash.com/photo-1584392480816-eaad92a75e60?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 30%;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(8,8,8,0.52) 0%,
+    rgba(8,8,8,0.28) 35%,
+    rgba(8,8,8,0.65) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  padding: 0 2rem;
+}
+
+.eyebrow {
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.2s;
+}
+
+.hero-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(4.5rem, 9vw, 8.5rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+  color: #fff;
+  margin-bottom: 2.2rem;
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards 0.35s;
+}
+
+.hero-tagline {
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.55);
+  max-width: 460px;
+  margin: 0 auto 3rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.55s;
+}
+
+.hero-cta {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: #fff;
+  color: #080808;
+  padding: 1rem 2.2rem;
+  text-decoration: none;
+  transition: opacity 0.18s;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.7s;
+}
+.hero-cta:hover { opacity: 0.88; }
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  z-index: 2;
+}
+
+/* ── What section ── */
+.what {
+  padding: 9rem 6rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.what-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-top: 0.5rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.what-content h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  color: var(--ink);
+}
+
+.what-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink-mid);
+  max-width: 600px;
+  margin-bottom: 1.3rem;
+}
+
+/* ── Recognition ── */
+.recognition {
+  padding: 10rem 6rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.recognition-inner {
+  max-width: 720px;
+}
+
+.recognition p {
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.95;
+  color: var(--ink-mid);
+  margin-bottom: 2.2rem;
+}
+
+.recognition p:first-child {
+  font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+  color: var(--ink);
+  line-height: 1.85;
+}
+
+/* ── Identity Cost bridge ── */
+.identity-bridge {
+  padding: 5rem 6rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 6rem;
+  align-items: start;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.identity-bridge-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-top: 0.5rem;
+}
+
+.identity-bridge-lead {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink-mid);
+  margin-bottom: 1.2rem;
+}
+
+.identity-bridge-link {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.identity-bridge-link:hover { color: var(--accent); }
+
+/* ── About ── */
+.about {
+  padding: 8rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 8rem;
+  align-items: start;
+}
+
+.about-content blockquote {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.4rem, 2.3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  border-left: 2px solid var(--accent);
+  padding-left: 2rem;
+  margin-bottom: 3rem;
+  color: var(--ink);
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink-mid);
+  max-width: 580px;
+  margin-bottom: 1.3rem;
+}
+
+.about-aside {
+  background: var(--accent-pale);
+  border: 1px solid rgba(200,241,53,0.18);
+  padding: 2.5rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.about-aside-label {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+}
+
+.about-aside p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--ink-mid);
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Form Embed Placeholder ── */
+.form-embed-placeholder {
+  padding: 3rem 2rem;
+  border: 1px dashed rgba(255,255,255,0.15);
+  color: var(--ink-light);
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .hero-title { font-size: clamp(3.5rem, 13vw, 5rem); }
+  .hero-tagline { font-size: 0.95rem; }
+  .what { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 2rem; }
+  .what-label { position: static; }
+  .recognition { padding: 6rem 1.5rem; }
+  .identity-bridge { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 1.5rem; }
+  .about { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 3rem; }
+  .about-aside { position: static; }
+}
+  </style>
+</head>
+<body class="">
+
+<!-- =============================================
+   FOUND ROOM — Header / Nav
+   Edit this file to change navigation site-wide.
+   ============================================= -->
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="identity-cost.html">Identity Cost</a>
+    <a href="journal.html">Journal</a>
+  </div>
+  <a href="join.html" class="nav-cta">Join</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="identity-cost.html">Identity Cost</a>
+    <a href="journal.html">Journal</a>
+    <a href="join.html" class="mobile-nav-cta">Join</a>
+  </div>
+</div>
+
+<section class="hero">
+<div class="hero-content">
+<p class="eyebrow">foundroom.co</p>
+<h1 class="hero-title">You got here.<br>It doesn't feel the way<br>you thought it would.</h1>
+<p class="hero-tagline">Found Room is a private community for founders who've built something real — and are ready to be honest about what comes next.</p>
+<a href="#join" class="hero-cta">Express Interest</a>
+</div>
+<p class="hero-scroll">Scroll to explore</p>
+</section>
+
+<div id="what" class="section-rule"></div>
+
+<section class="what">
+<div class="what-label reveal">
+<p>What this is</p>
+</div>
+<div class="what-content reveal">
+<h2>A room. Not a program.</h2>
+<p>Found Room is not a coaching program. Not a mastermind. Not a curriculum with an outcome promise attached to it.</p>
+<p>It's a room — a private community built around the specific experience of being a founder who has operated at a high level and is now living with questions that high performance doesn't answer.</p>
+<p>The members are founders who've built something significant. They're not here to optimize. They're here because they've run out of things to optimize and the underlying question is still active.</p>
+<p>Retreats, peer cohorts, and an ongoing private community form the structure. The members are the point.</p>
+</div>
+</section>
+
+<section class="recognition">
+<div class="recognition-inner reveal" markdown="1">
+
+Here's the thing nobody says about building a successful company: it ends. And when it does, everything it was quietly doing for you ends with it.
+
+Not just the work. The structure. The direction. The daily answer to the question of who you are and whether you're doing something that matters.
+
+Most founders don't see this coming. They exit — or they stay — and somewhere between six months and several years later, they find themselves in a life that looks right from the outside and feels subtly off from the inside. The praise is hollow. The obvious next moves feel like substitutes. The things that used to work as motivation stopped working, and no one around them knows that's happening.
+
+This is the experience Found Room is built for.
+
+Not crisis. Something slower and harder to name. The sense that the map that got you here isn't the map for what's next — and that nobody in your immediate orbit is equipped to help you draw a new one.
+
+</div>
+</section>
+
+<section class="identity-bridge">
+<p class="identity-bridge-label reveal">Read</p>
+<div class="identity-bridge-content reveal">
+<p class="identity-bridge-lead">If this is landing, there's a piece that names what's underneath it.</p>
+<a href="identity-cost.html" class="identity-bridge-link">The Identity Cost →</a>
+</div>
+</section>
+
+<section class="about">
+<div class="about-content reveal">
+<h2>Who belongs here.</h2>
+<p>Founders who've built something real. Companies that required years of genuine execution — not a venture story, not a pitch deck that got funded, but something that grew because they showed up and figured it out.</p>
+<p>They're pre-exit, post-exit, or continuing to operate. What they share is not a stage. It's a moment — the specific point where the gap between external success and internal experience has become too wide to ignore.</p>
+<p>They are high-functioning, private about what they're carrying, and deeply skeptical of any room that asks them to perform.</p>
+<blockquote>
+<p>"The most successful founders I know are often carrying the most — and have the fewest places to set it down honestly."</p>
+</blockquote>
+<p>Daniel Fox built a bootstrapped company to 180 people and tens of millions annually. He exited, and spent several years in the slow work of figuring out what he was without it. Found Room is built from that experience — and from years of working with founders navigating the same territory.</p>
+<p><a href="about.html">Read Daniel's full story →</a></p>
+</div>
+<div class="about-aside reveal">
+<p class="about-aside-label">Founding members</p>
+<p>Found Room is curated. Founding members are selected personally — not by revenue threshold or application form, but by whether they make the right room better for everyone in it.</p>
+</div>
+</section>
+
+<section class="cta-section" id="join">
+<div class="cta-left reveal" markdown="1">
+
+## Find the others.
+
+There are founders who've been through this — the exit, the loss of thread, the disorientation that doesn't have a name. They're not in the existing rooms. This is where we find each other.
+
+Free membership. Daniel reads every submission.
+
+</div>
+<div class="cta-right reveal">
+<a href="join.html" class="btn-primary">Join Found Room</a>
+<a href="about.html" class="btn-secondary">Read Daniel's story</a>
+</div>
+</section>
+
+<!-- =============================================
+   FOUND ROOM — Footer
+   Edit this file to change the footer site-wide.
+   ============================================= -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="join.html">Join Free</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
+</footer>
+
+<script src="assets/js/global.js"></script>
+</body>
+</html>

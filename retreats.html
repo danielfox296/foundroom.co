@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Retreats — Found Room</title>
+  <meta name="description" content="Immersive in-person retreats for founders. A break from the usual context, the usual roles, the usual answers.">
+  <link rel="canonical" href="https://foundroom.co/retreats.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Found Room">
+  <meta property="og:title" content="Retreats — Found Room">
+  <meta property="og:description" content="Immersive in-person retreats for founders. A break from the usual context, the usual roles, the usual answers.">
+  <meta property="og:url" content="https://foundroom.co/retreats.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Retreats — Found Room">
+  <meta name="twitter:description" content="Immersive in-person retreats for founders. A break from the usual context, the usual roles, the usual answers.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&h=630&q=85&auto=format&fit=crop">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0W9D4LQ59"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K0W9D4LQ59');
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* retreats — page-specific styles only */
+
+/* Hero — full-bleed image */
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 55%;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.25) 0%, rgba(8,8,8,0.5) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.1s;
+}
+
+.hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.25s;
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  color: var(--ink-mid);
+  max-width: 580px;
+  line-height: 1.6;
+  margin-top: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.4s;
+}
+
+/* What we're building section */
+.building-section {
+  background: var(--dark-surface);
+  padding: 8rem 6rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.building-section h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 4rem;
+}
+
+.building-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.building-item {
+  border-top: 2px solid var(--ink);
+  padding-top: 2rem;
+}
+
+.building-item h3 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin-bottom: 0.8rem;
+}
+
+.building-item p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .hero { padding: 8rem 1.5rem 4rem; }
+  .building-section { padding: 5rem 1.5rem; }
+  .building-grid { grid-template-columns: 1fr; }
+}
+  </style>
+</head>
+<body class="">
+
+<!-- =============================================
+   FOUND ROOM — Header / Nav
+   Edit this file to change navigation site-wide.
+   ============================================= -->
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="identity-cost.html">Identity Cost</a>
+    <a href="journal.html">Journal</a>
+  </div>
+  <a href="join.html" class="nav-cta">Join</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="identity-cost.html">Identity Cost</a>
+    <a href="journal.html">Journal</a>
+    <a href="join.html" class="mobile-nav-cta">Join</a>
+  </div>
+</div>
+
+<section class="hero">
+<p class="eyebrow">Found Room Retreat — Colorado, Fall 2026</p>
+<h1>The Next Map</h1>
+<p class="hero-sub">Four days in the Colorado mountains with a small group of founders who have built something real and are ready to be honest about what comes next.</p>
+</section>
+<div class="section-rule"></div>
+
+<section class="sidebar-section">
+<p class="section-label">The premise</p>
+<div class="sidebar-content reveal">
+<h2>The map that got you here stops working before you notice.</h2>
+<p>Most founders who've built something real have the same experience, usually somewhere between six months and two years after the exit. The external life looks right. The internal compass isn't pointing anywhere useful. The things that used to work as motivation stopped working. The obvious next moves feel thin.</p>
+<p>The standard explanation is that you need a new goal, a new company, a new project. Get back to building. Most founders try that. It doesn't work the way they expected, because the problem isn't the absence of a goal. The map itself needs redrawing.</p>
+<p>The Next Map is four days dedicated to that work. You leave with a document: your actual values, a clear account of what you're not willing to compromise going forward, and a specific picture of what you're building toward. Authored by you, from your own honest read of your life so far.</p>
+<p>That's the deliverable. Everything else is the conditions that make it possible.</p>
+</div>
+</section>
+<div class="section-rule"></div>
+
+<section class="sidebar-section">
+<p class="section-label">The work</p>
+<div class="sidebar-content reveal">
+<h2>Three things get built over four days.</h2>
+<p><strong>01 — The Values Audit</strong></p>
+<p>A lot of what founders call their values were absorbed, not chosen. From family, from culture, from the specific social math of being ambitious in your twenties. The audit surfaces which values are actually yours — revealed by your decisions over time, not your self-description. The gap between those two lists is usually where the interesting work is.</p>
+<p><strong>02 — The Compromise Inventory</strong></p>
+<p>Every founder makes agreements they didn't fully examine at the time. In the business, in relationships, in how they spend time, in who they perform themselves as to different audiences. The inventory isn't a grievance exercise. It's a way of seeing clearly what you're carrying so you can decide what you want to carry forward.</p>
+<p><strong>03 — The Forward Draft</strong></p>
+<p>What sovereignty actually looks like for you, specifically. The details, not the category. What are you building? What does a day look like when your actions match what you actually want? Where are you directing energy, and toward what? This is the map. It's a document you write during the retreat and leave with.</p>
+</div>
+</section>
+<div class="section-rule"></div>
+
+<div class="parallax-band" style="background-image: url('https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=1920&q=80&auto=format&fit=crop')">
+<span class="parallax-band-caption">Found Room Retreats — somewhere else entirely</span>
+</div>
+
+<section class="sidebar-section">
+<p class="section-label">Why this is different</p>
+<div class="sidebar-content reveal">
+<h2>Most work in this space starts in the wrong place.</h2>
+<p>It assumes you have values and need help aligning your life to them. The work here starts one level earlier: with the question of whether the values you've been living were yours to begin with, or whether they were installed by culture, success, family, and social pressure and never examined.</p>
+<p>The goal isn't alignment to a better version of the same map. The goal is authorship. Knowing what you actually want, why, and what you're willing to do about it from a foundation that's genuinely yours.</p>
+<p>Daniel has been through this work personally. He built a bootstrapped company to 180 people and tens of millions in revenue, exited, and spent several years in the slow work of rebuilding from a foundation he actually chose. That experience gives him patience for this process that doesn't come from theory, and a specific understanding of what it costs in a business, in relationships, and day to day that someone who hasn't been through it would miss.</p>
+<p>For members who want it, the work can extend to include meditation and plant medicine as tools within this process. That's a conversation for before the retreat.</p>
+</div>
+</section>
+<div class="section-rule"></div>
+
+<section class="sidebar-section">
+<p class="section-label">The place and the people</p>
+<div class="sidebar-content reveal">
+<h2>Colorado, fall 2026. A private house in the mountains.</h2>
+<p>The location will be announced to confirmed members. Removed enough that you actually leave your usual context. Beautiful enough that it earns the trip. The kind of place where long evenings around a table feel natural.</p>
+<p>Everyone stays under one roof. That changes the dynamic from conference to something closer to a gathering of people who already trust each other slightly. The meals are long. The afternoons are open. The in-between time is where the real conversations tend to happen.</p>
+<p>Lodging and meals are included. One pre-retreat conversation with Daniel before you arrive.</p>
+<div class="section-break" style="margin: 3rem 0; width: 40px; height: 2px; background: rgba(255,255,255,0.12);"></div>
+<p>People who've built something real over years of genuine execution. Pre-exit, post-exit, or still operating. What they share isn't a stage. It's a specific point: the gap between external success and internal experience has become wide enough to take seriously.</p>
+<p>High-functioning, private about what they're carrying, and skeptical of any room that asks them to perform. The selection is personal. Daniel knows each person before they arrive, because he spends time with everyone in the weeks before the retreat. That conversation isn't screening. It's preparation.</p>
+</div>
+</section>
+<div class="section-rule"></div>
+
+<section class="cta-section" id="join">
+<div class="cta-left reveal" markdown="1">
+
+<h2>The right room is <span style="color:var(--accent)">forming.</span></h2>
+
+If this has landed and you want to know whether it's the right room for you, reach out. Daniel will be in touch directly. No pitch. A real conversation.
+
+</div>
+<div class="cta-right reveal" markdown="1">
+<p class="cta-form-label">Express interest</p>
+<div class="cta-input-row" id="formRow">
+<input id="emailInput" type="email" placeholder="Your email address">
+<button onclick="handleSubmit()">I'm interested</button>
+</div>
+<p class="cta-note">Colorado, fall 2026. Exact dates forming.</p>
+<p class="success-message" id="successMsg">You're in the room. We'll be in touch.</p>
+</div>
+</section>
+
+<!-- =============================================
+   FOUND ROOM — Footer
+   Edit this file to change the footer site-wide.
+   ============================================= -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="join.html">Join Free</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
+</footer>
+
+<script src="assets/js/global.js"></script>
+</body>
+</html>

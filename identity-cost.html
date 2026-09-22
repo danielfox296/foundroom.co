@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>The Identity Cost — Found Room</title>
+  <meta name="description" content="The Identity Cost examines how founders route personal needs through business systems — and what becomes possible when they stop.">
+  <link rel="canonical" href="https://foundroom.co/identity-cost.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Found Room">
+  <meta property="og:title" content="The Identity Cost — Found Room">
+  <meta property="og:description" content="The Identity Cost examines how founders route personal needs through business systems — and what becomes possible when they stop.">
+  <meta property="og:url" content="https://foundroom.co/identity-cost.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Identity Cost — Found Room">
+  <meta name="twitter:description" content="The Identity Cost examines how founders route personal needs through business systems — and what becomes possible when they stop.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=630&q=85&auto=format&fit=crop">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0W9D4LQ59"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K0W9D4LQ59');
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* identity-cost — page-specific styles only */
+
+/* Hero — full-bleed image */
+.hero {
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 5rem 6rem;
+  background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center 35%;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.3) 0%, rgba(8,8,8,0.55) 50%, rgba(8,8,8,0.92) 100%);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .eyebrow {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.1s;
+}
+
+.hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.25s;
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--ink-mid);
+  max-width: 500px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.4s;
+}
+
+/* Large intro section */
+.large-intro {
+  background: var(--dark-surface);
+  padding: 7rem 6rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.large-intro-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.large-intro p.italic-large {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.large-intro p.italic-mid {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--ink-mid);
+  margin-bottom: 2rem;
+}
+
+.large-intro p.closing-line {
+  font-size: 1.05rem;
+  color: var(--ink-mid);
+  line-height: 1.8;
+}
+
+/* Sidebar section content (page-specific class name) */
+.sidebar-section-content h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+
+.sidebar-section-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  max-width: 600px;
+  margin-bottom: 1.4rem;
+}
+
+.sidebar-section-content p:last-child { margin-bottom: 0; }
+.sidebar-section-content p.italic { font-style: italic; }
+
+/* Cost groups */
+.cost-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 0.8rem;
+}
+
+.cost-label + p { margin-bottom: 2.5rem; }
+
+.cost-group { margin-top: 2.5rem; }
+.cost-group:first-child { margin-top: 0; }
+
+/* CTA overrides (dark bg instead of dark-surface) */
+.cta-section {
+  background: var(--dark);
+  gap: 6rem;
+  align-items: center;
+}
+
+.cta-left h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.cta-left h2 span { color: var(--accent); }
+
+.cta-left p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.45);
+  max-width: 420px;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .hero { padding: 8rem 1.5rem 4rem; }
+  .large-intro { padding: 5rem 1.5rem; }
+}
+  </style>
+</head>
+<body class="">
+
+<!-- =============================================
+   FOUND ROOM — Header / Nav
+   Edit this file to change navigation site-wide.
+   ============================================= -->
+<nav>
+  <a href="index.html" class="nav-logo">Found Room</a>
+  <div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="identity-cost.html">Identity Cost</a>
+    <a href="journal.html">Journal</a>
+  </div>
+  <a href="join.html" class="nav-cta">Join</a>
+  <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <a href="about.html">About</a>
+    <a href="identity-cost.html">Identity Cost</a>
+    <a href="journal.html">Journal</a>
+    <a href="join.html" class="mobile-nav-cta">Join</a>
+  </div>
+</div>
+
+<section class="hero">
+<p class="eyebrow">The framework</p>
+<h1>Your business has been doing something you never asked it to do.</h1>
+<p class="hero-sub">And it's costing both of you.</p>
+</section>
+<div class="section-rule"></div>
+
+<section class="large-intro">
+<div class="large-intro-inner reveal">
+<p class="italic-large">Every founder routes something personal through their business. Not intentionally. Not obviously. But over time, the business becomes the mechanism through which a founder answers questions that have nothing to do with the business.</p>
+<p class="italic-mid">Who am I? Do I matter? Am I good enough? Am I on the right path?</p>
+<p class="closing-line">The business answers these questions imperfectly, temporarily, and at significant cost to both the founder and the organization. This is The Identity Cost.</p>
+</div>
+</section>
+<div class="section-rule"></div>
+
+<section class="sidebar-section">
+<p class="section-label reveal">How it starts</p>
+<div class="sidebar-section-content reveal">
+<h2>How does the identity cost start?</h2>
+<p>You build something. The feedback is immediate and legible — revenue, recognition, growth, the satisfaction of a problem solved. That feedback feels good. It should. You're doing something real.</p>
+<p>But founders are human beings with human needs — for meaning, for worth, for belonging, for a sense that what they're doing matters. Those needs don't disappear when you start a company. They find a home there.</p>
+<p>Early on this is fine. The alignment between personal need and business activity is close enough that it barely registers. You're passionate. You're driven. You care. These look like founder virtues — and they are.</p>
+<p>The problem develops slowly, invisibly, as the business grows.</p>
+</div>
+</section>
+<div class="section-rule"></div>
+
+<section class="sidebar-section">
+<p class="section-label reveal">What it looks like</p>
+<div class="sidebar-section-content reveal">
+<h2>Is founder identity loss a structural problem or a personal failing?</h2>
+<p>The business starts doing need-meeting work it was never designed for. Resources get held defensively. Decisions get made from identity rather than strategy. Optimization cycles repeat without resolving the underlying pressure. Delegation feels like loss. Stepping back feels like disappearing.</p>
+<p>From the outside it looks like a founder who's too controlling, too attached, too resistant to change.</p>
+<p>From the inside it feels like responsibility. Like standards. Like no one else cares as much as you do.</p>
+<p>Both things are true. Neither explanation gets to the root.</p>
+<p>What's actually happening: the business has become a substitution system. It's being asked to produce something it can't sustainably produce — a stable sense of personal worth.</p>
+<p>The more efficient the business becomes, the more tightly it gets wound around that need. Optimization increases the load rather than reducing it.</p>
+</div>
+</section>
+<div class="section-rule"></div>
+
+<div class="parallax-band" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1920&q=80&auto=format&fit=crop')">
+<span class="parallax-band-caption">The Identity Cost — what the business is doing instead</span>
+</div>
+
+<section class="sidebar-section">
+<p class="section-label reveal">What it costs</p>
+<div class="sidebar-section-content reveal">
+<div class="cost-group">
+<div class="cost-group-header">
+<div class="icon-feature"><i data-lucide="building-2"></i></div>
+<p class="cost-label">The business pays:</p>
+</div>
+<p>Decisions made from identity rather than logic. Resources held back defensively. Processes that serve the founder's need for control rather than operational efficiency. Symbolic labor — work that signals rather than produces. Difficulty scaling because scaling requires releasing what the founder is using to feel okay.</p>
+</div>
+<div class="cost-group">
+<div class="cost-group-header">
+<div class="icon-feature"><i data-lucide="user"></i></div>
+<p class="cost-label">The founder pays:</p>
+</div>
+<p>Volatility tied to outcomes. Difficulty resting. The sense of being perpetually on call — not because the business demands it, but because the need is always active. Relationships that exist in the shadow of the company. An identity so merged with the business that imagining life without it produces something close to dread.</p>
+</div>
+<div class="cost-group">
+<div class="cost-group-header">
+<div class="icon-feature"><i data-lucide="log-out"></i></div>
+<p class="cost-label">After exit, the cost becomes visible:</p>
+</div>
+<p>The mechanism disappears. The need remains. The founder is left holding a question they've been outsourcing for years.</p>
+<p class="italic">Who am I without this?</p>
+</div>
+</div>
+</section>
+<div class="section-rule"></div>
+
+<section class="sidebar-section">
+<p class="section-label reveal">What changes</p>
+<div class="sidebar-section-content reveal">
+<h2>What's the difference between founder detachment and authorship?</h2>
+<p>The work is not to stop caring about the business. It's not to become detached or dispassionate or strategic in some clinical sense.</p>
+<p>The work is authorship.</p>
+<p>When a founder authors meaning and worth directly — rather than inheriting it from outcomes, roles, and valuations — something shifts. The business stops carrying personal weight it was never designed to carry. Decisions get cleaner. Delegation becomes possible. The pressure that felt like responsibility reveals itself as something else.</p>
+<p>The founder becomes harder to fracture. The organization reflects that shift.</p>
+<p>This doesn't happen through optimization. It happens through honest examination — usually with people who understand the territory.</p>
+</div>
+</section>
+<div class="section-rule"></div>
+
+<section class="sidebar-section">
+<p class="section-label reveal">Found Room</p>
+<div class="sidebar-section-content reveal">
+<p>The Identity Cost is a body of work developed by Daniel Fox over years of observation and lived experience — consulting with founders, watching the pattern repeat, and confronting it in himself.</p>
+<p>Found Room is not a program built around this framework. It's a community that uses it as one available lens. Members encounter it not as a curriculum but as a language — a way of seeing what's often invisible inside a business and a life.</p>
+<p>The full manuscript is in development. In the meantime, Found Room is the place to explore these ideas in community with founders who are living them.</p>
+</div>
+</section>
+
+<section class="cta-section">
+<div class="cta-left reveal">
+<h2>The room is <span>open.</span></h2>
+<p>Found Room is the place to explore these ideas in community with founders who are living them. The founding member community is forming now.</p>
+</div>
+<div class="cta-right reveal">
+<p><a href="join.html" class="btn-primary">Join Found Room</a>
+<a href="about.html" class="btn-secondary">Read Daniel's story</a></p>
+</div>
+</section>
+
+<!-- =============================================
+   FOUND ROOM — Footer
+   Edit this file to change the footer site-wide.
+   ============================================= -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand-name">Found Room</a>
+      <p class="footer-brand-tagline">A community for founders building great companies and great lives.</p>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/danielchristopherfox/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Explore</p>
+      <div class="footer-col-links">
+        <a href="about.html">About</a>
+        <a href="retreats.html">Retreats</a>
+        <a href="journal.html">Journal</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Writing</p>
+      <div class="footer-col-links">
+        <a href="identity-cost.html">Identity Cost</a>
+        <a href="essay-what-the-business-was-doing.html">What the Business Was Doing</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <p class="footer-col-label">Connect</p>
+      <div class="footer-col-links">
+        <a href="join.html">Join Free</a>
+        <a href="mailto:daniel@foundroom.co">daniel@foundroom.co</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Found Room. All rights reserved.</p>
+    <p>foundroom.co</p>
+  </div>
+</footer>
+
+<script src="assets/js/global.js"></script>
+</body>
+</html>
