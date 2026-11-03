@@ -347,6 +347,15 @@
 
 .footer-read-next-link:hover { color: var(--accent); }
 
+/* Spam trap field — off-screen for people, visible to bots */
+.fr-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* Responsive */
 @media (max-width: 960px) {
   .join-hero { padding: 8rem 1.5rem 4rem; }
@@ -424,6 +433,11 @@
 </div>
 
 
+<div class="fr-hp" aria-hidden="true">
+<label for="frWebsite">Leave this field empty</label>
+<input type="text" id="frWebsite" name="website" tabindex="-1" autocomplete="off">
+</div>
+
 <button class="fr-submit" type="submit" id="frSubmit">Join Found Room</button>
 <p class="fr-success" id="frSuccess">You're in. Daniel will be in touch.</p>
 <p class="fr-error" id="frError">Something went wrong. Email daniel@foundroom.co directly.</p>
@@ -434,8 +448,28 @@
 (function() {
   var ENDPOINT = 'https://script.google.com/macros/s/AKfycbxwUvLTTE2GwmLNvx33Bgl1m1dbcXTLWcJqeyPbHjQEq9jfEWOIPcLEcipfSYV2sQk9/exec';
 
+  var loadedAt = Date.now();
+
+  function showSuccess() {
+    // The success message lives inside the form, so hide the form's other parts, not the form.
+    var form = document.getElementById('frForm');
+    Array.prototype.forEach.call(form.children, function(el) {
+      if (el.id !== 'frSuccess') el.style.display = 'none';
+    });
+    document.getElementById('frSuccess').style.display = 'block';
+  }
+
   document.getElementById('frForm').addEventListener('submit', function(e) {
     e.preventDefault();
+
+    // Spam trap: bots fill the hidden field or submit within seconds of load.
+    // Show them the normal success message, but send nothing.
+    var trap = document.getElementById('frWebsite').value;
+    if (trap || Date.now() - loadedAt < 3000) {
+      showSuccess();
+      return;
+    }
+
     var btn = document.getElementById('frSubmit');
     btn.disabled = true;
     btn.textContent = 'Sending...';
@@ -452,8 +486,7 @@
     })
     .then(function(r) { return r.json(); })
     .then(function(res) {
-      document.getElementById('frForm').style.display = 'none';
-      document.getElementById('frSuccess').style.display = 'block';
+      showSuccess();
     })
     .catch(function() {
       btn.disabled = false;

@@ -295,6 +295,15 @@
 
 .footer-read-next-link:hover { color: var(--accent); }
 
+/* Spam trap field — off-screen for people, visible to bots */
+.fr-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* Responsive */
 @media (max-width: 960px) {
   .join-hero { padding: 8rem 1.5rem 4rem; }
